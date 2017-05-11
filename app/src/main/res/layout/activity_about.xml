@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/abt_title"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="22sp"
+        android:textColor="#468499"
+        android:text="title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/abt_message"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#794044"
+        android:text="version"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="share to your friends"
+        android:textColor="#3b5998"
+        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/abt_fb"
+            android:layout_width="54dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/fb_icon" />
+        <ImageView
+            android:id="@+id/abt_tw"
+            android:layout_width="54dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/twitter_icon" />
+        <ImageView
+            android:id="@+id/abt_gmail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/gmail_icon" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+﻿#--------------------------------------------------
+# file name     : vocab_traffic
+# description   : traffic related vocabulary file
+# creation date : 14/12/2015
+# author        : dainv
+#--------------------------------------------------
+# transportation
+じどうしゃ ~ jidousha ~ Automobile
+くるま ~ kuruma ~ Car
+トラック ~ torakku ~ Truck
+スポーツカー ~ supootsu kaa ~ Sports car
+タクシー ~ takushii ~ Taxi
+きゅうきゅうしゃ ~ kyuukyuusha ~ Ambulance
+しょうぼうしゃ ~ shoubousha ~ Fire engine
+パトカー ~ patokaa ~ Police patrol car
+オートバイ ~ ootobai ~ Motorcycle
+じてんしゃ ~ jitensha ~ Bicycle
+きしゃ ~ kisha ~ Steam train
+でんしゃ ~ densha ~ Electric train
+ちかてつ ~ chikatetsu ~ Subway; underground train
+しんかんせん ~ shinkansen ~ Bullet train
+ひこうき ~ hikouki ~ Airplane
+ヘリコプター ~ herikoputaa ~ Helicopter
+ふね ~ fune ~ Ship
+はんせん ~ hansen ~ Sailing boat
+フェリー ~ ferii ~ Ferry
+
+
+# traffic
+こうさてん ~ kousaten ~ Crossing; intersection

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="title_color">#0d56ac</color>
+    <color name="desc_color">#112c08</color>
+    <color name="chris_bkg">#DFFFC0</color>
+    <color name="green_bkg">#00bce4</color>
+    <color name="heading_color">#F48A00</color>
+</resources>

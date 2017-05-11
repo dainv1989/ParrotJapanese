@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="pref_lang"
+        android:title="@string/pref_language_title"
+        android:dialogTitle="@string/pref_language_title"
+        android:entries="@array/pref_languages"
+        android:entryValues="@array/pref_lang"
+        android:defaultValue="@string/pref_lang_default"/>
+
+    <ListPreference
+        android:key="pref_number_qa"
+        android:title="@string/pref_qa_title"
+        android:summary="@string/pref_qa_summary"
+        android:dialogTitle="@string/pref_qa_title"
+        android:entries="@array/pref_number_qa_entries"
+        android:entryValues="@array/pref_number_qa_entries"
+        android:defaultValue="10" />
+
+    <CheckBoxPreference
+        android:key="pref_exercise_by_subject"
+        android:title="@string/pref_sub_title"
+        android:summary="@string/pref_sub_summary"
+        android:defaultValue="true" />
+</PreferenceScreen>

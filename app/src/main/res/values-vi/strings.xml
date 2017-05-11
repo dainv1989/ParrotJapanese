@@ -1,0 +1,126 @@
+﻿<resources>
+    <string name="app_name">Parrot Japanese</string>
+    <string name="default_label">Label</string>
+    <string name="str_btnStrategy">Giới thiệu</string>
+    <string name="str_btnHiragana">Hiragana</string>
+    <string name="str_btnKatakana">Katakana</string>
+    <string name="str_btnVocabulary">Từ vựng</string>
+    <string name="str_btnGrammar">Ngữ pháp cơ bản</string>
+    <string name="str_btnPhrase">Giao tiếp</string>
+    <string name="str_btnAbout">Thông tin</string>
+    <string name="str_btnExercise">Bài tập</string>
+    <string name="str_btnCount">Số đếm</string>
+    <string name="str_btnResource">Tài nguyên học tập</string>
+    <string name="title_question">Câu hỏi</string>
+
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_rate_app">Đánh giá ứng dụng</string>
+    <string name="action_about">Thông tin</string>
+
+    <!-- content to be displayed at strategy screen -->
+    <string name="st_title">Giữ bĩnh tĩnh và học tiếng Nhật !</string>
+    <string name="app_desc">Ứng dụng Parrot Japanese được thiết kế cho người mới bắt đầu hoặc những người học kỹ năng nói tiếng Nhật hoặc những người cần làm quen và sử dụng tiếng Nhật trong một thời gian ngắn. Ứng dụng cũng hữu ích khi sử dụng như một từ điển nhỏ với nhiều từ vựng được dùng phổ biến hàng ngày. Đối với người mới bắt đầu học, những hướng dẫn dưới đây sẽ giúp các bạn sử dụng phần mềm này một cách hiệu quả:</string>
+    <string-array name="st_steps">
+        <item>Bảng chữ cái tiếng Nhật: Hiragana and Katakana</item>
+        <item>Từ vựng: Từ vựng phổ biến và cách đếm số</item>
+        <item>Bài tập</item>
+        <item>Học ngữ pháp cơ bản</item>
+        <item>Học các câu giao tiếp hàng ngày</item>
+        <item>Lên level</item>
+    </string-array>
+
+    <string-array name="st_targets">
+        <item>Bước đầu tiên là làm quen với các kí tự và âm cơ bản của tiếng Nhật. Bạn sẽ tự nhớ được các ký tự và âm này khi học về từ vựng và câu. Vì vậy không nên lãng phí vài tuần hay cả tháng để học thuộc các kí tự này trước khi học từ phần khác.</item>
+        <item>Dành một vài ngày hoặc một tuần để lướt qua hết một lượt từ vựng, sau đó học đến các phần tiếp theo. Bạn sẽ còn quay lại mục từ vựng nhiều lần nữa.</item>
+        <item>Kiểm tra từ vựng của bạn với vài câu trắc nghiệm đơn giản</item>
+        <item>23 video được tạo bởi người bản địa dạy về ngữ pháp cơ bản. Các video này dạy bạn cách sử dụng ngữ pháp để đặt câu từ rất đơn giản đến phức tạp.</item>
+        <item>Cụm từ và câu sử dụng trong giao tiếp hàng ngày</item>
+        <item>Học tiếng Nhật sâu hơn, nhiều hơn về từ vựng, ngữ pháp các kỹ năng nghe, nói, đọc viết ở các tài nguyên được giới thiệu.</item>
+    </string-array>
+    <string name="st_goodbye">Chúc vui vẻ!</string>
+    <!-- end strategy screen -->
+
+
+    <!-- content for resource page -->
+    <!--logo file name array for each resource -->
+    <string-array name="res_logo_name">
+        <item>logo_jppod101</item>
+        <item>logo_erin</item>
+        <item>logo_taekim</item>
+        <item>logo_youtube</item>
+        <item>logo_memrise</item>
+    </string-array>
+
+    <string-array name="res_title">
+        <item>Japanesepod101</item>
+        <item>Học tiếng Nhật với Erin</item>
+        <item>Hướng dẫn tiếng Nhật của TaeKim</item>
+        <item>Youtube</item>
+        <item>Học từ vựng với Memrise</item>
+    </string-array>
+
+    <string name="res_title">Tài nguyên online</string>
+    <string-array name="res_desc">
+        <item>Japanesepod101 có rất nhiều audio, video cùng với transcript, từ vựng và bài tập ... cho các cấp độ người học khác nhau</item>
+        <item>Erin là một nhân vật hoạt hình để giúp bạn học tiếng Nhật thông qua các tình huống khác nhau. Bạn sẽ học từ vựng và ngữ pháp ở từng tình huống đó.</item>
+        <item>Hướng dẫn về tiếng Nhật này được biết đến rất nhiều trên internet. </item>
+        <item>Trang web chia sẻ video lớn nhất internet. Bạn có thể tìm thấy rất nhiều thứ thú vị giúp bạn học tiếng Nhật tốt hơn từ audio thi JPNL đến phim hoạt hình tiếng Nhật, bài hát, phim truyện ...</item>
+        <item>Trang web học từ vựng được thiết kế giúp bạn nhớ từ một cách hiệu quả. Nó sẽ nhắc bạn những từ nào bạn hay quên sau những khoảng thời gian xác định một cách khoa học. Ngoài tiếng Nhật, trang web này còn có đầy đủ các thứ tiếng khác cho bạn học.</item>
+    </string-array>
+
+    <string-array name="res_site">
+        <item>japanesepod101.com</item>
+        <item>erin.ne.jp</item>
+        <item>guidetojapanese.org</item>
+        <item>youtube.com</item>
+        <item>memrise.com</item>
+    </string-array>
+    <string name="res_end">Hãy bình tĩnh và học tiếng Nhật !</string>
+
+    <string name="title_activity_settings">Cài đặt</string>
+    <string name="pref_language_title">Ngôn ngữ</string>
+    <string name="pref_qa_title">Số câu hỏi</string>
+    <string name="pref_qa_summary">câu hỏi cho mỗi bài tập</string>
+    <string name="pref_sub_title">Bài tập theo chủ đề</string>
+    <string name="pref_sub_summary">Học từ vựng theo từng chủ đề</string>
+
+    <string-array name="pref_languages">
+        <item>English</item>
+        <item>Tiếng Việt</item>
+    </string-array>
+
+    <string-array name="pref_lang">
+        <item>en</item>
+        <item>vi</item>
+    </string-array>
+
+    <string name="pref_lang_default">en</string>
+
+    <string-array name="pref_number_qa_entries">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+    <string name="pref_number_qa_def">10</string>
+
+    <!-- about screen string -->
+    <string name="about_share">Chia sẻ với bạn bè</string>
+
+    <!-- question screen -->
+    <string-array name="answer">
+        <item>đáp án 1</item>
+        <item>đáp án 2</item>
+        <item>đáp án 3</item>
+        <item>đáp án 4</item>
+    </string-array>
+    <string name="qa_str_answer">Câu trả lời:</string>
+    <string name="qa_str_pronunciation">Phát âm</string>
+    <string name="qa_str_meaning">Nghĩa của từ</string>
+
+    <!-- score screen -->
+    <string name="str_score_title">Điểm số</string>
+    <string name="str_your_score">Điểm của bạn:</string>
+    <string name="str_btn_continue">Tiếp tục</string>
+    <string name="str_btn_exit">Thoát</string>
+</resources>

@@ -1,0 +1,30 @@
+﻿#--------------------------------------------------
+# file name     : vocab_traffic
+# description   : traffic related vocabulary file
+# creation date : 14/12/2015
+# author        : dainv
+#--------------------------------------------------
+# transportation
+じどうしゃ ~ jidousha ~ Xe hơi
+くるま ~ kuruma ~ Xe ô tô
+トラック ~ torakku ~ Xe tải
+スポーツカー ~ supootsu kaa ~ Xe ô tô thể thao
+タクシー ~ takushii ~ Taxi
+きゅうきゅうしゃ ~ kyuukyuusha ~ Xe cứu thương
+しょうぼうしゃ ~ shoubousha ~ Xe cứu hỏa
+パトカー ~ patokaa ~ Xe tuần tra của cảnh sát
+オートバイ ~ ootobai ~ Xe gắn máy; xe máy
+じてんしゃ ~ jitensha ~ Xe đạp
+きしゃ ~ kisha ~ Tàu hỏa
+でんしゃ ~ densha ~ Tàu điện
+ちかてつ ~ chikatetsu ~ Tàu điện ngầm
+しんかんせん ~ shinkansen ~ Tàu siêu tốc của Nhật Bản
+ひこうき ~ hikouki ~ Máy bay
+ヘリコプター ~ herikoputaa ~ Trực thăng
+ふね ~ fune ~ Tàu thuyền
+はんせん ~ hansen ~ Thuyền buồm
+フェリー ~ ferii ~ Phà
+
+
+# traffic
+こうさてん ~ kousaten ~ Ngã tư đường

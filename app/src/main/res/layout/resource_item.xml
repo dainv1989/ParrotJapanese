@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:scaleType="centerInside"
+        android:id="@+id/res_logo"
+        android:src="@drawable/parrot"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/res_title"
+            android:text="YouTube"
+            android:textColor="@color/title_color"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/res_desc"
+            android:text="Videos sharing website"
+            android:textColor="@color/desc_color"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/res_site"
+            android:text="youtube.com"
+            android:textSize="16sp"
+            android:textColor="#8A7967"/>
+    </LinearLayout>
+</LinearLayout>
