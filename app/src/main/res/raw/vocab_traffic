@@ -5,26 +5,26 @@
 # author        : dainv
 #--------------------------------------------------
 # transportation
-じどうしゃ ~ jidousha ~ Automobile
-くるま ~ kuruma ~ Car
-トラック ~ torakku ~ Truck
-スポーツカー ~ supootsu kaa ~ Sports car
-タクシー ~ takushii ~ Taxi
-きゅうきゅうしゃ ~ kyuukyuusha ~ Ambulance
-しょうぼうしゃ ~ shoubousha ~ Fire engine
-パトカー ~ patokaa ~ Police patrol car
-オートバイ ~ ootobai ~ Motorcycle
-じてんしゃ ~ jitensha ~ Bicycle
-きしゃ ~ kisha ~ Steam train
-でんしゃ ~ densha ~ Electric train
-ちかてつ ~ chikatetsu ~ Subway; underground train
-しんかんせん ~ shinkansen ~ Bullet train
-ひこうき ~ hikouki ~ Airplane
-ヘリコプター ~ herikoputaa ~ Helicopter
-ふね ~ fune ~ Ship
-はんせん ~ hansen ~ Sailing boat
-フェリー ~ ferii ~ Ferry
+じどうしゃ ~ jidousha ~ automobile
+くるま ~ kuruma ~ car, vehicle
+トラック ~ torakku ~ truck
+スポーツカー ~ supootsu kaa ~ sports car
+タクシー ~ takushii ~ taxi
+きゅうきゅうしゃ ~ kyuukyuusha ~ ambulance
+しょうぼうしゃ ~ shoubousha ~ fire engine
+パトカー ~ patokaa ~ police car
+オートバイ ~ ootobai ~ motorcycle
+じてんしゃ ~ jitensha ~ bicycle
+きしゃ ~ kisha ~ steam train
+でんしゃ ~ densha ~ electric train
+ちかてつ ~ chikatetsu ~ subway; underground train
+しんかんせん ~ shinkansen ~ bullet train
+ひこうき ~ hikouki ~ airplane
+ヘリコプター ~ herikoputaa ~ helicopter
+ふね ~ fune ~ ship
+はんせん ~ hansen ~ sailing boat
+フェリー ~ ferii ~ ferry
 
 
 # traffic
-こうさてん ~ kousaten ~ Crossing; intersection
+こうさてん ~ kousaten ~ crossing; intersection

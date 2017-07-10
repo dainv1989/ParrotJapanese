@@ -1,38 +1,41 @@
-﻿1 ~ いち ~ ichi ~ One
-2 ~ に ~ ni ~ Two
-3 ~ さん ~ san ~ Three
-4 ~ よん　（　し　） ~ yon ( shi ) ~ Four
-5 ~ ご ~ go ~ Five
-6 ~ ろく ~ roku ~ Six
-7 ~ なな　（　しち　） ~ nana ( shichi ) ~ Seven
-8 ~ はち ~ hachi ~ Eight
-9 ~ きゅう ~ kyuu ~ Nine
-10 ~ じゅう ~ juu ~ Ten
-11 ~ じゅういち ~ juuichi ~ Eleven
-12 ~ じゅうに ~ juuni ~ Twelve
-13 ~ じゅうさん ~ juusan ~ Thirteen
-14 ~ じゅうよん ~ juushi ~ Fourteen
-15 ~ じゅうご ~ juugo ~ Fifteen
-16 ~ じゅうろく ~ juuroku ~ Sixteen
-17 ~ じゅうしち ~ juushichi ~ Seventeen
-18 ~ じゅうはち ~ juuhachi ~ Eighteen
-19 ~ じゅうく ~ juuku ~ Nineteen
-20 ~ にじゅう ~ nijuu ~ Twenty
-21 ~ にじゅういち ~ nijuuichi ~ Twenty one
-22 ~ にじゅうに ~ nijuuni ~ Twenty two
-30 ~ さんじゅう ~ sanjuu ~ Thirty
-40 ~ よんじゅう ~ yonjuu ~ Fourty
-50 ~ ごじゅう ~ gojuu ~ Fifty
-60 ~ ろくじゅう ~ rokujuu ~ Sixty
-70 ~ ななじゅう ~ nanajuu ~ Seventy
-80 ~ はちじゅう ~ hachijuu ~ Eighty
-90 ~ きゅうじゅう ~ kyuujuu ~ Ninety
-100 ~ ひゃく ~ hyaku ~ Hundred
-150 ~ ひゃくごじゅう　~ hyaku-gojuu ~ Hundred and fifty
-300 ~　さんびゃく ~ sanbyaku ~ Three hundred
-1000 ~ せん ~ sen ~ A thousand
-1500 ~　せんごひゃく ~ sen-gohyaku ~ A thousand and five hundred
-10.000 ~ まん ~ ichiman (man) ~ Ten thousand
-1.000.000 ~　ひゃくまん ~ hyaku-man ~ One million
-10.000.000　~ せんまん ~ sen-man ~ Ten millions
-100.000.000　~ いちおく ~ ichioku ~ Hundred millions
+﻿1 ~ いち ~ ichi ~ one
+2 ~ に ~ ni ~ two
+3 ~ さん ~ san ~ three
+4 ~ よん　（　し　） ~ yon ( shi ) ~ four
+5 ~ ご ~ go ~ five
+6 ~ ろく ~ roku ~ six
+7 ~ なな　（　しち　） ~ nana ( shichi ) ~ seven
+8 ~ はち ~ hachi ~ eight
+9 ~ きゅう ~ kyuu ~ nine
+10 ~ じゅう ~ juu ~ ten
+11 ~ じゅういち ~ juuichi ~ eleven
+12 ~ じゅうに ~ juuni ~ twelve
+13 ~ じゅうさん ~ juusan ~ thirteen
+14 ~ じゅうよん ~ juuyon ~ fourteen
+15 ~ じゅうご ~ juugo ~ fifteen
+16 ~ じゅうろく ~ juuroku ~ sixteen
+17 ~ じゅうなな ~ juunana ~ seventeen
+18 ~ じゅうはち ~ juuhachi ~ eighteen
+19 ~ じゅうきゅう ~ juukyuu ~ nineteen
+20 ~ にじゅう ~ nijuu ~ twenty
+21 ~ にじゅういち ~ nijuuichi ~ twenty one
+22 ~ にじゅうに ~ nijuuni ~ twenty two
+30 ~ さんじゅう ~ sanjuu ~ thirty
+40 ~ よんじゅう ~ yonjuu ~ fourty
+50 ~ ごじゅう ~ gojuu ~ fifty
+60 ~ ろくじゅう ~ rokujuu ~ sixty
+70 ~ ななじゅう ~ nanajuu ~ seventy
+80 ~ はちじゅう ~ hachijuu ~ eighty
+90 ~ きゅうじゅう ~ kyuujuu ~ ninety
+100 ~ ひゃく ~ hyaku ~ hundred
+150 ~ ひゃくごじゅう ~ hyaku-gojuu ~ hundred and fifty
+300 ~　さんびゃく ~ sanbyaku ~ three hundred
+600 ~ ろっぴゃく ~ roppyaku ~ six hundred
+800 ~ はっぴゃく ~ happyaku ~ eight hundred
+1000 ~ せん ~ sen ~ a thousand
+8000 ~ はっせん ~ hassen ~ eight thousand
+1500 ~　せんごひゃく ~ sen-gohyaku ~ a thousand and five hundred
+10.000 ~ まん ~ ichiman (man) ~ ten thousand
+1.000.000 ~　ひゃくまん ~ hyaku-man ~ one million
+10.000.000　~ せんまん ~ sen-man ~ ten millions
+100.000.000　~ いちおく ~ ichioku ~ hundred millions
