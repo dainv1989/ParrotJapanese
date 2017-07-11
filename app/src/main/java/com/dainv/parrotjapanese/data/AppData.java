@@ -62,6 +62,7 @@ public class AppData {
             "ya", "", "yu", "", "yo",
             "ra", "ri", "ru", "re", "ro",
             "wa", "", "", "", "wo",
+            "n"
     };
 
     /**
