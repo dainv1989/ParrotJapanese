@@ -57,6 +57,8 @@
         <item>Hướng dẫn tiếng Nhật của TaeKim</item>
         <item>Youtube</item>
         <item>Học từ vựng với Memrise</item>
+        <item>Lang-8</item>
+        <item>ReadTheKanji</item>
     </string-array>
 
     <string name="res_title">Tài nguyên online</string>
@@ -66,6 +68,8 @@
         <item>Hướng dẫn về tiếng Nhật này được biết đến rất nhiều trên internet. </item>
         <item>Trang web chia sẻ video lớn nhất internet. Bạn có thể tìm thấy rất nhiều thứ thú vị giúp bạn học tiếng Nhật tốt hơn từ audio thi JPNL đến phim hoạt hình tiếng Nhật, bài hát, phim truyện ...</item>
         <item>Trang web học từ vựng được thiết kế giúp bạn nhớ từ một cách hiệu quả. Nó sẽ nhắc bạn những từ nào bạn hay quên sau những khoảng thời gian xác định một cách khoa học. Ngoài tiếng Nhật, trang web này còn có đầy đủ các thứ tiếng khác cho bạn học.</item>
+        <item>Lang-8 là một mạng xã hội về trao đổi ngôn ngữ. Bạn có thể viết câu, đoạn văn, bài báo tiếng Nhật và các thành viên nói tiếng Nhật bản ngữ sẽ sửa cho bạn.</item>
+        <item>ReadTheKanji sẽ đố bạn về từ kanji trong những câu tiếng Nhật thực tế. Bạn sẽ trả lời về cách độc những từ kanji này theo những văn cảnh khác nhau.</item>
     </string-array>
 
     <string-array name="res_site">
@@ -74,6 +78,8 @@
         <item>guidetojapanese.org</item>
         <item>youtube.com</item>
         <item>memrise.com</item>
+        <item>lang-8.com</item>
+        <item>readthekanji.com</item>
     </string-array>
     <string name="res_end">Hãy bình tĩnh và học tiếng Nhật !</string>
 

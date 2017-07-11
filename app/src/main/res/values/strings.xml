@@ -49,6 +49,8 @@
         <item>logo_taekim</item>
         <item>logo_youtube</item>
         <item>logo_memrise</item>
+        <item>logo_youtube</item>
+        <item>logo_youtube</item>
     </string-array>
 
     <string-array name="res_title">
@@ -57,6 +59,8 @@
         <item>Tae Kim\'s Guide To Japanese</item>
         <item>Youtube</item>
         <item>Memrise</item>
+        <item>Lang-8</item>
+        <item>ReadTheKanji</item>
     </string-array>
 
     <string name="res_title">Online resources</string>
@@ -66,6 +70,8 @@
         <item>This guide to Japanese is one of the most well known on the internet. </item>
         <item>Most popular video sharing site. You can find a lot of stuffs here for learning Japanese: music, films, anime, cartoon ...</item>
         <item>Learning vocabulary website. After a specific time, this site will check your memory and it reminds you the forgot words.</item>
+        <item>Lang-8 is a language exchange social network. You can write journal entries in Japanese and a Japanese native speaker will correct them for you.</item>
+        <item>ReadTheKanji quizzes you on kanji inside of actual Japanese sentences. You have to read those kanji in different contexts.</item>
     </string-array>
 
     <string-array name="res_site">
@@ -74,6 +80,8 @@
         <item>guidetojapanese.org</item>
         <item>youtube.com</item>
         <item>memrise.com</item>
+        <item>lang-8.com</item>
+        <item>readthekanji.com</item>
     </string-array>
     <string name="res_end">Keep calm and learn Japanese !</string>
 
