@@ -1,51 +1,125 @@
-﻿おはようございます。 ~ ohayou gozaimasu. ~ Chào! (buổi sáng)
-こんにちは。 ~ konnichiwa. ~ Chào! (buổi chiều)
-こんばんは。 ~ konbanwa. ~ Chào! (buổi tối)
-おやすみなさい。 ~ oyasuminasai. ~ Chúc ngủ ngon!
-おげんきですか。　~ ogenki desuka. ~ Bạn khỏe không?
-どういたしまして。　~ douitashimashite. ~ Không có gì! (nói khi có người khác cảm ơn)
-はじめまして。 ~ hajimemashite ~ Chào bạn. (nói với người lần đầu tiên gặp)
-どうぞよろしくおねがいします。 ~ douzo yoroshiku onegaishimasu. ~ Rất vui được làm quen với bạn.
-すみません。 ~ sumimasen. ~ Xin lỗi! (Excuse me)
-ごめんなさい。 ~ gomennasai. ~ Xin lỗi! (Sorry)
-いくらですか。 ~ ikura desuka. ~ Giá bao nhiêu?
-どういうことですか。 ~ douiu koto desuka. ~ Ý bạn là sao?
-どうしたの。 ~ doushitano. ~ Có chuyện gì vậy?
-なんでもない。 ~ nan demo nai. ~ Không có gì.
-だれでもいない。 ~ dare demo inai. ~ Không có ai cả.
-ちょっとまってください。 ~ chotto matte kudasai. ~ Vui lòng chờ một chút.
-やくそくします。 ~ yakusoku shimasu. ~ Tôi hứa.
-これでいいですか。 ~ kore de ii desuka. ~ Như thế có được không?
-けっこうです。 ~ kekkou desu. ~ Không, cảm ơn bạn.
-いただきます。 ~ itadakimasu ~ Cảm ơn vì bữa ăn (nói trước khi ăn).
-ごちそうさまでした。 ~ gochisousama deshita. ~ Cảm ơn vì bữa ăn (nói sau khi ăn xong).
-ありがとうございます。 ~ arigatou gozaimasu. ~ Cảm ơn bạn rất nhiều.
-ほんとうですか。 ~ hontou desuka. ~ Thật à? Thế á?
-いらっしゃいませ。 ~ irasshaimase. ~ Kính chào quý khách.
-また、どうぞおこしください。 ~ mata douzookoshi kudasai. ~ Bạn luôn được chào đón ở đây.
-じゃ、またね。 ~ ya, matane. ~ Hẹn gặp lại.
-なるほど。 ~ naruhodo ~ Đã hiểu!
-おなかがすいています。 ~ onakaga suite imasu. ~ Tôi đói.
-おなかがいっぱいです。 ~ onakaga ippai desu ~ Tôi no rồi.
-のどがかわいています。 ~ nodo ga kawaite imasu. ~ Tôi thấy khát.
-てんきはどうですか。　~ tenki wa dou desuka. ~ Thời tiết thế nào?
-けっこんしていますか。 ~ kekkon shite imasuka. ~ Bạn đã kết hôn chưa?
-けっこんしています。 ~ kekkon shite imasu. ~ Tôi đã kết hôn.
-どくしんです。 ~ dokushin desu. ~ Tôi đang độc thân.
-きょうだいがいますか。 ~ kyoudai ga imasuka. ~ Bạn có anh chị em gái không?
-こどもがいますか。 ~ kodomo ga imasuka. ~ Bạn có con chưa?
-しんりられない。　~ shinrirarenai ~ Thật không thể tin được.
-どうも。 ~ doumo ~ Cảm ơn. (cách nói ngắn gọn)
-がんばります。 ~ ganbarimasu. ~ Cố lên !
-おつかれさまでした。 ~ otsukaresama deshita. ~ Bạn đã vất vả rồi.
-おひさしぶりです。 ~ ohisashiburi desu. ~ Lâu lắm không gặp. (cách nói lịch sự)
-しばらくですね。 ~ shibaraku desune. ~ Lâu lắm không gặp. (nói thông thường)
-ただいま ~ tada ima. ~ Tôi đang ở nhà.
-おかえり ~ okaeri ~ Chào mừng bạn trở lại.
-いよいよぼくのほんばんだ。 ~ iyoiyo boku no honban da. ~ Cuối cùng thì cũng tới lượt tôi.
-かんけいないでしょう。 ~ kankeinai deshou. ~ Chả liên quan.
-おじゃまします。 ~ ojama shimasu. ~ Xin lỗi vì làm phiền bạn (nói khi vào nhà ai đó)
-おじゃましました。 ~ ojama shimashita. ~ Xin lỗi đã phiền bạn (nói khi ra về)
-おまったせいたしました。 ~ omattaseita shimashita. ~ Xin lỗi đã bắt bạn phải chờ.
-そのとおりです。 ~ sono toori desu. ~ Đúng thế; Đúng vậy
-どうしょうかな。 ~ doushoukana ~ Tôi nên làm gì nhỉ?
+﻿#
+# greeting and basic communication
+おはようございます。 ~ ohayou gozaimasu. ~ chào buổi sáng.
+こんにちは。 ~ konnichiwa. ~ chào buổi chiều.
+こんばんは。 ~ konbanwa. ~ chào buổi tối.
+おやすみなさい。 ~ oyasuminasai. ~ chúc ngủ ngon.
+おげんきですか。　~ ogenki desuka. ~ bạn khỏe không.
+どういたしまして。　~ douitashimashite. ~ không có gì (nói khi có người khác cảm ơn)
+はじめまして。 ~ hajimemashite. ~ rất vui được làm quen với bạn. (lần đầu gặp)
+どうぞよろしくおねがいします。 ~ douzo yoroshiku onegaishimasu. ~ rất mong nhận được sự giúp đỡ. (nói sau khi giới thiệu bản thân)
+また、どうぞこしください。 ~ mata douzokoshi kudasai. ~ bạn luôn được chào đón ở đây.
+おひさしぶりです。 ~ ohisashiburi desu. ~ lâu rồi không gặp. (cách nói lịch sự)
+しばらくですね。 ~ shibaraku desune. ~ lâu rồi không gặp. (cách nói thông thường)
+じゃ、またね。 ~ ja, matane. ~ hẹn gặp lại.
+またあした。 ~ mata ashita. ~ hẹn gặp lại ngày mai.
+さよなら。 ~ sayonara. ~ tạm biệt.
+おめでとう。 ~ omedetou. ~ chúc mừng.
+たんじょうびおめでとう。 ~ tanjoubi omedetou. ~ chúc mừng sinh nhật.
+あけましておめでとう。 ~ akemashite omedetou. ~ chúc mừng năm mới.
+けっこんおめでとう。 ~ kekkon omedetou. ~ chúc mừng đám cười.
+ぐあいはいかがですか。 ~ guai wa ikaga desuka. ~ bạn đang cảm thấy thế nào?
+かぜはどうですか。 ~ kaze wa dou desuka. ~ bạn bị cảm thế nào rồi?
+おかげさまでよくなりました。 ~ okagesamade yoku narimashita. ~ mình ổn hơn rồi.
+はい。 ~ hai. ~ vâng, đúng.
+いいえ。 ~ iie. ~ không.
+すみません。 ~ sumimasen. ~ xin lỗi! (excuse me)
+ごめんなさい。 ~ gomennasai. ~ xin lỗi! (sorry)
+ありがとうございます。 ~ arigatou gozaimasu. ~ cảm ơn bạn rất nhiều.
+どうも。 ~ doumo. ~ cảm ơn. (cách nói ngắn gọn)
+
+# as for language communication
+にほんごをはなしますか。 ~ nihongo wo hanashimasu ka. ~ bạn có nói được tiếng nhật không?
+はい、すこし。 ~ hai, sukoshi. ~ có, một chút. (trả lời cho câu hỏi trên)
+まだまだです。 ~ mada mada desu. ~ tôi vẫn còn kém lắm.
+わかりますか。 ~ wakarimasuka. ~ bạn có hiểu không?
+わかりません。 ~ wakarimasen. ~ tôi không hiểu.
+しりません。 ~ shirimasen. ~ tôi không biết.
+よくわかりません。 ~ yoku wakarimasen. ~ tôi không chắc lắm.
+にほんごでなんといいますか。 ~ nihongo de nanto ii masuka. ~ từ/câu/cái này tiếng nhật nói như thế nào?
+どういういみですか。 ~ douiu imi desu ka. ~ nó có nghĩa là gì?
+どういうことですか。 ~ douiu koto desuka. ~ ý của bạn là sao?
+これはなんですか。 ~ kore wa nan desuka. ~ cái gì đây?
+ゆっくりはなしてください。 ~ yukkuri hanashite kudasai. ~ xin vui lòng nói chậm lại.
+もういちどいってください。 ~ mou ichido itte kudasai. ~ xin vui lòng nhắc lại lần nữa.
+いいえ、けっこうです。 ~ iie, kekkou desu. ~ không, cảm ơn bạn.
+だいじょうぶです。 ~ daijoubu desu. ~ không vấn đề gì.
+ちょっとまってください。 ~ chotto matte kudasai. ~ xin vui lòng chờ một chút.
+ほんとうですか。 ~ hontou desuka. ~ thật à? thế á?
+
+# ask about time
+なんじですか。 ~ nan-ji desuka. ~ mấy giờ rồi?
+ごぜんくじです。 ~ gozen ku-ji desu. ~ 9 giờ sáng.
+ごごさんじはんです。 ~ gogo san-ji han desu. ~ 3 rưỡi chiều.
+きょうはなんようびですか。 ~ kyou wa nan youbi desuka. ~ hôm nay là thứ mấy?
+きょうはなんにちですか。 ~ kyou wa nan nichi desuka. ~ hôm nay là ngày bao nhiêu?
+
+# on the phone
+もしもし。 ~ moshi moshi. ~ alo. (khi gọi điện thoại)
+どなたですか。 ~ donata desu ka. ~ ai đang gọi thế nhỉ?
+またあとででんわします。 ~ mata atode denwa shimasu. ~ tôi sẽ gọi lại sau.
+でんわばんごうはなんばんですか。 ~ denwabangou wa nan ban desu ka. ~ số điện thoại của bạn là gì?
+まちがえました。 ~ machigaemashita. ~ tôi gọi nhầm số.
+はなしちゅうです。 ~ hanashi-chuu desu. ~ số máy bận.
+
+# at a restaurant
+いらっしゃいませ。 ~ irasshaimase. ~ kính chào quí khách.
+いただきます。 ~ itadakimasu. ~ cảm ơn vì bữa ăn. (nói trước khi ăn)
+ごちそうさまでした。 ~ gochisousama deshita. ~ cảm ơn vì bữa ăn. (nói sáu khi ăn)
+おなかがすいています。 ~ onaka ga suite imasu. ~ tôi đang đói.
+おなかがいっぱいです。 ~ onaka ga ippai desu. ~ tôi no rồi.
+のどがかわいています。 ~ nodo ga kawaite imasu. ~ tôi đang khát.
+おちゃをください。 ~ ocha wo kudasai. ~ vui lòng cho tôi cốc trà.
+いくらですか。 ~ ikura desuka. ~ giá bao nhiêu tiền?
+どうぞ。 ~ douzo. ~ xin mời, của bạn đây.
+
+# about weather
+てんきはどうですか。　~ tenki wa dou desuka. ~ thời tiết thế nào?
+よいてんきです。 ~ yoi tenki desu. ~ thời tiết rất đẹp.
+はれています。 ~ harete imasu. ~ trời đang nắng.
+くもっています。 ~ kumotte imasu. ~ trời nhiều mây.
+あめがふっています。 ~ ame ga futte imasu. ~ trời đang mưa.
+ゆきがふっています。 ~ yuki ga futte imasu. ~ đang có tuyết rơi.
+あついです。 ~ atsui desu. ~ trời nóng.
+さむいです。 ~ samui desu. ~ trời lạnh.
+あたたかいです。 ~ atatakai desu. ~ trời ấm.
+すずしいです。 ~ suzushii desu. ~ trời mát mẻ.
+かぜがつよいです。 ~ kaze ga tsuyoi desu. ~ trời đang có gió mạnh.
+
+# personal information
+けっこんしていますか。 ~ kekkon shite imasuka. ~ bạn đã kết hôn chưa?
+けっこんしています。 ~ kekkon shite imasu. ~ tôi đã kết hôn.
+どくしんです。 ~ dokushin desu. ~ tôi đang độc thân.
+きょうだいがいますか。 ~ kyoudai ga imasuka. ~ bạn có anh chị em không?
+こどもがいますか。 ~ kodomo ga imasuka. ~ bạn có con chưa?
+おしごとはなんですか。 ~ oshigoto wa nan desuka. ~ công việc của bạn là gì?
+スポーツがすきですか。 ~ supootsu ga suki desuka. ~ bạn có thích chơi thể thao không?
+テニスをしますか。 ~ tenisu wo shimasuka. ~ bạn có chơi quần vợt không?
+
+# taxi
+東京ホテルはどこですか。 ~ tokyo hoteru wa doko desuka. ~ khách sạn tokyo ở đâu nhỉ?
+ここからとおいですか。 ~ koko kara tooi desuka. ~ chỗ đó có xa đây không.
+まっすぐいってください。 ~ massugu itte kudasai. ~ vui lòng đi thẳng.
+みぎにまがってください。 ~ migi ni magatte kudasai. ~ vui lòng rẽ phải.
+ひだりにまがってください。 ~ hidari ni magatte kudasai. ~ vui lòng rẽ trái.
+
+# others
+どうしたの。 ~ doushitano. ~ có chuyện gì vậy?
+なんでもない。 ~ nan demo nai. ~ không có gì cả.
+だれでもいない。 ~ dare demo inai. ~ không có ai.
+やくそくします。 ~ yakusoku shimasu. ~ tôi hứa.
+これでいいですか。 ~ kore de ii desuka. ~ như thế có được không?
+なるほど。 ~ naruhodo. ~ thì ra là vậy!
+しんじられない。 ~ shinjirarenai. ~ thật không thể tin nổi.
+がんばります。 ~ ganbarimasu. ~ cố lên!
+おつかれさまでした。 ~ otsukaresama deshita. ~ bạn đã vất vả rồi.
+いってきます。 ~ itte kimasu. ~ tôi đi rồi về ngay.
+いってらっしゃい。 ~ itte rasshai. ~ bước chân cẩn thận.
+ただいま ~ tada ima. ~ tôi đang ở nhà.
+おかえり ~ okaeri. ~ chào mừng bạn đã trở lại.
+かんけいないでしょう。 ~ kankei nai deshou. ~ chả liên quan.
+おじゃまします。 ~ ojama shimasu. ~ xin lỗi đã phiền bạn. (nói khi vào nhà ai đó)
+おじゃましました。 ~ ojama shimashita. ~ xin lỗi đã phiền bạn. (nói khi ra về)
+おまったせいたしました。 ~ omattase itashimashita. ~ xin lỗi đã bắt bạn phải chờ.
+そのとおりです。 ~ sono toori desu. ~ đúng thế, đúng vậy.
+どうしようかな。 ~ doushiyoukana. ~ tôi nên làm gì nhỉ?

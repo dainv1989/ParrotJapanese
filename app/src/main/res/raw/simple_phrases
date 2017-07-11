@@ -1,51 +1,125 @@
-﻿おはようございます。 ~ ohayou gozaimasu. ~ Good morning!
-こんにちは。 ~ konnichiwa. ~ Good afternoon!
-こんばんは。 ~ konbanwa. ~ Good evening!
-おやすみなさい。 ~ oyasuminasai. ~ Good night!
-おげんきですか。　~ ogenki desuka. ~ How are you?
-どういたしまして。　~ douitashimashite. ~ You are welcome!
-はじめまして。 ~ hajimemashite ~ How do you do.
-どうぞよろしくおねがいします。 ~ douzo yoroshiku onegaishimasu. ~ Pleased to meet you.
-すみません。 ~ sumimasen. ~ Excuse me!
-ごめんなさい。 ~ gomennasai. ~ Sorry!
-いくらですか。 ~ ikura desuka. ~ How much is it?
-どういうことですか。 ~ douiu koto desuka. ~ What do you mean?
-どうしたの。 ~ doushitano. ~ What's the matter?
-なんでもない。 ~ nan demo nai. ~ Nothing.
-だれでもいない。 ~ dare demo inai. ~ Nobody.
-ちょっとまってください。 ~ chotto matte kudasai. ~ Please wait a minute.
-やくそくします。 ~ yakusoku shimasu. ~ That's deal; Promise
-これでいいですか。 ~ kore de ii desuka. ~ Is that OK?
-けっこうです。 ~ kekkou desu. ~ No, thank you.
-いただきます。 ~ itadakimasu ~ Thanks for the meal (say before eating).
-ごちそうさまでした。 ~ gochisousama deshita. ~ Thanks for the meal (say after eating).
-ありがとうございます。 ~ arigatou gozaimasu. ~ Thank you very much.
-ほんとうですか。 ~ hontou desuka. ~ Really?
-いらっしゃいませ。 ~ irasshaimase. ~ Welcome here.
-また、どうぞおこしください。 ~ mata douzookoshi kudasai. ~ You're always welcome here.
-じゃ、またね。 ~ ya, matane. ~ See you later.
-なるほど。 ~ naruhodo ~ I see!
-おなかがすいています。 ~ onakaga suite imasu. ~ I am hungry.
-おなかがいっぱいです。 ~ onakaga ippai desu ~ I am full.
-のどがかわいています。 ~ nodo ga kawaite imasu. ~ I am thirsty.
-てんきはどうですか。　~ tenki wa dou desuka. ~ How is the weather?
-けっこんしていますか。 ~ kekkon shite imasuka. ~ Are you married?
-けっこんしています。 ~ kekkon shite imasu. ~ I am married.
-どくしんです。 ~ dokushin desu. ~ I am single.
-きょうだいがいますか。 ~ kyoudai ga imasuka. ~ Do you have brothers or sisters?
-こどもがいますか。 ~ kodomo ga imasuka. ~ Do you have children?
-しんりられない。　~ shinrirarenai ~ It's unbelievable.
-どうも。 ~ doumo ~ Thank you. (shorten)
-がんばります。 ~ ganbarimasu. ~ Do one's best
-おつかれさまでした。 ~ otsukaresama deshita. ~ You worked hard.
-おひさしぶりです。 ~ ohisashiburi desu. ~ I haven't seen for a long time. (formal)
-しばらくですね。 ~ shibaraku desune. ~ I haven't seen for a long time. (informal)
-ただいま ~ tada ima. ~ I am home.
-おかえり ~ okaeri ~ Welcome back.
-いよいよぼくのほんばんだ。 ~ iyoiyo boku no honban da. ~ Finally, it's my turn (male).
-かんけいないでしょう。 ~ kankeinai deshou. ~ None of your business.
-おじゃまします。 ~ ojama shimasu. ~ Sorry for disturbing you (arrive somebody's home)
-おじゃましました。 ~ ojama shimashita. ~ Sorry for disturbing you (leave somebody's home)
-おまったせいたしました。 ~ omattaseita shimashita. ~ Sorry to keep you waiting.
-そのとおりです。 ~ sono toori desu. ~ You're right.
-どうしょうかな。 ~ doushoukana ~ What should I do?
+﻿#
+# greeting and basic communication
+おはようございます。 ~ ohayou gozaimasu. ~ good morning!
+こんにちは。 ~ konnichiwa. ~ good afternoon!
+こんばんは。 ~ konbanwa. ~ good evening!
+おやすみなさい。 ~ oyasuminasai. ~ good night!
+おげんきですか。　~ ogenki desuka. ~ how are you?
+どういたしまして。　~ douitashimashite. ~ you are welcome!
+はじめまして。 ~ hajimemashite. ~ nice to meet you (for 1st time meeting).
+どうぞよろしくおねがいします。 ~ douzo yoroshiku onegaishimasu. ~ pleased to meet you.
+また、どうぞこしください。 ~ mata douzokoshi kudasai. ~ you're always welcome here.
+おひさしぶりです。 ~ ohisashiburi desu. ~ i haven't seen for a long time. (formal)
+しばらくですね。 ~ shibaraku desune. ~ i haven't seen for a long time. (informal)
+じゃ、またね。 ~ ja, matane. ~ see you later.
+またあした。 ~ mata ashita. ~ see you tomorrow.
+さよなら。 ~ sayonara. ~ goodbye.
+おめでとう。 ~ omedetou. ~ congratulations.
+たんじょうびおめでとう。 ~ tanjoubi omedetou. ~ happy birthday.
+あけましておめでとう。 ~ akemashite omedetou. ~ happy new year.
+けっこんおめでとう。 ~ kekkon omedetou. ~ congrats on your marriage.
+ぐあいはいかがですか。 ~ guai wa ikaga desuka. ~ how are you feeling?
+かぜはどうですか。 ~ kaze wa dou desuka. ~ how is your cold?
+おかげさまでよくなりました。 ~ okagesamade yoku narimashita. ~ i have gotten better.
+はい。 ~ hai. ~ yes.
+いいえ。 ~ iie. ~ no.
+すみません。 ~ sumimasen. ~ excuse me!
+ごめんなさい。 ~ gomennasai. ~ sorry!
+ありがとうございます。 ~ arigatou gozaimasu. ~ thank you very much.
+どうも。 ~ doumo. ~ thank you. (shorten)
+どうぞ。 ~ douzo. ~ here you go.
+
+# as for language communication
+にほんごをはなしますか。 ~ nihongo wo hanashimasu ka. ~ do you speak japanese?
+はい、すこし。 ~ hai, sukoshi. ~ yes, little. (answer for above question)
+まだまだです。 ~ mada mada desu. ~ i'm not good yet.
+わかりますか。 ~ wakarimasuka. ~ do you understand?
+わかりません。 ~ wakarimasen. ~ i don't understand.
+しりません。 ~ shirimasen. ~ i don't know.
+よくわかりません。 ~ yoku wakarimasen. ~ i'm not sure.
+にほんごでなんといいますか。 ~ nihongo de nanto ii masuka. ~ how to say it in japanese?
+どういういみですか。 ~ douiu imi desu ka. ~ what does it mean?
+どういうことですか。 ~ douiu koto desuka. ~ what do you mean?
+これはなんですか。 ~ kore wa nan desuka. ~ what is it?
+ゆっくりはなしてください。 ~ yukkuri hanashite kudasai. ~ please speak slowly.
+もういちどいってください。 ~ mou ichido itte kudasai. ~ please say it again.
+いいえ、けっこうです。 ~ iie, kekkou desu. ~ no, thank you.
+だいじょうぶです。 ~ daijoubu desu. ~ it is all right.
+ちょっとまってください。 ~ chotto matte kudasai. ~ please wait a minute.
+ほんとうですか。 ~ hontou desuka. ~ is it true?
+
+# ask about time
+なんじですか。 ~ nan-ji desuka. ~ what time is it?
+ごぜんくじです。 ~ gozen ku-ji desu. ~ it's 9 a.m
+ごごさんじはんです。 ~ gogo san-ji han desu. ~ it's 3h30 p.m
+きょうはなんようびですか。 ~ kyou wa nan youbi desuka. ~ what day is today? (day of week)
+きょうはなんにちですか。 ~ kyou wa nan nichi desuka. ~ what day is it today? (day of month)
+
+# on the phone
+もしもし。 ~ moshi moshi. ~ hello. (on the phone)
+どなたですか。 ~ donata desu ka. ~ who is calling?, who are you?
+またあとででんわします。 ~ mata atode denwa shimasu. ~ i will call you later.
+でんわばんごうはなんばんですか。 ~ denwabangou wa nan ban desu ka. ~ what is your phone number?
+まちがえました。 ~ machigaemashita. ~ i got the wrong number.
+はなしちゅうです。 ~ hanashi-chuu desu. ~ the line is busy.
+
+# at a restaurant
+いらっしゃいませ。 ~ irasshaimase. ~ welcome to our store.
+いただきます。 ~ itadakimasu. ~ thanks for the meal. (say before eating)
+ごちそうさまでした。 ~ gochisousama deshita. ~ thanks for the meal. (say after eating)
+おなかがすいています。 ~ onaka ga suite imasu. ~ i am hungry.
+おなかがいっぱいです。 ~ onaka ga ippai desu. ~ i am full.
+のどがかわいています。 ~ nodo ga kawaite imasu. ~ i am thirsty.
+おちゃをください。 ~ ocha wo kudasai. ~ please give me a cup of tea.
+いくらですか。 ~ ikura desuka. ~ how much is it?
+
+# about weather
+てんきはどうですか。　~ tenki wa dou desuka. ~ how is the weather?
+よいてんきです。 ~ yoi tenki desu. ~ the weather is nice.
+はれています。 ~ harete imasu. ~ it's sunny.
+くもっています。 ~ kumotte imasu. ~ it's cloudy.
+あめがふっています。 ~ ame ga futte imasu. ~ it's raining.
+ゆきがふっています。 ~ yuki ga futte imasu. ~ it's snowing.
+あついです。 ~ atsui desu. ~ it's hot.
+さむいです。 ~ samui desu. ~ it's cold.
+あたたかいです。 ~ atatakai desu. ~ it's warm.
+すずしいです。 ~ suzushii desu. ~ it's cool.
+かぜがつよいです。 ~ kaze ga tsuyoi desu. ~ it's strong wind.
+
+# personal information
+けっこんしていますか。 ~ kekkon shite imasuka. ~ are you married?
+けっこんしています。 ~ kekkon shite imasu. ~ i am married.
+どくしんです。 ~ dokushin desu. ~ i am single.
+きょうだいがいますか。 ~ kyoudai ga imasuka. ~ do you have brothers or sisters?
+こどもがいますか。 ~ kodomo ga imasuka. ~ do you have children?
+おしごとはなんですか。 ~ oshigoto wa nan desuka. ~ what is your job?
+スポーツがすきですか。 ~ supootsu ga suki desuka. ~ do you like sports?
+テニスをしますか。 ~ tenisu wo shimasuka. ~ do you play tennis?
+
+# taxi
+東京ホテルはどこですか。 ~ tokyo hoteru wa doko desuka. ~ where is tokyo hotel?
+ここからとおいですか。 ~ koko kara tooi desuka. ~ is it far from here.
+まっすぐいってください。 ~ massugu itte kudasai. ~ please go ahead.
+みぎにまがってください。 ~ migi ni magatte kudasai. ~ please turn right.
+ひだりにまがってください。 ~ hidari ni magatte kudasai. ~ please turn left.
+
+# others
+どうしたの。 ~ doushitano. ~ what's wrong?
+なんでもない。 ~ nan demo nai. ~ nothing!
+だれでもいない。 ~ dare demo inai. ~ there is nobody.
+やくそくします。 ~ yakusoku shimasu. ~ that's deal.
+これでいいですか。 ~ kore de ii desuka. ~ is that ok?
+なるほど。 ~ naruhodo. ~ i see!
+しんじられない。 ~ shinjirarenai. ~ it's unbelievable.
+がんばります。 ~ ganbarimasu. ~ do one's best.
+おつかれさまでした。 ~ otsukaresama deshita. ~ thanks for your hard work.
+いってきます。 ~ itte kimasu. ~ i will go and come back.
+いってらっしゃい。 ~ itte rasshai. ~ watch your step.
+ただいま ~ tada ima. ~ i am home.
+おかえり ~ okaeri. ~ welcome back.
+かんけいないでしょう。 ~ kankei nai deshou. ~ none of your business.
+おじゃまします。 ~ ojama shimasu. ~ sorry for disturbing you. (arrive somebody's home)
+おじゃましました。 ~ ojama shimashita. ~ sorry for disturbing you. (leave somebody's home)
+おまったせいたしました。 ~ omattase itashimashita. ~ sorry to keep you waiting.
+そのとおりです。 ~ sono toori desu. ~ you're right.
+どうしようかな。 ~ doushiyoukana. ~ what should i do?
