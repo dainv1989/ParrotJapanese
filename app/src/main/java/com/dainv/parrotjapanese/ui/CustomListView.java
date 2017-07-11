@@ -33,11 +33,11 @@ public class CustomListView extends LinearLayout {
 
     public void setItemList(ListItem item) {
         Resources res = mContext.getResources();
-        int photoResId = res.getIdentifier(item.photoRes, "drawable", mContext.getPackageName());
+        int photoResId = res.getIdentifier(item.photoRes, "mipmap", mContext.getPackageName());
         if (photoResId > 0) {
             this.photo.setImageResource(photoResId);
         } else {
-            this.photo.setImageResource(R.drawable.animal_icon);
+            this.photo.setImageResource(R.mipmap.animal_icon);
         }
         this.title.setText(item.title);
         this.desc.setText(item.desc);

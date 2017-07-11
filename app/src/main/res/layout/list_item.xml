@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:padding="5dp"
         android:id="@+id/itemPhoto"
-        android:src="@drawable/animal_icon"/>
+        android:src="@mipmap/animal_icon"/>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="4"
