@@ -2,7 +2,7 @@ package com.dainv.parrotjapanese.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,7 +34,8 @@ public class MainViewButton extends LinearLayout {
     
     public void setItem(ListItem item) {
         Resources res = context.getResources();
-        int photoId = res.getIdentifier(item.photoRes, "drawable", context.getPackageName());
+        int photoId = res.getIdentifier(item.photoRes, "mipmap", context.getPackageName());
+        Log.v("mainviewbutton", "photo " + item.photoRes.toString() + " id = " + photoId);
         this.thumb.setImageResource(photoId);
         this.label.setText(item.title);
     }

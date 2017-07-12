@@ -1,6 +1,5 @@
 package com.dainv.parrotjapanese;
 
-import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -11,7 +10,6 @@ import android.widget.ListView;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
 import com.dainv.parrotjapanese.data.ListLearnItem;
-import com.dainv.parrotjapanese.ui.ListLearnView;
 import com.dainv.parrotjapanese.util.TextLoader;
 
 import java.util.ArrayList;

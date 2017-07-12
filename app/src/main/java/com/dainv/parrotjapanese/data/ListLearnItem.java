@@ -1,8 +1,6 @@
 package com.dainv.parrotjapanese.data;
 
-import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 
 /**
  * Created by dainv on 10/29/2015.

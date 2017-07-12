@@ -3,14 +3,10 @@ package com.dainv.parrotjapanese.adapter;
 import android.content.Context;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
-import android.opengl.Visibility;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 
-import com.dainv.parrotjapanese.R;
 import com.dainv.parrotjapanese.data.ListLearnItem;
 import com.dainv.parrotjapanese.ui.ListLearnView;
 

@@ -1,15 +1,13 @@
 package com.dainv.parrotjapanese.ui;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.transition.Visibility;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dainv.parrotjapanese.data.ListLearnItem;
 import com.dainv.parrotjapanese.R;
+import com.dainv.parrotjapanese.data.ListLearnItem;
 
 /**
  * Created by dainv on 10/29/2015.

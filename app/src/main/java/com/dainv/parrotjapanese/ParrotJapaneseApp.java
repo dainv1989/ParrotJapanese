@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.Constant;

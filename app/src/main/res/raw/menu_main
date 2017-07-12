@@ -1,9 +1,9 @@
 ﻿introduction ~ null ~ null ~ intro
 hiragana ~ null ~ null ~ hiragana
 katakana ~ null ~ null ~ katakana
-essential vocabulary ~ null ~ menu_vocabulary ~ vocabulary_icon
-basic grammar ~ null ~ grammar_videos ~ grammar_icon
-count numbers ~ null ~ menu_counter ~ counter_icon
-simple phrases ~ null ~ null ~ phrases_icon
-exercise ~ null ~ null ~ exercise_icon
-resources ~ null ~ null ~ resources_icon
+vocabulary ~ null ~ menu_vocabulary ~ dictionary
+grammar ~ null ~ grammar_videos ~ grammar
+counting ~ null ~ menu_counter ~ numbers
+phrases ~ null ~ null ~ conversation
+exercise ~ null ~ null ~ brain
+resources ~ null ~ null ~ resource

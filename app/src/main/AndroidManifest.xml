@@ -15,7 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,66 +26,79 @@
         <activity
             android:name=".HiraActivity"
             android:label="@string/str_btnHiragana"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".KataActivity"
             android:label="@string/str_btnKatakana"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".VocabularyActivity"
             android:label="@string/str_btnVocabulary"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".CountingActivity"
             android:label="@string/str_btnCount"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".CountItemActivity"
             android:label="@string/str_btnCount"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".CountFragmentActivity"
             android:label="@string/str_btnCount"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".VocabItemActivity"
             android:label="@string/str_btnVocabulary"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".PhraseActivity"
             android:label="@string/str_btnPhrase"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".GrammarActivity"
             android:label="@string/str_btnGrammar"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".StrategyActivity"
             android:label="@string/str_btnStrategy"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".ResourceActivity"
             android:label="@string/str_btnResource"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".ExerciseActivity"
             android:label="@string/str_btnExercise"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
             android:configChanges="layoutDirection|locale">
         </activity>
 

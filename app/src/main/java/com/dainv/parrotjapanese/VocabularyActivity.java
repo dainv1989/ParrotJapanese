@@ -2,13 +2,10 @@ package com.dainv.parrotjapanese;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -16,10 +13,7 @@ import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.CustomListAdapter;
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.ListItem;
 import com.dainv.parrotjapanese.util.TextLoader;
-
-import java.util.ArrayList;
 
 public class VocabularyActivity extends AppCompatActivity {
     private final String TAG = "VocabularyActivity";

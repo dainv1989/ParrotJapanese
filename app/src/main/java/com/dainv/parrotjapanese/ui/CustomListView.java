@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dainv.parrotjapanese.data.ListItem;
 import com.dainv.parrotjapanese.R;
+import com.dainv.parrotjapanese.data.ListItem;
 
 /**
  * Created by dainv on 10/28/2015.

@@ -18,7 +18,7 @@ public class ListItem {
         this.desc = desc;
         this.photoRes = photo;
         this.dataRes = dataFile;
-        this.learnItems = new ArrayList<ListLearnItem>();
+        this.learnItems = new ArrayList<>();
     }
 
     public ListItem() {
@@ -26,6 +26,6 @@ public class ListItem {
         this.desc = "";
         this.photoRes = "";
         this.dataRes = "";
-        this.learnItems = new ArrayList<ListLearnItem>();
+        this.learnItems = new ArrayList<>();
     }
 }

@@ -1,14 +1,12 @@
 package com.dainv.parrotjapanese;
 
 import android.content.res.Resources;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class ResourceActivity extends AppCompatActivity {
     private String[] resLogo;

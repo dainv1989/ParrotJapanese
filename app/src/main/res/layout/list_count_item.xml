@@ -12,7 +12,6 @@
         android:padding="10dp"
         android:layout_centerVertical="true"
         android:text="10.000.000"
-        android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:background="@color/green_bkg"/>
     <LinearLayout

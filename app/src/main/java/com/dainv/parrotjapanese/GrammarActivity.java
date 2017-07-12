@@ -11,7 +11,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.ListVideoAdapter;
-import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.Constant;
 import com.dainv.parrotjapanese.data.ListLearnItem;
 import com.dainv.parrotjapanese.data.VideoEntry;

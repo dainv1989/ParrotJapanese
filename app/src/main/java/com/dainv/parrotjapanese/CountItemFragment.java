@@ -4,9 +4,7 @@ package com.dainv.parrotjapanese;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +14,7 @@ import android.widget.ListView;
 import com.dainv.parrotjapanese.adapter.CountItemAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.ListItem;
-import com.dainv.parrotjapanese.data.ListLearnItem;
 import com.dainv.parrotjapanese.util.TextLoader;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.

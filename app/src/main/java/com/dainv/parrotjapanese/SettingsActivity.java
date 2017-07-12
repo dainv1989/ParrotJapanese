@@ -2,15 +2,8 @@ package com.dainv.parrotjapanese;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-
-import com.dainv.parrotjapanese.data.Constant;
 
 public class SettingsActivity extends AppCompatActivity {
     private final static String TAG = "SettingsActivity";
