@@ -15,7 +15,7 @@
    id="svg22"
    sodipodi:docname="katakana.svg"
    inkscape:version="0.92.1 r15371"
-   inkscape:export-filename="D:\tmp\parrot\images\katakana.png"
+   inkscape:export-filename="E:\Github\ParrotJapanese\images\katakana.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <metadata
@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,13 +41,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="838"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
      id="namedview24"
      showgrid="false"
-     inkscape:pagecheckerboard="true"
+     inkscape:pagecheckerboard="false"
      inkscape:zoom="0.65186406"
-     inkscape:cx="260.03704"
+     inkscape:cx="-1.5205614"
      inkscape:cy="233.75278"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -55,7 +55,7 @@
      inkscape:current-layer="svg22" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.33331299px;line-height:1.25;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#3c81b2;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.33331299px;line-height:1.25;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#3c54b2;fill-opacity:1;stroke:none;"
      x="6.0000095"
      y="453.91666"
      id="text4489"
@@ -65,5 +65,5 @@
        id="tspan4487"
        x="6.0000095"
        y="453.91666"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.33331299px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';fill:#3c81b2;fill-opacity:1;">カ</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.33331299px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';fill:#3c54b2;fill-opacity:1;">カ</tspan></text>
 </svg>

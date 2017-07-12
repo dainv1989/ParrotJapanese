@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="title_color">#0d56ac</color>
+    <color name="title_color">#2c3e50</color>
     <color name="desc_color">#112c08</color>
     <color name="green_bkg">#3c81b2</color>
     <color name="heading_color">#F48A00</color>
@@ -13,5 +13,5 @@
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
-    <color name="divider">#3c81b2</color>
+    <color name="divider">#3c5cb2</color>
 </resources>
