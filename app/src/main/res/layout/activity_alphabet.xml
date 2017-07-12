@@ -9,10 +9,11 @@
         android:id="@+id/txtChartTitle"
         android:layout_width="match_parent"
         android:layout_height="36dp"
-        android:text="hiragana"
-        android:textAllCaps="true"
         android:gravity="center"
-        android:textColor="@color/primary_text" />
+        android:text="hiragana"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/title_color" />
 
     <View
         android:layout_width="match_parent"
