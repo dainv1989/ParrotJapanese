@@ -38,7 +38,7 @@
         android:layout_below="@id/groupAppName"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#3c81b2"/>
+        android:background="@color/divider"/>
 
     <LinearLayout
         android:id="@+id/mainBottomNav"

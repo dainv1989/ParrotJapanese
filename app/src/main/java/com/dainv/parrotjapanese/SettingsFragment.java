@@ -42,7 +42,6 @@ public class SettingsFragment extends PreferenceFragment implements
          */
         SettingsActivity parent = (SettingsActivity)getActivity();
         String title = getResources().getString(R.string.title_activity_settings);
-        parent.setActionbarTitle(title);
 
         /**
          * set summary for preferences

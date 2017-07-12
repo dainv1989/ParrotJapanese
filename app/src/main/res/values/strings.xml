@@ -17,6 +17,8 @@
     <string name="action_rate_app">Rate this app</string>
     <string name="action_about">About</string>
 
+    <string name="share_content">Great app for Japanese beginers: </string>
+
     <!-- content to be displayed at strategy screen -->
     <string name="st_title">Keep calm and learn japanese !</string>
     <string name="app_desc">Parrot Japanese application is designed for the beginners and the speaking-oriented Japanese learners or who need to be familiar with Japanese in a very short time. It is useful to use this app as a small dictionary. For the beginners, following guidance to help using this app effectively:</string>

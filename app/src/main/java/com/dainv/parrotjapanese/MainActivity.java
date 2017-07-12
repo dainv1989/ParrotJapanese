@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import com.dainv.parrotjapanese.adapter.ImageAdapter;
 import com.dainv.parrotjapanese.data.AppData;
@@ -28,10 +29,15 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 
 public class MainActivity extends AppCompatActivity {
     private final static String TAG = "MainActivity";
-    private GridView gridView;
+
     private SharedPreferences settings;
     private static String language;
-    private Menu menu;
+
+    private GridView gridView;
+    private ImageView btnSetting;
+    private ImageView btnVote;
+    private ImageView btnShare;
+    private ImageView btnInfo;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,15 +52,20 @@ public class MainActivity extends AppCompatActivity {
             loader.loadMenuFile(R.raw.menu_main, "~", AppData.buttons);
         }
 
-        gridView = (GridView)findViewById(R.id.gridView);
+        gridView    = (GridView)findViewById(R.id.gridView);
+        btnSetting  = (ImageView)findViewById(R.id.imgSetting);
+        btnVote     = (ImageView)findViewById(R.id.imgVote);
+        btnShare    = (ImageView)findViewById(R.id.imgShare);
+        btnInfo     = (ImageView)findViewById(R.id.imgInfo);
+
         ImageAdapter adapter = new ImageAdapter(this, gridView.getId(), AppData.buttons);
         gridView.setAdapter(adapter);
 
         final Activity main = this;
+        final Context context = this;
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Context context = getApplicationContext();
             switch (position) {
                 // Learning strategy
                 case 0:
@@ -108,15 +119,66 @@ public class MainActivity extends AppCompatActivity {
                     Intent itResource = new Intent(context, ResourceActivity.class);
                     startActivity(itResource);
                     break;
-                /* About
-                case 9:
-                    DialogFragment dlgAbout = new AboutDialog();
-                    dlgAbout.show(getFragmentManager(), "About");
-                    break; */
                 default:
                     // do nothing
                     break;
             }
+            }
+        });
+
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnVote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * open Google Play market to rate app
+                 * or start web browser if Google Play app is not available
+                 */
+                Uri uri = Uri.parse("market://details?id=" +
+                        getApplicationContext().getPackageName());
+                Intent itGotoMarket = new Intent(Intent.ACTION_VIEW, uri);
+                try {
+                    startActivity(itGotoMarket);
+                }
+                catch (ActivityNotFoundException e) {
+                    Uri webUri = Uri.parse("http://play.google.com/store/apps/details?id=" +
+                            getApplicationContext().getPackageName());
+                    Intent itWebMarket = new Intent(Intent.ACTION_VIEW, webUri);
+                    startActivity(itWebMarket);
+                }
+            }
+        });
+
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String shareText = context.getResources().getString(R.string.share_content);
+                String appUrl = " http://play.google.com/store/apps/details?id=" +
+                        context.getPackageName();
+
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/html");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareText + appUrl);
+
+                startActivity(Intent.createChooser(shareIntent, "Share via"));
+            }
+        });
+
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * Display About dialog
+                 */
+                DialogFragment dlgAbout = new AboutDialog();
+                dlgAbout.show(getFragmentManager(), "About");
             }
         });
     }
@@ -145,69 +207,9 @@ public class MainActivity extends AppCompatActivity {
                 gridView.setAdapter(adapter);
 
                 this.findViewById(android.R.id.content).invalidate();
-                this.updateOptionMenu();
             } else {
                 Log.v(TAG, "Language is NOT changed");
             }
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        this.menu = menu;
-        return true;
-    }
-
-    private void updateOptionMenu() {
-        if (this.menu != null) {
-            menu.clear();
-            this.onCreateOptionsMenu(this.menu);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            /**
-             * Start AppSettings window
-             */
-            Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
-            startActivity(intent);
-        } else if(id == R.id.action_rate_app) {
-            /**
-             * open Google Play market to rate app
-             * or start web browser if Google Play app is not available
-             */
-            Uri uri = Uri.parse("market://details?id=" +
-                    getApplicationContext().getPackageName());
-            Intent itGotoMarket = new Intent(Intent.ACTION_VIEW, uri);
-            try {
-                startActivity(itGotoMarket);
-            }
-            catch (ActivityNotFoundException e) {
-                Uri webUri = Uri.parse("http://play.google.com/store/apps/details?id=" +
-                        getApplicationContext().getPackageName());
-                Intent itWebMarket = new Intent(Intent.ACTION_VIEW, webUri);
-                startActivity(itWebMarket);
-            }
-        } else if (id == R.id.action_about) {
-            /**
-             * Display About dialog
-             */
-            DialogFragment dlgAbout = new AboutDialog();
-            dlgAbout.show(getFragmentManager(), "About");
-            return true;
-        } else {
-            /* do nothing */
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

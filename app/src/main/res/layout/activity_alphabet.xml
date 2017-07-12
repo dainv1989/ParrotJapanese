@@ -3,16 +3,29 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/chris_bkg">
+    android:background="@drawable/noise_bkg">
+
+    <TextView
+        android:id="@+id/txtChartTitle"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="hiragana"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="@color/primary_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
 
     <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/gridAlphabet"
         android:numColumns="5"
-        android:columnWidth="60dp"
+        android:columnWidth="64dp"
         android:stretchMode="spacingWidthUniform"
-        android:padding="10dp"
         android:gravity="center">
     </GridView>
 </LinearLayout>

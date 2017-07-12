@@ -3,22 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:gravity="center">
     <TextView
         android:id="@+id/txtJp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:textSize="40sp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textSize="32sp"
         android:textColor="@color/title_color"
         android:text="hello" />
     <TextView
+        android:id="@+id/txtEn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="4dp"
         android:text="world"
-        android:textSize="20sp"
-        android:textColor="@color/desc_color"
-        android:id="@+id/txtEn"/>
+        android:textSize="14sp"
+        android:textColor="@color/secondary_text" />
 </LinearLayout>

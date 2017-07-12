@@ -18,8 +18,4 @@ public class SettingsActivity extends AppCompatActivity {
         transaction.replace(android.R.id.content, settingsFragment);
         transaction.commit();
     }
-
-    public void setActionbarTitle(String title) {
-        getSupportActionBar().setTitle(title);
-    }
 }

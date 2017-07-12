@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.dainv.parrotjapanese.adapter.AlphabetAdapter;
 import com.dainv.parrotjapanese.data.AlphabetItem;
@@ -19,15 +20,21 @@ import java.util.ArrayList;
  * Created by dainv on 10/26/2015.
  */
 public class HiraActivity extends AppCompatActivity {
+
     private static final String TAG="HiraActivity";
+
     private GridView gridViewHira;
+    private TextView tvChartTitle;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet);
 
         gridViewHira = (GridView)findViewById(R.id.gridAlphabet);
-        final ArrayList<AlphabetItem> lstHira = new ArrayList<AlphabetItem>();
+        tvChartTitle = (TextView)findViewById(R.id.txtChartTitle);
+        tvChartTitle.setText("hiragana");
+
+        final ArrayList<AlphabetItem> lstHira = new ArrayList<>();
         for (int i = 0; i < AppData.hiragana.length; i++) {
             lstHira.add(new AlphabetItem(AppData.hiragana[i], AppData.pronun[i]));
         }
