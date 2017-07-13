@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.CustomListAdapter;
@@ -19,7 +20,10 @@ import com.dainv.parrotjapanese.util.TextLoader;
  * Created by dainv on 10/28/2015.
  */
 public class CountingActivity extends AppCompatActivity {
+
     private final String TAG = "CountingActivity";
+
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,9 @@ public class CountingActivity extends AppCompatActivity {
             TextLoader loader = new TextLoader(getApplicationContext());
             loader.loadMenuFile(R.raw.menu_counter, "~", AppData.lstCount);
         }
+
+        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
+        tvTitle.setText("count numbers");
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);
         CustomListAdapter listCountAdapter = new CustomListAdapter(this,

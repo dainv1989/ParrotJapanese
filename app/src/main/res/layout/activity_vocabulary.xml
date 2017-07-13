@@ -6,9 +6,20 @@
     android:background="@drawable/noise_bkg"
     tools:context=".VocabularyActivity">
 
-    <ListView
+    <TextView
+        android:id="@+id/txtVocabTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listVocabulary">
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="essential vocabulary"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/noise_grey_bkg"/>
+
+    <ListView
+        android:id="@+id/listVocabulary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtVocabTitle">
     </ListView>
 </RelativeLayout>
