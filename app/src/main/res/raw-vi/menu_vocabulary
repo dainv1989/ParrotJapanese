@@ -1,15 +1,15 @@
-Màu sắc ~ Xanh, đỏ, tím, vàng, đen, nâu ... ~ vocab_colors ~ color_icon
-Động vật ~ Chó, mèo, lợn, gà, chim, chuột ... ~ vocab_animals ~ animal_icon
-Ăn uống ~ Bữa ăn, ăn sáng, ăn tối, thịt lợn, thịt gà, thịt bò ... ~ vocab_foods ~ food_icon
-Rau và hoa quả ~ Táo, cam, chanh, nho, cà rốt ... ~ vocab_fruits_vegetables ~ fruit_icon
-Thời tiết ~ Mưa, nắng, bão, tuyết ... ~ vocab_weather ~ weather_icon
-Cơ thể người ~ Đầu, mặt, chân, tay, tai, mũi ... ~ vocab_body_parts ~ body_part_icon
-Gia đình ~ Bố, mẹ, ông, bà, anh trai, em gái ... ~ vocab_family_members ~ family_icon
-Động từ ~ Làm, đi, học, nhìn, yêu ... ~ vocab_verbs ~ verb_icon
-Tính từ ~ Khó, dễ, mạnh, yếu, xấu, đẹp ... ~ vocab_adjectives ~ adjective_icon
-Nghề nghiệp ~ Kỹ sư, bác sĩ, giáo viên ... ~ vocab_occupations ~ occupation_icon
-Câu hỏi ~ Ai, cái gì, ở đâu, khi nào ... ~ vocab_question_words ~ question_icon
-Nhà cửa ~ Phòng khác, phòng ngủ, bàn, ghế ... ~ vocab_room ~ room_icon
-Địa điểm và hướng ~ Đông, tây, nam, bắc, trường học, bệnh viện ... ~ vocab_location ~ location_icon
-Giao thông ~ Ngã tư, đường xá, phương tiện giao thông ~ vocab_traffic ~ traffic_icon
-Thể thao ~ Bóng đá, tennis, bơi lội ... ~ vocab_sports ~ sport_icon
+màu sắc ~ xanh, đỏ, tím, vàng, đen, nâu ... ~ vocab_colors ~ color_icon
+động vật ~ chó, mèo, lợn, gà, chim, chuột ... ~ vocab_animals ~ animal_icon
+ăn uống ~ bữa ăn, ăn sáng, ăn tối, thịt lợn, thịt gà, thịt bò ... ~ vocab_foods ~ food_icon
+rau và hoa quả ~ táo, cam, chanh, nho, cà rốt ... ~ vocab_fruits_vegetables ~ fruit_icon
+thời tiết ~ mưa, nắng, bão, tuyết ... ~ vocab_weather ~ weather_icon
+cơ thể người ~ đầu, mặt, chân, tay, tai, mũi ... ~ vocab_body_parts ~ body_part_icon
+gia đình ~ bố, mẹ, ông, bà, anh trai, em gái ... ~ vocab_family_members ~ family_icon
+động từ ~ làm, đi, học, nhìn, yêu ... ~ vocab_verbs ~ verb_icon
+tính từ ~ khó, dễ, mạnh, yếu, xấu, đẹp ... ~ vocab_adjectives ~ adjective_icon
+nghề nghiệp ~ kỹ sư, bác sĩ, giáo viên ... ~ vocab_occupations ~ occupation_icon
+câu hỏi ~ ai, cái gì, ở đâu, khi nào ... ~ vocab_question_words ~ question_icon
+nhà cửa ~ phòng khác, phòng ngủ, bàn, ghế ... ~ vocab_room ~ room_icon
+địa điểm và hướng ~ đông, tây, nam, bắc, trường học, bệnh viện ... ~ vocab_location ~ location_icon
+giao thông ~ ngã tư, đường xá, phương tiện giao thông ~ vocab_traffic ~ traffic_icon
+thể thao ~ bóng đá, tennis, bơi lội ... ~ vocab_sports ~ sport_icon
