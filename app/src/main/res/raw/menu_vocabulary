@@ -1,16 +1,16 @@
-﻿Colors ~ Red, green, blue, yellow ... ~ vocab_colors ~ color_icon
-Animals ~ Mouse, cat, dog, chicken ... ~ vocab_animals ~ animal_icon
-Foods and drinks ~ Meal, breakfast, dinner, pork, beef ... ~ vocab_foods ~ food_icon
-Fruits and vegetables ~ Apple, orange, lemon, grape ... ~ vocab_fruits_vegetables ~ fruit_icon
-Weather ~ Rain, sunny, storm, cloudy ... ~ vocab_weather ~ weather_icon
-Body parts ~ Head, face, chest, neck, leg ... ~ vocab_body_parts ~ body_part_icon
-Family members ~ Mom, dad, sister, brother ... ~ vocab_family_members ~ family_icon
-Verbs ~ To do, to have, to be, to make, to see ... ~ vocab_verbs ~ verb_icon
-Adjectives ~ Easy, difficult, strong, weak ... ~ vocab_adjectives ~ adjective_icon
-Occupations ~ Engineer, doctor, teacher ... ~ vocab_occupations ~ occupation_icon
-Question words ~ What, when, where, how ... ~ vocab_question_words ~ question_icon
-Room house ~ Living room, bedroom, desk, chair ... ~ vocab_room ~ room_icon
-Locations and directions ~ North, south, east, west ... ~ vocab_location ~ location_icon
-Traffic and transportation ~ Car, plane, train, bicycle ... ~ vocab_traffic ~ traffic_icon
-Sports ~ Football, tennis, golf ... ~ vocab_sports ~ sport_icon
-Adverbs ~ Always, usually, often, seldom ... ~ vocab_adverbs ~ sport_icon
+﻿Colors ~ Red, green, blue, yellow ... ~ vocab_colors ~ color
+Animals ~ Mouse, cat, dog, chicken ... ~ vocab_animals ~ animal
+Foods and drinks ~ Meal, breakfast, dinner, pork, beef ... ~ vocab_foods ~ food
+Fruits and vegetables ~ Apple, orange, lemon, grape ... ~ vocab_fruits_vegetables ~ banana
+Weather ~ Rain, sunny, storm, cloudy ... ~ vocab_weather ~ weather
+Body parts ~ Head, face, chest, neck, leg ... ~ vocab_body_parts ~ body
+Family members ~ Mom, dad, sister, brother ... ~ vocab_family_members ~ family
+Verbs ~ To do, to have, to be, to make, to see ... ~ vocab_verbs ~ running
+Adjectives ~ Easy, difficult, strong, weak ... ~ vocab_adjectives ~ devil
+Occupations ~ Engineer, doctor, teacher ... ~ vocab_occupations ~ occupation
+Question words ~ What, when, where, how ... ~ vocab_question_words ~ question
+Room house ~ Living room, bedroom, desk, chair ... ~ vocab_room ~ bed
+Locations and directions ~ North, south, east, west ... ~ vocab_location ~ location
+Traffic and transportation ~ Car, plane, train, bicycle ... ~ vocab_traffic ~ traffic
+Sports ~ Football, tennis, golf ... ~ vocab_sports ~ sports
+Adverbs ~ Always, usually, often, seldom ... ~ vocab_adverbs ~ frequency

@@ -37,7 +37,7 @@ public class CustomListView extends LinearLayout {
         if (photoResId > 0) {
             this.photo.setImageResource(photoResId);
         } else {
-            this.photo.setImageResource(R.mipmap.animal_icon);
+            this.photo.setImageResource(R.mipmap.animal);
         }
         this.title.setText(item.title);
         this.desc.setText(item.desc);

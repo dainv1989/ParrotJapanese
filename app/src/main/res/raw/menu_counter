@@ -1,11 +1,11 @@
-﻿Numbers ~ 0, 1, 2, 3, 4, 5, 6, 7 ... ~ count_numbers ~ number_icon
-Date ~ days of month from 1 to 31 ~ count_date ~ date_icon
-Month, days of week ~ January, February, Monday, Tuesday ... ~ count_month_day ~ day_icon
-Hours ~ hours in a day from 1 to 12 ~ count_hours ~ hour_icon
-Minutes ~ minutes of an hour ~ count_minutes ~ minute_icon
-General things ~ Used to count all type of things ~ count_general_things ~ general_thing_icon
-People ~ Count number of people ~ count_people ~ people_icon
-Flat things ~ Papers, stamps, dishes ... ~ count_flat_things ~ flat_thing_icon
-Long, cylindrical things ~ Stick, umbrella, tree, pen ... ~ count_long_things ~ long_thing_icon
-Small, compact things ~ Apple, orange, eraser ... ~ count_compact_things ~ eraser_icon
-Books ~ Book, notebook, magazine ... ~ count_books ~ book_icon
+﻿Numbers ~ 0, 1, 2, 3, 4, 5, 6, 7 ... ~ count_numbers ~ numbers_amber
+Date ~ days of month from 1 to 31 ~ count_date ~ date
+Month, days of week ~ January, February, Monday, Tuesday ... ~ count_month_day ~ weekday
+Hours ~ hours in a day from 1 to 12 ~ count_hours ~ hour
+Minutes ~ minutes of an hour ~ count_minutes ~ minute
+General things ~ Used to count all type of things ~ count_general_things ~ common_thing
+People ~ Count number of people ~ count_people ~ people
+Flat things ~ Papers, stamps, dishes ... ~ count_flat_things ~ envelop
+Long, cylindrical things ~ Stick, umbrella, tree, pen ... ~ count_long_things ~ pencil
+Small, compact things ~ Apple, orange, eraser ... ~ count_compact_things ~ eraser
+Books ~ Book, notebook, magazine ... ~ count_books ~ books
