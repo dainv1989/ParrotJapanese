@@ -54,8 +54,7 @@ public class CountingActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent itCountItemAct = new Intent(getApplicationContext(),
-                        CountFragmentActivity.class);
-                        //CountItemActivity.class);
+                        CountItemActivity.class);
 
                 /* check if data resouce file is available */
                 String srcFileName = AppData.lstCount.get(position).dataRes;

@@ -64,10 +64,10 @@ public class TextLoader {
                     count++;
                 } else if (strings.length == COUNT_NUMBER_OF_FIELDS) {
                     result.add(new ListLearnItem(
-                            strings[0].trim(),      // specific count number
+                            count + "",             // strings[0] is ignored
                             strings[1].trim(),      // kanji
                             strings[2].trim(),      // romaji
-                            strings[3].trim()));    // meaning
+                            strings[3].trim()));    // meaning + number expression
                     count++;
                 } else {
                     Log.v(TAG, "INVALID LINE: " + line);
