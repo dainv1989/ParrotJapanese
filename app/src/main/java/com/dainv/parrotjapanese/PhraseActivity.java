@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
 import com.dainv.parrotjapanese.data.ListLearnItem;
@@ -18,7 +19,10 @@ import java.util.ArrayList;
  * Created by dainv on 10/29/2015.
  */
 public class PhraseActivity extends AppCompatActivity {
+
     private ArrayList<ListLearnItem> lstPhrase = null;
+
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +32,8 @@ public class PhraseActivity extends AppCompatActivity {
         /* set toolbar title */
         Resources res = getResources();
         ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnPhrase));
+        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
+        tvTitle.setText("simple phrases");
 
         if (lstPhrase == null) {
             lstPhrase = new ArrayList<ListLearnItem>();

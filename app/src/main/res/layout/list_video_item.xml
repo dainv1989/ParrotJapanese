@@ -2,34 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:minHeight="72dp"
+    android:background="@drawable/noise_bkg"
+    android:gravity="center_vertical">
 
     <com.google.android.youtube.player.YouTubeThumbnailView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:scaleType="centerCrop"
+        android:layout_width="96dp"
+        android:layout_height="72dp"
         android:id="@+id/thumbail"
-        android:layout_margin="5dp"
-        android:src="@drawable/no_thumbnail"/>
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="16dp"
+        android:src="@mipmap/crying"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:orientation="vertical">
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:gravity="start">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/videoTitle"
-            android:text="Title"
-            android:textColor="#0d56ac"
-            android:textSize="18sp"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="title"
+            android:textColor="@color/title_color"
+            android:textSize="16sp"/>
+        <TextView
             android:id="@+id/videoDesc"
-            android:text="Brief Description"
-            android:textColor="#112c08"
-            android:textSize="15sp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="description"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp"/>
     </LinearLayout>
 </LinearLayout>

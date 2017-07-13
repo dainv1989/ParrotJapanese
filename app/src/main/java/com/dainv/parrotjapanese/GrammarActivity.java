@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.ListVideoAdapter;
@@ -26,11 +27,14 @@ import java.util.List;
  * Created by dainv on 10/29/2015.
  */
 public class GrammarActivity extends AppCompatActivity {
+
     /** The request code when calling startActivityForResult to recover from an API service error. */
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     private ListVideoAdapter adapter;
 
     private List<VideoEntry> lstVideo = null;
+
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +43,8 @@ public class GrammarActivity extends AppCompatActivity {
 
         /* set toolbar title */
         Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnGrammar));
+        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
+        tvTitle.setText("grammar videos");
 
         /** load YouTube video list from a resource file */
         if (lstVideo == null) {
@@ -87,7 +90,7 @@ public class GrammarActivity extends AppCompatActivity {
         if (errorReason.isUserRecoverableError()) {
             errorReason.getErrorDialog(this, RECOVERY_DIALOG_REQUEST).show();
         } else if (errorReason != YouTubeInitializationResult.SUCCESS) {
-            String errorMsg = "There was an error initializing the YouTubePlayer";
+            String errorMsg = "There was an error initializing the YouTube Player";
             Toast.makeText(this, errorMsg, Toast.LENGTH_SHORT).show();
         }
     }
