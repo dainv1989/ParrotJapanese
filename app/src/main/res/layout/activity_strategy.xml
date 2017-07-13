@@ -3,65 +3,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:background="@drawable/noise_bkg"
     tools:context=".StrategyActivity">
 
+    <TextView
+        android:id="@+id/txtGreeting"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:text="@string/st_title"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/noise_blue_bkg"/>
+
+    <TextView
+        android:id="@+id/txtEnjoyment"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/st_goodbye"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/noise_blue_bkg"/>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtGreeting"
+        android:layout_above="@id/txtEnjoyment">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="16dp"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:gravity="center_horizontal"
-                android:id="@+id/st_title"
-                android:textSize="22sp"
-                android:text="@string/st_title"
-                android:background="#00bce4"/>
-
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/st_photo"
-                android:src="@drawable/parrot"/>
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/parrot_speaking"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:id="@+id/st_desc"
                 android:text="@string/app_desc"
-                android:textSize="16sp"
-                android:textColor="@color/desc_color"/>
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"/>
 
             <!-- put ListView here make unexpected view
                  size of ListView is fixed and put ListView inside ScrollView is a bad idea in GUI design -->
-            <include layout="@layout/learning_step_item" android:id="@+id/step1"/>
-            <include layout="@layout/learning_step_item" android:id="@+id/step2"/>
-            <include layout="@layout/learning_step_item" android:id="@+id/step3"/>
-            <include layout="@layout/learning_step_item" android:id="@+id/step4"/>
-            <include layout="@layout/learning_step_item" android:id="@+id/step5"/>
-            <include layout="@layout/learning_step_item" android:id="@+id/step6"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:gravity="center_horizontal"
-                android:id="@+id/st_goodbye"
-                android:text="@string/st_goodbye"
-                android:textSize="22dp"
-                android:background="#00bce4"/>
+            <include
+                layout="@layout/learning_step_item"
+                android:id="@+id/step1"/>
+            <include
+                layout="@layout/learning_step_item"
+                android:id="@+id/step2"/>
+            <include
+                layout="@layout/learning_step_item"
+                android:id="@+id/step3"/>
+            <include
+                layout="@layout/learning_step_item"
+                android:id="@+id/step4"/>
+            <include
+                layout="@layout/learning_step_item"
+                android:id="@+id/step5"/>
+            <include
+                layout="@layout/learning_step_item"
+                android:id="@+id/step6"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

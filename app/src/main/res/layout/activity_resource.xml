@@ -1,45 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
     android:background="@drawable/noise_bkg"
     tools:context=".ResourceActivity">
 
+    <TextView
+        android:id="@+id/txtResourceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:text="@string/res_title"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/noise_blue_bkg"/>
+
+    <TextView
+        android:id="@+id/txtInspiration"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/res_end"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/noise_blue_bkg"/>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtResourceTitle"
+        android:layout_above="@id/txtInspiration">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="16dp"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:gravity="center_horizontal"
-                android:text="@string/res_title"
-                android:textSize="22dp"
-                android:background="@color/green_bkg"/>
 
-            <include layout="@layout/resource_item" android:id="@+id/resource0" />
-            <include layout="@layout/resource_item" android:id="@+id/resource1" />
-            <include layout="@layout/resource_item" android:id="@+id/resource2" />
-            <include layout="@layout/resource_item" android:id="@+id/resource3" />
-            <include layout="@layout/resource_item" android:id="@+id/resource4" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:gravity="center_horizontal"
-                android:text="@string/res_end"
-                android:textSize="20dp"
-                android:background="@color/green_bkg"/>
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource0" />
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource1" />
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource2" />
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource3" />
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource4" />
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</RelativeLayout>

@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp">
+    android:minHeight="72dp"
+    android:gravity="center"
+    android:background="@drawable/noise_bkg">
+
+    <TextView
+        android:id="@+id/step_number"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="10"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/round_bkg"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:paddingLeft="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:orientation="vertical">
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:id="@+id/step_number"
-            android:text="1"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:background="#00bce4"/>
-        <TextView
+            android:id="@+id/step_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/step_title"
-            android:paddingLeft="5dp"
-            android:text="Step"
-            android:textColor="@color/title_color"
-            android:textSize="18sp" />
+            android:paddingBottom="4dp"
+            android:text="step"
+            android:textSize="16sp"
+            android:textColor="@color/title_color" />
+        <TextView
+            android:id="@+id/step_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="step description"
+            android:textSize="15sp"
+            android:textColor="@color/primary_text"/>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/step_desc"
-        android:paddingLeft="35dp"
-        android:text="Step description"
-        android:textSize="16sp"
-        android:textColor="@color/desc_color"/>
 </LinearLayout>

@@ -52,7 +52,7 @@ public class ResourceActivity extends AppCompatActivity {
                 if (resLogoId > 0) {
                     ivResLogo.setImageResource(resLogoId);
                 } else {
-                    ivResLogo.setImageResource(R.drawable.parrot);
+                    ivResLogo.setImageResource(R.mipmap.ic_launcher);
                 }
                 tvResTitle.setText(resTitle[i]);
                 tvResDesc.setText(resDesc[i]);

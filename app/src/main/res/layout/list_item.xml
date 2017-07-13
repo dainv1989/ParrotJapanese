@@ -30,7 +30,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/itemDesc"
             android:text="Brief Description"
-            android:textColor="@color/desc_color"
             android:textSize="15sp"/>
     </LinearLayout>
 </LinearLayout>
