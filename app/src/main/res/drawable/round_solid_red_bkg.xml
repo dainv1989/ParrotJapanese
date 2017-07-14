@@ -6,13 +6,13 @@
         android:bottom="2dp">
         <shape android:shape="rectangle">
             <corners android:radius="10dp"/>
-            <solid android:color="@color/primary_blue"
-                android:width="1dp"/>
+            <solid android:color="@color/primary_red"
+                android:width="2dp"/>
         </shape>
     </item>
 
     <item>
         <bitmap android:src="@drawable/noise"
-            android:tileMode="repeat" />
+            android:tileMode="repeat"/>
     </item>
 </layer-list>

@@ -1,43 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/noise_bkg"
-    android:gravity="center">
+    android:background="@drawable/noise_bkg">
 
     <TextView
+        android:id="@+id/txtScoreTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="30dp"
+        android:layout_height="36dp"
         android:gravity="center"
-        android:text="@string/str_your_score"
-        android:textSize="22sp"/>
-    <TextView
-        android:id="@+id/sc_score"
+        android:text="your score"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/noise_grey_bkg"/>
+
+    <ImageView
+        android:id="@+id/imgAppLogo"
+        android:layout_below="@id/txtScoreTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="100dp"
-        android:gravity="center"
-        android:text="10/10"
-        android:textSize="60sp"/>
+        android:layout_height="96dp"
+        android:padding="16dp"
+        android:src="@drawable/parrot_speaking"/>
+
     <LinearLayout
+        android:id="@+id/groupNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:minHeight="96dp"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
         <Button
             android:id="@+id/sc_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_btn_continue"
-            android:textAllCaps="false"
-            android:textSize="18sp"/>
+            android:textAllCaps="true"/>
+
         <Button
             android:id="@+id/sc_exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_btn_exit"
-            android:textAllCaps="false"
-            android:textSize="18sp"/>
+            android:textAllCaps="true"/>
     </LinearLayout>
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/sc_score"
+        android:layout_below="@id/imgAppLogo"
+        android:layout_above="@id/groupNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="10/10"
+        android:textSize="80sp"/>
+</RelativeLayout>

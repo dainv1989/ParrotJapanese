@@ -174,10 +174,12 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                view.setBackgroundColor(Color.GREEN);
+                                //view.setBackgroundColor(Color.GREEN);
+                                view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.hiraQASummary.numCorrectAns++;
                             } else {
-                                view.setBackgroundColor(Color.RED);
+                                //view.setBackgroundColor(Color.RED);
+                                view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
 
                             showCorrectAnswer(qa);
@@ -198,10 +200,12 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                view.setBackgroundColor(Color.GREEN);
+                                //view.setBackgroundColor(Color.GREEN);
+                                view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.kataQASummary.numCorrectAns++;
                             } else {
-                                view.setBackgroundColor(Color.RED);
+                                //view.setBackgroundColor(Color.RED);
+                                view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
                             showCorrectAnswer(qa);
                             /* show next question */
@@ -223,10 +227,12 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                view.setBackgroundColor(Color.GREEN);
+                                //view.setBackgroundColor(Color.GREEN);
+                                view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.pronunQASummary.numCorrectAns++;
                             } else {
-                                view.setBackgroundColor(Color.RED);
+                                //view.setBackgroundColor(Color.RED);
+                                view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
                             showCorrectAnswer(qa);
                             /* show next question */
@@ -248,10 +254,12 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                view.setBackgroundColor(Color.GREEN);
+                                //view.setBackgroundColor(Color.GREEN);
+                                view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.meaningQASummary.numCorrectAns++;
                             } else {
-                                view.setBackgroundColor(Color.RED);
+                                //view.setBackgroundColor(Color.RED);
+                                view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
                             showCorrectAnswer(qa);
                             /* show next question */
@@ -464,7 +472,8 @@ public class QuestionActivity extends AppCompatActivity {
                     public void run() {
                         for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
                             if (qa.answers[i].kanji.contentEquals(qa.correctAnswer.kanji)) {
-                                lvAns.getChildAt(i).setBackgroundColor(Color.GREEN);
+                                //lvAns.getChildAt(i).setBackgroundColor(Color.GREEN);
+                                lvAns.getChildAt(i).setBackgroundResource(R.drawable.round_solid_bkg);
                                 break;
                             }
                         }

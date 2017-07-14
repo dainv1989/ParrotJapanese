@@ -58,8 +58,9 @@
     <LinearLayout
         android:id="@+id/aboutContent"
         android:layout_below="@id/txtAboutTitle"
+        android:layout_above="@id/txtThanks"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -102,6 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:visibility="gone"
         android:orientation="vertical">
 
         <TextView
