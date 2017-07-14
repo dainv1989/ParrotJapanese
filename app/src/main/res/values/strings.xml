@@ -135,4 +135,7 @@
     <string name="str_your_score">Your score:</string>
     <string name="str_btn_continue">Continue</string>
     <string name="str_btn_exit">Exit</string>
+
+    <string name="thanks_state">Thanks for using this app.\nPlease share and encourage me on Google Play.</string>
+    <string name="app_suggest">Another app by me on Google Play:</string>
 </resources>

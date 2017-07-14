@@ -1,7 +1,6 @@
 package com.dainv.parrotjapanese;
 
 import android.app.Activity;
-import android.app.DialogFragment;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -19,13 +17,11 @@ import android.widget.ImageView;
 import com.dainv.parrotjapanese.adapter.ImageAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.Constant;
-import com.dainv.parrotjapanese.ui.AboutDialog;
 import com.dainv.parrotjapanese.util.TextLoader;
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 
 public class MainActivity extends AppCompatActivity {
-    private final static String TAG = "MainActivity";
 
     private SharedPreferences settings;
     private static String language;
@@ -171,11 +167,8 @@ public class MainActivity extends AppCompatActivity {
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**
-                 * Display About dialog
-                 */
-                DialogFragment dlgAbout = new AboutDialog();
-                dlgAbout.show(getFragmentManager(), "About");
+                Intent intent = new Intent(context, AboutActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -188,7 +181,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (!newLanguage.isEmpty()) {
             if (!newLanguage.contentEquals(language)) {
-                Log.v(TAG, "language is changed");
                 language = newLanguage;
                 /**
                  * reload data resource file with new language setting
@@ -204,8 +196,6 @@ public class MainActivity extends AppCompatActivity {
                 gridView.setAdapter(adapter);
 
                 this.findViewById(android.R.id.content).invalidate();
-            } else {
-                Log.v(TAG, "Language is NOT changed");
             }
         }
     }
