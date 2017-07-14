@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
 import com.dainv.parrotjapanese.data.AppData;
@@ -16,8 +17,11 @@ import com.dainv.parrotjapanese.util.TextLoader;
  * Created by dainv on 10/29/2015.
  */
 public class VocabItemActivity extends AppCompatActivity {
+
     private final static String TAG = "VocabItemActivity";
     private static int current_index = 0;
+
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +34,8 @@ public class VocabItemActivity extends AppCompatActivity {
         int dataResId = res.getIdentifier(selectedItem.dataRes, "raw", getPackageName());
 
         /* set toolbar title */
-        android.support.v7.app.ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(selectedItem.title);
+        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
+        tvTitle.setText(selectedItem.title);
 
         /** load vocabulary from raw data file */
         if (selectedItem.learnItems.isEmpty()) {

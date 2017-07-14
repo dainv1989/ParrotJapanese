@@ -36,14 +36,6 @@ public class SettingsFragment extends PreferenceFragment implements
         addPreferencesFromResource(R.xml.preferences);
 
         /**
-         * set title for parrent activity
-         * this trick is useful in case change language,
-         * the actionbar title language will change correspondingly
-         */
-        SettingsActivity parent = (SettingsActivity)getActivity();
-        String title = getResources().getString(R.string.title_activity_settings);
-
-        /**
          * set summary for preferences
          */
         PreferenceScreen prefs = getPreferenceScreen();

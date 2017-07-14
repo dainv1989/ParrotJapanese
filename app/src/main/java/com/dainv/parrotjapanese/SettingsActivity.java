@@ -11,11 +11,6 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        FragmentManager manager = getFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        SettingsFragment settingsFragment = new SettingsFragment();
-        transaction.replace(android.R.id.content, settingsFragment);
-        transaction.commit();
+        setContentView(R.layout.activity_setting);
     }
 }
