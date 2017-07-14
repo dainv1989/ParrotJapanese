@@ -3,7 +3,6 @@ package com.dainv.parrotjapanese;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -48,7 +47,7 @@ public class GrammarActivity extends AppCompatActivity {
 
         /** load YouTube video list from a resource file */
         if (lstVideo == null) {
-            lstVideo = new ArrayList<VideoEntry>();
+            lstVideo = new ArrayList<>();
             final List<ListLearnItem> lstItem = new ArrayList<ListLearnItem>();
             TextLoader loader = new TextLoader(getApplicationContext());
             loader.loadFile(R.raw.grammar_videos, "~", lstItem);
@@ -61,7 +60,7 @@ public class GrammarActivity extends AppCompatActivity {
             }
         }
 
-        adapter = new ListVideoAdapter(this, lstVideo);
+        adapter = new ListVideoAdapter(getApplicationContext(), lstVideo);
         ListView lsVideoView = (ListView)findViewById(R.id.listVocabulary);
         lsVideoView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lsVideoView.setAdapter(adapter);
@@ -71,7 +70,7 @@ public class GrammarActivity extends AppCompatActivity {
         lsVideoView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            startActivity(YouTubeStandalonePlayer.createVideoIntent(
+                startActivity(YouTubeStandalonePlayer.createVideoIntent(
                     parentActivity, Constant.DEVELOPER_KEY,
                     lstVideo.get(position).videoId, 0, true, true));
             }

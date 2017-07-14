@@ -74,7 +74,7 @@ public class ListVideoAdapter extends BaseAdapter {
             if (loader == null) {
                 thumbnail.setTag(entry.videoId);
             } else {
-                thumbnail.setImageResource(R.mipmap.running);
+                thumbnail.setImageResource(R.mipmap.loading);
                 loader.setVideo(entry.videoId);
             }
         }
@@ -95,7 +95,7 @@ public class ListVideoAdapter extends BaseAdapter {
                                             YouTubeThumbnailLoader loader) {
             loader.setOnThumbnailLoadedListener(this);
             mLoaders.put(view, loader);
-            view.setImageResource(R.mipmap.running);
+            view.setImageResource(R.mipmap.loading);
             String videoID = (String)view.getTag();
             loader.setVideo(videoID);
         }
