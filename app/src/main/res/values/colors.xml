@@ -14,6 +14,7 @@
     <color name="divider">#3c5cb2</color>
 
     <color name="primary_blue">#3c5cb2</color>
+    <color name="blue_light">#6084e4</color>
     <color name="primary_grey">#8ca1ab</color>
     <color name="primary_red">#c24e4a</color>
 </resources>

@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.Constant;
@@ -15,6 +16,11 @@ import com.dainv.parrotjapanese.data.ListItem;
 import com.dainv.parrotjapanese.util.TextLoader;
 
 public class ExerciseActivity extends AppCompatActivity {
+
+    private TextView btnHira;
+    private TextView btnKata;
+    private TextView btnPronun;
+    private TextView btnMean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +33,10 @@ public class ExerciseActivity extends AppCompatActivity {
         if (ab != null)
             ab.setTitle(res.getString(R.string.str_btnExercise));
 
-        Button btnHira = (Button)findViewById(R.id.ex_hiragana);
-        Button btnKata = (Button)findViewById(R.id.ex_katakana);
-        Button btnPronun = (Button)findViewById(R.id.ex_pronun);
-        Button btnMean = (Button)findViewById(R.id.ex_meaning);
+        btnHira = (TextView)findViewById(R.id.ex_hiragana);
+        btnKata = (TextView)findViewById(R.id.ex_katakana);
+        btnPronun = (TextView)findViewById(R.id.ex_pronun);
+        btnMean = (TextView)findViewById(R.id.ex_meaning);
 
         final Context context = getApplicationContext();
         btnHira.setOnClickListener(new View.OnClickListener() {
