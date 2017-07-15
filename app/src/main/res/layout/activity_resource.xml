@@ -54,6 +54,12 @@
             <include
                 layout="@layout/resource_item"
                 android:id="@+id/resource4" />
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource5" />
+            <include
+                layout="@layout/resource_item"
+                android:id="@+id/resource6" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

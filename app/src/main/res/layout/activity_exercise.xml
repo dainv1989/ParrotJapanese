@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="96dp"
         android:padding="16dp"
-        android:src="@drawable/parrot_speaking"/>
+        android:src="@drawable/parrot_speaking_coban"/>
 
     <LinearLayout
         android:id="@+id/groupExercises"

@@ -28,7 +28,7 @@
         <item>Exercises</item>
         <item>Learn basic grammar</item>
         <item>Learn daily life simple phrases</item>
-        <item>Goto next level</item>
+        <item>Goto next levels</item>
     </string-array>
 
     <string-array name="st_targets">
@@ -51,8 +51,8 @@
         <item>logo_taekim</item>
         <item>logo_youtube</item>
         <item>logo_memrise</item>
-        <item>logo_youtube</item>
-        <item>logo_youtube</item>
+        <item>logo_lang8</item>
+        <item>logo_readthekanji</item>
     </string-array>
 
     <string-array name="res_title">

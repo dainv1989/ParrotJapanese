@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
@@ -19,6 +20,9 @@ public class ScoreActivity extends AppCompatActivity {
     private static int correctAns = 0;
     private static String extra;
 
+    private ImageView btnContinue;
+    private ImageView btnHome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +33,8 @@ public class ScoreActivity extends AppCompatActivity {
             ab.setTitle(R.string.str_score_title);
 
         TextView tvScore = (TextView)findViewById(R.id.sc_score);
-        Button btnCont = (Button)findViewById(R.id.sc_continue);
-        Button btnExit = (Button)findViewById(R.id.sc_exit);
+        btnContinue = (ImageView)findViewById(R.id.sc_continue);
+        btnHome = (ImageView)findViewById(R.id.sc_exit);
 
         final Intent qaIntent = new Intent(getApplicationContext(), QuestionActivity.class);
         extra = (String)getIntent().getStringExtra(Constant.EXTRA_EXER_KEY);
@@ -65,7 +69,7 @@ public class ScoreActivity extends AppCompatActivity {
          * Continue question activitiy
          * If Continue button is clicked
          */
-        btnCont.setOnClickListener(new View.OnClickListener() {
+        btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int numQAs = 0;
@@ -109,7 +113,7 @@ public class ScoreActivity extends AppCompatActivity {
         /**
          * Goto main activity on Exit button is clicked
          */
-        btnExit.setOnClickListener(new View.OnClickListener() {
+        btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (extra) {
