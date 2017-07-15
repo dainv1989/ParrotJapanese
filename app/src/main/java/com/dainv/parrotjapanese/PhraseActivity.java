@@ -29,14 +29,13 @@ public class PhraseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        /* set toolbar title */
+        /* set screen title */
         Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
-        tvTitle.setText("simple phrases");
+        tvTitle.setText(res.getString(R.string.title_phrase));
 
         if (lstPhrase == null) {
-            lstPhrase = new ArrayList<ListLearnItem>();
+            lstPhrase = new ArrayList<>();
             TextLoader loader = new TextLoader(getApplicationContext());
             loader.loadFile(R.raw.simple_phrases, "~", lstPhrase);
         }

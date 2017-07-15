@@ -36,7 +36,7 @@ public class CountItemActivity extends AppCompatActivity {
         current_index = (int)getIntent().getExtras().get("selected_index");
         ListItem selectedItem = AppData.lstCount.get(current_index);
 
-        /* set toolbar title */
+        /* set screen title */
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(selectedItem.title);
 

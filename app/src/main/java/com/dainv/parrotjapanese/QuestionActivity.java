@@ -37,7 +37,6 @@ public class QuestionActivity extends AppCompatActivity {
     private final static int HIRAGANA_TO_ROMAJI = 4;
 
     private AppData.Settings appSettings;
-    private SharedPreferences settings = null;
     private static int numQAs = 0;
     private static boolean isLearnBySubject = true;
 
@@ -45,6 +44,8 @@ public class QuestionActivity extends AppCompatActivity {
     private TextView tvQuestion;
     private TextView tvExplanation;
     private ListView lvAns;
+
+    private TextView tvTitle;
 
     private String exercise = "";
     private static boolean isWaitingThread = false;
@@ -55,23 +56,20 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
 
+        /* set screen title */
+        Resources res = getResources();
+        tvTitle = (TextView)findViewById(R.id.txtQATitle);
+        tvTitle.setText(res.getString(R.string.title_question));
+
         Context context = getApplicationContext();
-        settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         appSettings = new AppData.Settings(context);
         boolean isChangedSetting = false;
         if ((numQAs != appSettings.getNumberOfQuestions()) ||
              isLearnBySubject != appSettings.isLearnBySubject()){
-            Log.v(TAG, "******* Setting is changed *******");
             isChangedSetting = true;
             numQAs = appSettings.getNumberOfQuestions();
             isLearnBySubject = appSettings.isLearnBySubject();
         }
-
-        /* set toolbar title */
-        Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.title_question));
 
         tvResult = (TextView)findViewById(R.id.qa_result);
         tvQuestion = (TextView)findViewById(R.id.qa_question);
@@ -79,10 +77,8 @@ public class QuestionActivity extends AppCompatActivity {
         lvAns = (ListView)findViewById(R.id.qa_answer);
 
         exercise = this.getIntent().getStringExtra(Constant.EXTRA_EXER_KEY);
-        // Log.v(TAG, exercise);
         switch (exercise) {
             case Constant.EXTRA_EXER_HIRAGANA:
-                Log.v(TAG, "CASE: hiragana");
                 if (AppData.hiraQASummary.isEmpty() || isChangedSetting) {
                     AppData.hiraQASummary.clear();
                     AppData.hiraQASummary.numQuestion = numQAs;
@@ -91,7 +87,6 @@ public class QuestionActivity extends AppCompatActivity {
                 setQAOnScreen(AppData.hiraQASummary, HIRAGANA_TO_ROMAJI);
                 break;
             case Constant.EXTRA_EXER_KATAKANA:
-                Log.v(TAG, "CASE: katakana");
                 if (AppData.kataQASummary.isEmpty() || isChangedSetting) {
                     AppData.kataQASummary.clear();
                     AppData.kataQASummary.numQuestion = numQAs;
@@ -101,7 +96,6 @@ public class QuestionActivity extends AppCompatActivity {
                 break;
             case Constant.EXTRA_EXER_PRONUN:
                 boolean isLearnBySubject = AppData.Settings.isLearnBySubject();
-                Log.v(TAG, "CASE: pronunciation");
                 if (AppData.pronunQASummary.isEmpty() || isChangedSetting) {
                     AppData.pronunQASummary.clear();
                     AppData.pronunQASummary.numQuestion = numQAs;
@@ -125,7 +119,6 @@ public class QuestionActivity extends AppCompatActivity {
                 break;
             case Constant.EXTRA_EXER_MEANING:
                 isLearnBySubject = AppData.Settings.isLearnBySubject();
-                Log.v(TAG, "CASE: meaning");
                 if (AppData.meaningQASummary.isEmpty() || isChangedSetting) {
                     AppData.meaningQASummary.clear();
                     AppData.meaningQASummary.numQuestion = numQAs;
@@ -174,11 +167,9 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                //view.setBackgroundColor(Color.GREEN);
                                 view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.hiraQASummary.numCorrectAns++;
                             } else {
-                                //view.setBackgroundColor(Color.RED);
                                 view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
 
@@ -200,11 +191,9 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                //view.setBackgroundColor(Color.GREEN);
                                 view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.kataQASummary.numCorrectAns++;
                             } else {
-                                //view.setBackgroundColor(Color.RED);
                                 view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
                             showCorrectAnswer(qa);
@@ -227,11 +216,9 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                //view.setBackgroundColor(Color.GREEN);
                                 view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.pronunQASummary.numCorrectAns++;
                             } else {
-                                //view.setBackgroundColor(Color.RED);
                                 view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
                             showCorrectAnswer(qa);
@@ -254,11 +241,9 @@ public class QuestionActivity extends AppCompatActivity {
                                  * set red on wrong answer
                                  * then stop for a while before goto next question
                                  */
-                                //view.setBackgroundColor(Color.GREEN);
                                 view.setBackgroundResource(R.drawable.round_solid_bkg);
                                 AppData.meaningQASummary.numCorrectAns++;
                             } else {
-                                //view.setBackgroundColor(Color.RED);
                                 view.setBackgroundResource(R.drawable.round_solid_red_bkg);
                             }
                             showCorrectAnswer(qa);
@@ -281,14 +266,12 @@ public class QuestionActivity extends AppCompatActivity {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                // Log.v(TAG, "-----------thread: begin ");
                 // sleep 1 second
                 try {
                     Thread.sleep(waitingTime);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Log.v(TAG, "-----------thread: sleeping done ");
 
                 runOnUiThread(new Runnable() {
                     @Override
@@ -367,7 +350,6 @@ public class QuestionActivity extends AppCompatActivity {
                 });
                 isWaitingThread = false;
                 isAnswered = false;
-                //Log.v(TAG, "--------------thread finished");
             }
         };
         thread.start();
@@ -459,20 +441,17 @@ public class QuestionActivity extends AppCompatActivity {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                // Log.v(TAG, "-----------thread: begin ");
                 // sleep 1 second
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Log.v(TAG, "-----------thread: sleeping done ");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
                             if (qa.answers[i].kanji.contentEquals(qa.correctAnswer.kanji)) {
-                                //lvAns.getChildAt(i).setBackgroundColor(Color.GREEN);
                                 lvAns.getChildAt(i).setBackgroundResource(R.drawable.round_solid_bkg);
                                 break;
                             }
@@ -500,7 +479,6 @@ public class QuestionActivity extends AppCompatActivity {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
                     mp.release();
-                    mp = null;
                 }
             });
         }

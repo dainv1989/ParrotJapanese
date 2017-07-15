@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.CustomListAdapter;
@@ -16,18 +17,17 @@ import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
 
 public class VocabularyActivity extends AppCompatActivity {
-    private final String TAG = "VocabularyActivity";
+
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        /* set toolbar title */
         Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnVocabulary));
+        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
+        tvTitle.setText(res.getString(R.string.title_vocabulary));
 
         /** load vocabulary categories from file */
         if (AppData.lstVocab.isEmpty()) {
@@ -54,7 +54,6 @@ public class VocabularyActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Cannot find data file",
                             Toast.LENGTH_SHORT).show();
-                    Log.v(TAG, AppData.lstVocab.get(position).dataRes);
                 }
             }
         });

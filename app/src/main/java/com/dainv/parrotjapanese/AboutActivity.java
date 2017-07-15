@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,12 +26,19 @@ public class AboutActivity extends AppCompatActivity {
     private TextView tvAppVersion;
     private String strAppVersion = "2.0";
 
+    private TextView tvTitle;
+
     private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+
+        /* set screen title */
+        Resources res = getResources();
+        tvTitle = (TextView)findViewById(R.id.txtAboutTitle);
+        tvTitle.setText(res.getString(R.string.title_about));
 
         imgShare = (ImageView)findViewById(R.id.imgAboutShare);
         imgVote = (ImageView)findViewById(R.id.imgAboutVote);

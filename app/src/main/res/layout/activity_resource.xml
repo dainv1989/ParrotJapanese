@@ -12,7 +12,7 @@
         android:layout_height="36dp"
         android:gravity="center"
         android:layout_alignParentTop="true"
-        android:text="@string/res_title"
+        android:text="@string/title_resource"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:background="@drawable/noise_grey_bkg"/>

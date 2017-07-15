@@ -1,43 +1,40 @@
 ﻿<resources>
     <string name="app_name">Parrot Japanese</string>
-    <string name="default_label">Label</string>
-    <string name="str_btnStrategy">Giới thiệu</string>
-    <string name="str_btnHiragana">Hiragana</string>
-    <string name="str_btnKatakana">Katakana</string>
-    <string name="str_btnVocabulary">Từ vựng</string>
-    <string name="str_btnGrammar">Ngữ pháp cơ bản</string>
-    <string name="str_btnPhrase">Giao tiếp</string>
-    <string name="str_btnAbout">Thông tin</string>
-    <string name="str_btnExercise">Bài tập</string>
-    <string name="str_btnCount">Số đếm</string>
-    <string name="str_btnResource">Tài nguyên học tập</string>
-    <string name="title_question">Câu hỏi</string>
 
-    <string name="action_settings">Cài đặt</string>
-    <string name="action_rate_app">Đánh giá ứng dụng</string>
-    <string name="action_about">Thông tin</string>
+    <string name="title_vocabulary">từ vựng</string>
+    <string name="title_grammar">ngữ pháp cơ bản</string>
+    <string name="title_phrase">câu giao tiếp</string>
+    <string name="title_about">thông tin</string>
+    <string name="title_exercise">bài tập</string>
+    <string name="title_count">số đếm</string>
+    <string name="title_resource">học liệu online</string>
+    <string name="title_question">câu hỏi</string>
+    <string name="title_setting">cài đặt</string>
+    <string name="title_score">điểm số</string>
+
+    <string name="share_content">app học tiếng Nhật hay vãi, tải ở đây nhé chế: </string>
 
     <!-- content to be displayed at strategy screen -->
-    <string name="st_title">Giữ bĩnh tĩnh và học tiếng Nhật !</string>
-    <string name="app_desc">Ứng dụng Parrot Japanese được thiết kế cho người mới bắt đầu hoặc những người học kỹ năng nói tiếng Nhật hoặc những người cần làm quen và sử dụng tiếng Nhật trong một thời gian ngắn. Ứng dụng cũng hữu ích khi sử dụng như một từ điển nhỏ với nhiều từ vựng được dùng phổ biến hàng ngày. Đối với người mới bắt đầu học, những hướng dẫn dưới đây sẽ giúp các bạn sử dụng phần mềm này một cách hiệu quả:</string>
+    <string name="st_title">cứ bĩnh tĩnh học tiếng nhật!</string>
+    <string name="app_desc">ứng dụng parrot japanese được thiết kế cho người mới bắt đầu hoặc những người học kỹ năng nói tiếng nhật hoặc những người cần làm quen và sử dụng tiếng nhật trong một thời gian ngắn. ứng dụng cũng hữu ích khi sử dụng như một từ điển nhỏ với nhiều từ vựng được dùng phổ biến hàng ngày. đối với người mới bắt đầu học, những hướng dẫn dưới đây sẽ giúp các bạn sử dụng phần mềm này một cách hiệu quả:</string>
     <string-array name="st_steps">
-        <item>Bảng chữ cái tiếng Nhật: Hiragana and Katakana</item>
-        <item>Từ vựng: Từ vựng phổ biến và cách đếm số</item>
-        <item>Bài tập</item>
-        <item>Học ngữ pháp cơ bản</item>
-        <item>Học các câu giao tiếp hàng ngày</item>
-        <item>Lên level</item>
+        <item>bảng chữ cái tiếng nhật: hiragana and katakana</item>
+        <item>từ vựng: từ vựng phổ biến và cách đếm số</item>
+        <item>bài tập</item>
+        <item>học ngữ pháp cơ bản</item>
+        <item>học các câu giao tiếp hàng ngày</item>
+        <item>lên level</item>
     </string-array>
 
     <string-array name="st_targets">
-        <item>Bước đầu tiên là làm quen với các kí tự và âm cơ bản của tiếng Nhật. Bạn sẽ tự nhớ được các ký tự và âm này khi học về từ vựng và câu. Vì vậy không nên lãng phí vài tuần hay cả tháng để học thuộc các kí tự này trước khi học từ phần khác.</item>
-        <item>Dành một vài ngày hoặc một tuần để lướt qua hết một lượt từ vựng, sau đó học đến các phần tiếp theo. Bạn sẽ còn quay lại mục từ vựng nhiều lần nữa.</item>
-        <item>Kiểm tra từ vựng của bạn với vài câu trắc nghiệm đơn giản</item>
-        <item>23 video được tạo bởi người bản địa dạy về ngữ pháp cơ bản. Các video này dạy bạn cách sử dụng ngữ pháp để đặt câu từ rất đơn giản đến phức tạp.</item>
-        <item>Cụm từ và câu sử dụng trong giao tiếp hàng ngày</item>
-        <item>Học tiếng Nhật sâu hơn, nhiều hơn về từ vựng, ngữ pháp các kỹ năng nghe, nói, đọc viết ở các tài nguyên được giới thiệu.</item>
+        <item>bước đầu tiên là làm quen với các kí tự và âm cơ bản của tiếng nhật. bạn sẽ tự nhớ được các ký tự và âm này khi học về từ vựng và câu. vì vậy không nên lãng phí vài tuần hay cả tháng để học thuộc các kí tự này trước khi học từ phần khác.</item>
+        <item>dành một vài ngày hoặc một tuần để lướt qua hết một lượt từ vựng, sau đó học đến các phần tiếp theo. bạn sẽ còn quay lại mục từ vựng nhiều lần nữa.</item>
+        <item>kiểm tra từ vựng của bạn với vài câu trắc nghiệm đơn giản</item>
+        <item>23 video dạy ngữ pháp của người bản địa dạy về ngữ pháp cơ bản. các video này dạy bạn cách sử dụng ngữ pháp để đặt câu từ rất đơn giản đến phức tạp.</item>
+        <item>cụm từ và câu sử dụng trong giao tiếp hàng ngày</item>
+        <item>học tiếng nhật sâu hơn, nhiều hơn về từ vựng, ngữ pháp các kỹ năng nghe, nói, đọc viết ở các tài nguyên được giới thiệu.</item>
     </string-array>
-    <string name="st_goodbye">Chúc vui vẻ!</string>
+    <string name="st_goodbye">học vui nhé!</string>
     <!-- end strategy screen -->
 
 
@@ -49,27 +46,28 @@
         <item>logo_taekim</item>
         <item>logo_youtube</item>
         <item>logo_memrise</item>
+        <item>logo_lang8</item>
+        <item>logo_readthekanji</item>
     </string-array>
 
     <string-array name="res_title">
-        <item>Japanesepod101</item>
-        <item>Học tiếng Nhật với Erin</item>
-        <item>Hướng dẫn tiếng Nhật của TaeKim</item>
-        <item>Youtube</item>
-        <item>Học từ vựng với Memrise</item>
-        <item>Lang-8</item>
-        <item>ReadTheKanji</item>
+        <item>japanesepod101</item>
+        <item>học tiếng Nhật với Erin</item>
+        <item>hướng dẫn tiếng Nhật của TaeKim</item>
+        <item>youtube</item>
+        <item>học từ vựng với Memrise</item>
+        <item>lang-8</item>
+        <item>read the kanji</item>
     </string-array>
 
-    <string name="res_title">Tài nguyên online</string>
     <string-array name="res_desc">
-        <item>Japanesepod101 có rất nhiều audio, video cùng với transcript, từ vựng và bài tập ... cho các cấp độ người học khác nhau</item>
-        <item>Erin là một nhân vật hoạt hình để giúp bạn học tiếng Nhật thông qua các tình huống khác nhau. Bạn sẽ học từ vựng và ngữ pháp ở từng tình huống đó.</item>
-        <item>Hướng dẫn về tiếng Nhật này được biết đến rất nhiều trên internet. </item>
-        <item>Trang web chia sẻ video lớn nhất internet. Bạn có thể tìm thấy rất nhiều thứ thú vị giúp bạn học tiếng Nhật tốt hơn từ audio thi JPNL đến phim hoạt hình tiếng Nhật, bài hát, phim truyện ...</item>
-        <item>Trang web học từ vựng được thiết kế giúp bạn nhớ từ một cách hiệu quả. Nó sẽ nhắc bạn những từ nào bạn hay quên sau những khoảng thời gian xác định một cách khoa học. Ngoài tiếng Nhật, trang web này còn có đầy đủ các thứ tiếng khác cho bạn học.</item>
-        <item>Lang-8 là một mạng xã hội về trao đổi ngôn ngữ. Bạn có thể viết câu, đoạn văn, bài báo tiếng Nhật và các thành viên nói tiếng Nhật bản ngữ sẽ sửa cho bạn.</item>
-        <item>ReadTheKanji sẽ đố bạn về từ kanji trong những câu tiếng Nhật thực tế. Bạn sẽ trả lời về cách độc những từ kanji này theo những văn cảnh khác nhau.</item>
+        <item>japanesepod101 có rất nhiều audio, video cùng với transcript, từ vựng và bài tập ... cho các cấp độ người học khác nhau</item>
+        <item>erin là một nhân vật hoạt hình để giúp bạn học tiếng nhật thông qua các tình huống khác nhau. bạn sẽ học từ vựng và ngữ pháp ở từng tình huống đó.</item>
+        <item>hướng dẫn về tiếng nhật này được biết đến rất nhiều trên internet. </item>
+        <item>trang web chia sẻ video lớn nhất internet. bạn có thể tìm thấy rất nhiều thứ thú vị giúp bạn học tiếng nhật tốt hơn từ audio thi jpnl đến phim hoạt hình tiếng nhật, bài hát, phim truyện ...</item>
+        <item>trang web học từ vựng được thiết kế giúp bạn nhớ từ một cách hiệu quả. nó sẽ nhắc bạn những từ nào bạn hay quên sau những khoảng thời gian xác định một cách khoa học. ngoài tiếng nhật, trang web này còn có đầy đủ các thứ tiếng khác cho bạn học.</item>
+        <item>lang-8 là một mạng xã hội về trao đổi ngôn ngữ. bạn có thể viết câu, đoạn văn, bài báo tiếng nhật và các thành viên nói tiếng nhật bản ngữ sẽ sửa cho bạn.</item>
+        <item>readthekanji sẽ đố bạn về từ kanji trong những câu tiếng nhật thực tế. bạn sẽ trả lời về cách độc những từ kanji này theo những văn cảnh khác nhau.</item>
     </string-array>
 
     <string-array name="res_site">
@@ -81,18 +79,17 @@
         <item>lang-8.com</item>
         <item>readthekanji.com</item>
     </string-array>
-    <string name="res_end">Hãy bình tĩnh và học tiếng Nhật !</string>
+    <string name="res_end">cứ bình tĩnh học tiếng Nhật!</string>
 
-    <string name="title_activity_settings">Cài đặt</string>
-    <string name="pref_language_title">Ngôn ngữ</string>
-    <string name="pref_qa_title">Số câu hỏi</string>
+    <string name="pref_language_title">ngôn ngữ</string>
+    <string name="pref_qa_title">số câu hỏi</string>
     <string name="pref_qa_summary">câu hỏi cho mỗi bài tập</string>
-    <string name="pref_sub_title">Bài tập theo chủ đề</string>
-    <string name="pref_sub_summary">Học từ vựng theo từng chủ đề</string>
+    <string name="pref_sub_title">bài tập theo chủ đề</string>
+    <string name="pref_sub_summary">học từ vựng theo từng chủ đề</string>
 
     <string-array name="pref_languages">
         <item>English</item>
-        <item>Tiếng Việt</item>
+        <item>tiếng Việt</item>
     </string-array>
 
     <string-array name="pref_lang">
@@ -110,23 +107,11 @@
     </string-array>
     <string name="pref_number_qa_def">10</string>
 
-    <!-- about screen string -->
-    <string name="about_share">Chia sẻ với bạn bè</string>
-
     <!-- question screen -->
-    <string-array name="answer">
-        <item>đáp án 1</item>
-        <item>đáp án 2</item>
-        <item>đáp án 3</item>
-        <item>đáp án 4</item>
-    </string-array>
-    <string name="qa_str_answer">Câu trả lời:</string>
-    <string name="qa_str_pronunciation">Phát âm</string>
-    <string name="qa_str_meaning">Nghĩa của từ</string>
+    <string name="qa_str_answer">câu trả lời:</string>
+    <string name="qa_str_pronunciation">phát âm</string>
+    <string name="qa_str_meaning">nghĩa của từ</string>
 
-    <!-- score screen -->
-    <string name="str_score_title">Điểm số</string>
-    <string name="str_your_score">Điểm của bạn:</string>
-    <string name="str_btn_continue">Tiếp tục</string>
-    <string name="str_btn_exit">Thoát</string>
+    <string name="thanks_state">cảm ơn bà con đã ủng hộ.\nshare và vote ủng hộ mình trên Google Play nhé.</string>
+    <string name="app_suggest">xem app khác của mình trên Google Play:</string>
 </resources>

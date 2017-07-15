@@ -1,6 +1,7 @@
 package com.dainv.parrotjapanese;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -23,14 +24,16 @@ public class ScoreActivity extends AppCompatActivity {
     private ImageView btnContinue;
     private ImageView btnHome;
 
+    private TextView tvTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(R.string.str_score_title);
+        Resources res = getResources();
+        tvTitle = (TextView)findViewById(R.id.txtScoreTitle);
+        tvTitle.setText(res.getString(R.string.title_score));
 
         TextView tvScore = (TextView)findViewById(R.id.sc_score);
         btnContinue = (ImageView)findViewById(R.id.sc_continue);

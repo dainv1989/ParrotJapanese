@@ -1,15 +1,16 @@
-màu sắc ~ xanh, đỏ, tím, vàng, đen, nâu ... ~ vocab_colors ~ color_icon
-động vật ~ chó, mèo, lợn, gà, chim, chuột ... ~ vocab_animals ~ animal_icon
-ăn uống ~ bữa ăn, ăn sáng, ăn tối, thịt lợn, thịt gà, thịt bò ... ~ vocab_foods ~ food_icon
-rau và hoa quả ~ táo, cam, chanh, nho, cà rốt ... ~ vocab_fruits_vegetables ~ fruit_icon
-thời tiết ~ mưa, nắng, bão, tuyết ... ~ vocab_weather ~ weather_icon
-cơ thể người ~ đầu, mặt, chân, tay, tai, mũi ... ~ vocab_body_parts ~ body_part_icon
-gia đình ~ bố, mẹ, ông, bà, anh trai, em gái ... ~ vocab_family_members ~ family_icon
-động từ ~ làm, đi, học, nhìn, yêu ... ~ vocab_verbs ~ verb_icon
-tính từ ~ khó, dễ, mạnh, yếu, xấu, đẹp ... ~ vocab_adjectives ~ adjective_icon
-nghề nghiệp ~ kỹ sư, bác sĩ, giáo viên ... ~ vocab_occupations ~ occupation_icon
-câu hỏi ~ ai, cái gì, ở đâu, khi nào ... ~ vocab_question_words ~ question_icon
-nhà cửa ~ phòng khác, phòng ngủ, bàn, ghế ... ~ vocab_room ~ room_icon
-địa điểm và hướng ~ đông, tây, nam, bắc, trường học, bệnh viện ... ~ vocab_location ~ location_icon
-giao thông ~ ngã tư, đường xá, phương tiện giao thông ~ vocab_traffic ~ traffic_icon
-thể thao ~ bóng đá, tennis, bơi lội ... ~ vocab_sports ~ sport_icon
+màu sắc ~ xanh, đỏ, tím, vàng, ... ~ vocab_colors ~ color
+động vật ~ chó, mèo, lợn, gà, chim, chuột ... ~ vocab_animals ~ animal
+ăn uống ~ ăn sáng, ăn tối, thịt lợn, thịt gà, rau ... ~ vocab_foods ~ food
+rau và hoa quả ~ táo, cam, chanh, nho, cà rốt ... ~ vocab_fruits_vegetables ~ banana
+thời tiết ~ mưa, nắng, bão, tuyết ... ~ vocab_weather ~ weather
+cơ thể người ~ mặt, mũi, chân, tay, tai, mũi ... ~ vocab_body_parts ~ body
+gia đình ~ bố, mẹ, ông, bà, cô, gì, chú, bác, anh, em ... ~ vocab_family_members ~ family
+động từ ~ đi, học, nhìn, yêu ... ~ vocab_verbs ~ running
+tính từ ~ khó, dễ, mạnh, yếu, xấu, đẹp ... ~ vocab_adjectives ~ devil
+nghề nghiệp ~ kỹ sư, bác sĩ, giáo viên ... ~ vocab_occupations ~ occupation
+câu hỏi ~ ai, cái gì, ở đâu, khi nào ... ~ vocab_question_words ~ question
+nhà cửa ~ phòng khách, phòng ngủ, bàn, ghế ... ~ vocab_room ~ bed
+địa điểm và hướng ~ đông, tây, nam, bắc, trường học, bệnh viện ... ~ vocab_location ~ location
+giao thông ~ ngã tư, đường xá, phương tiện giao thông ~ vocab_traffic ~ traffic
+thể thao ~ bóng đá, tennis, bơi lội ... ~ vocab_sports ~ sports
+trạng từ ~ luôn luôn, thỉnh thoảng, đôi khi, hiếm khi ... ~ vocab_adverbs ~ frequency

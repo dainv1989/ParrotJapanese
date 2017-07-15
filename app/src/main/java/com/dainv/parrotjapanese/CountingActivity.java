@@ -30,20 +30,16 @@ public class CountingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        /* set toolbar title */
+        /* set screen title */
         Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnCount));
+        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
+        tvTitle.setText(res.getString(R.string.title_count));
 
-        /** load counter categories from menu resource file */
+        /* load counter categories from menu resource file */
         if (AppData.lstCount.isEmpty()) {
             TextLoader loader = new TextLoader(getApplicationContext());
             loader.loadMenuFile(R.raw.menu_counter, "~", AppData.lstCount);
         }
-
-        tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
-        tvTitle.setText("count numbers");
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);
         CustomListAdapter listCountAdapter = new CustomListAdapter(this,

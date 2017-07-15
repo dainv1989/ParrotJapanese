@@ -1,11 +1,11 @@
-số đếm ~ 0, 1, 2, 3, 4, 5, 6, 7 ... ~ count_numbers ~ number_icon
-ngày trong tháng ~ ngày mùng 1 đến ngày 31 trong tháng ~ count_date ~ date_icon
-tháng, ngày trong tuần ~ tháng một, tháng 2, thứ 2, thứ 3 ... ~ count_month_day ~ day_icon
-giờ ~ giờ trong ngày từ 1h đến 12h ~ count_hours ~ hour_icon
-phút ~ đếm phút trong một giờ ~ count_minutes ~ minute_icon
-vật nói chung ~ có thể sử dụng để đếm tất cả các vật, đồ vật ~ count_general_things ~ general_thing_icon
-người ~ đếm số người ~ count_people ~ people_icon
-vật mỏng ~ giấy, phong bì, đĩa ... ~ count_flat_things ~ flat_thing_icon
-vật dài, vật hình trụ ~ cây gậy, cái ô, cái cây, cái bút ... ~ count_long_things ~ long_thing_icon
-những vật nhỏ ~ quả táo, quả cam, cục tẩy ... ~ count_compact_things ~ eraser_icon
-sách ~ đếm sách, vở, tạp chí ... ~ count_books ~ book_icon
+số đếm ~ 0, 1, 2, 3, 4, 5, 6, 7 ... ~ count_numbers ~ numbers_amber
+ngày trong tháng ~ ngày mùng 1 đến ngày 31 trong tháng ~ count_date ~ date
+tháng, ngày trong tuần ~ tháng một, tháng 2, thứ 2, thứ 3 ... ~ count_month_day ~ weekday
+giờ ~ giờ trong ngày từ 1h đến 12h ~ count_hours ~ hour
+phút ~ đếm phút trong một giờ ~ count_minutes ~ minute
+vật nói chung ~ có thể sử dụng để đếm tất cả các vật, đồ vật ~ count_general_things ~ common_thing
+người ~ đếm số người ~ count_people ~ people
+vật mỏng ~ giấy, phong bì, đĩa ... ~ count_flat_things ~ envelop
+vật dài, vật hình trụ ~ cây gậy, cái ô, cái cây, cái bút ... ~ count_long_things ~ pencil
+những vật nhỏ ~ quả táo, quả cam, cục tẩy ... ~ count_compact_things ~ eraser
+sách ~ đếm sách, vở, tạp chí ... ~ count_books ~ books

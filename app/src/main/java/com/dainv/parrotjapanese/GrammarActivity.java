@@ -40,10 +40,10 @@ public class GrammarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        /* set toolbar title */
+        /* set screen title */
         Resources res = getResources();
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
-        tvTitle.setText("grammar videos");
+        tvTitle.setText(res.getString(R.string.title_grammar));
 
         /** load YouTube video list from a resource file */
         if (lstVideo == null) {

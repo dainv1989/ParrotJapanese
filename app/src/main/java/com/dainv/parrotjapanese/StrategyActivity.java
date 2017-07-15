@@ -20,12 +20,7 @@ public class StrategyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_strategy);
 
         Resources res = getResources();
-        /* set toolbar title */
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnStrategy));
-
-        int resId = 0;
+        int resId;
         TextView title;
         TextView desc;
         TextView number;

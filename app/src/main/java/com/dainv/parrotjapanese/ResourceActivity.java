@@ -14,16 +14,16 @@ public class ResourceActivity extends AppCompatActivity {
     private String[] resDesc;
     private String[] resSite;
 
+    private TextView tvTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resource);
 
-        /* set toolbar title */
         Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnResource));
+        tvTitle = (TextView)findViewById(R.id.txtResourceTitle);
+        tvTitle.setText(res.getString(R.string.title_resource));
 
         resLogo = res.getStringArray(R.array.res_logo_name);
         resTitle = res.getStringArray(R.array.res_title);

@@ -22,16 +22,17 @@ public class ExerciseActivity extends AppCompatActivity {
     private TextView btnPronun;
     private TextView btnMean;
 
+    private TextView tvTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
 
-        /* set toolbar title */
+        /* set screen title */
         Resources res = getResources();
-        ActionBar ab = getSupportActionBar();
-        if (ab != null)
-            ab.setTitle(res.getString(R.string.str_btnExercise));
+        tvTitle = (TextView)findViewById(R.id.txtExerciseTitle);
+        tvTitle.setText(res.getString(R.string.title_exercise));
 
         btnHira = (TextView)findViewById(R.id.ex_hiragana);
         btnKata = (TextView)findViewById(R.id.ex_katakana);

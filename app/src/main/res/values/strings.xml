@@ -1,47 +1,41 @@
 <resources>
     <string name="app_name">Parrot Japanese</string>
-    <string name="default_label">Label Here</string>
-    <string name="str_btnStrategy">Introduction</string>
-    <string name="str_btnHiragana">Hiragana</string>
-    <string name="str_btnKatakana">Katakana</string>
-    <string name="str_btnVocabulary">Essential vocabulary</string>
-    <string name="str_btnGrammar">Basic Grammar</string>
-    <string name="str_btnPhrase">Simple Phrases</string>
-    <string name="str_btnAbout">About</string>
-    <string name="str_btnExercise">Exercise</string>
-    <string name="str_btnCount">Count Numbers</string>
-    <string name="str_btnResource">Learning Resources</string>
-    <string name="title_question">Question</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="action_rate_app">Rate this app</string>
-    <string name="action_about">About</string>
+    <string name="title_vocabulary">essential vocabulary</string>
+    <string name="title_grammar">basic grammar</string>
+    <string name="title_phrase">simple phrases</string>
+    <string name="title_about">about</string>
+    <string name="title_exercise">exercise</string>
+    <string name="title_count">count numbers</string>
+    <string name="title_resource">online resources</string>
+    <string name="title_question">question</string>
+    <string name="title_setting">settings</string>
+    <string name="title_score">your score</string>
 
-    <string name="share_content">Great app for Japanese beginers: </string>
+    <string name="share_content">great app for Japanese beginners: </string>
 
     <!-- content to be displayed at strategy screen -->
-    <string name="st_title">Keep calm and learn japanese !</string>
+    <string name="st_title">keep calm and learn japanese!</string>
     <string name="app_desc">Parrot Japanese application is designed for the beginners and the speaking-oriented Japanese learners or who need to be familiar with Japanese in a very short time. It is useful to use this app as a small dictionary. For the beginners, following guidance to help using this app effectively:</string>
     <string-array name="st_steps">
-        <item>Japanese alphabet: Hiragana and Katakana</item>
-        <item>Learn vocabulary: Essential vocabulary and Count numbers</item>
-        <item>Exercises</item>
-        <item>Learn basic grammar</item>
-        <item>Learn daily life simple phrases</item>
-        <item>Goto next levels</item>
+        <item>japanese alphabet: hiragana &amp; katakana</item>
+        <item>learn vocabulary: essential vocabulary and count numbers</item>
+        <item>exercises</item>
+        <item>learn basic grammar</item>
+        <item>learn daily life simple phrases</item>
+        <item>goto next levels</item>
     </string-array>
 
     <string-array name="st_targets">
-        <item>First step for you familiar with basic Japanese sounds and characters. You will remember them automatically when you go through other steps. So you should not waste weeks or a month to remember all of them before going to next steps.</item>
-        <item>Take a few days or a week to take a look on all words once. You will come back here many times when necessary.</item>
-        <item>Check your vocabulary with exercises</item>
-        <item>Video series made by Japanese native speaker to help you learn simple Japanese grammar. These videos teach you to speak a sentence from very simple to complicated.</item>
-        <item>Common use phrases which are not in grammar videos</item>
-        <item>Learn more vocabulary, grammar, listening and writing skills from recommended resources</item>
+        <item>first step for you familiar with basic Japanese sounds and characters. you will remember them automatically when you go through other steps. so you should not waste weeks or a month to remember all of them before going to next steps.</item>
+        <item>Take a few days or a week to take a look on all words once. you will come back here many times when necessary.</item>
+        <item>check your vocabulary with exercises.</item>
+        <item>video series made by Japanese native speaker to help you learn simple Japanese grammar. these videos teach you to speak a Japanese sentence from very simple to complicated.</item>
+        <item>common used phrases which are not in grammar videos.</item>
+        <item>learn more vocabulary, grammar, listening and writing skills from recommended resources.</item>
     </string-array>
-    <string name="st_goodbye">Have a good time!</string>
+    <string name="st_goodbye">have a good time!</string>
     <!-- end strategy screen -->
-
 
     <!-- content for resource screen -->
     <!--logo file name array for each resource -->
@@ -56,16 +50,15 @@
     </string-array>
 
     <string-array name="res_title">
-        <item>Japanesepod101</item>
-        <item>Learning japanese with Erin</item>
-        <item>Tae Kim\'s Guide To Japanese</item>
-        <item>Youtube</item>
-        <item>Memrise</item>
-        <item>Lang-8</item>
-        <item>ReadTheKanji</item>
+        <item>japanesepod101</item>
+        <item>learning japanese with Erin</item>
+        <item>Tae Kim\'s guide to Japanese</item>
+        <item>youtube</item>
+        <item>memrise</item>
+        <item>lang-8</item>
+        <item>read the kanji</item>
     </string-array>
 
-    <string name="res_title">Online resources</string>
     <string-array name="res_desc">
         <item>Japanesepod101 has a lot of audios, videos along with transcipt, vocabulary, exercises ... for different level learners</item>
         <item>Erin is a anime character who help you learn Japanese through diffrent situations. You will learn grammar and vocabulary with each situation.</item>
@@ -85,15 +78,14 @@
         <item>lang-8.com</item>
         <item>readthekanji.com</item>
     </string-array>
-    <string name="res_end">Keep calm and learn Japanese !</string>
+    <string name="res_end">keep calm and learn Japanese !</string>
 
     <!-- setting screen -->
-    <string name="title_activity_settings">Settings</string>
-    <string name="pref_language_title">Language</string>
-    <string name="pref_qa_title">Number of questions</string>
+    <string name="pref_language_title">language</string>
+    <string name="pref_qa_title">number of questions</string>
     <string name="pref_qa_summary">questions for each exercise</string>
-    <string name="pref_sub_title">Create exercise by subject</string>
-    <string name="pref_sub_summary">Learn vocabulary from one-by-one subject</string>
+    <string name="pref_sub_title">create exercise by subject</string>
+    <string name="pref_sub_summary">learn vocabulary from one by one subject</string>
 
     <string-array name="pref_languages">
         <item>English</item>
@@ -116,25 +108,10 @@
     <string name="pref_number_qa_def">10</string>
     <!-- end setting screen -->
 
-    <!-- about screen string -->
-    <string name="about_share">Share to your friends</string>
-
     <!-- question screen -->
-    <string-array name="answer">
-        <item>answer 1</item>
-        <item>answer 2</item>
-        <item>answer 3</item>
-        <item>answer 4</item>
-    </string-array>
-    <string name="qa_str_answer">Anwser:</string>
-    <string name="qa_str_pronunciation">Pronunciation</string>
-    <string name="qa_str_meaning">Word meaning</string>
-
-    <!-- score screen -->
-    <string name="str_score_title">Score</string>
-    <string name="str_your_score">Your score:</string>
-    <string name="str_btn_continue">Continue</string>
-    <string name="str_btn_exit">Exit</string>
+    <string name="qa_str_answer">anwsers:</string>
+    <string name="qa_str_pronunciation">pronunciation</string>
+    <string name="qa_str_meaning">word meaning</string>
 
     <string name="thanks_state">Thanks for using this app.\nPlease share and encourage me on Google Play.</string>
     <string name="app_suggest">Another app by me on Google Play:</string>

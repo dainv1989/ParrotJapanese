@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="@string/default_label"
+        android:text="label here"
         android:textColor="@color/primary_text"
         android:gravity="center_horizontal" />
 </LinearLayout>
