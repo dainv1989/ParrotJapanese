@@ -28,14 +28,6 @@ public class ListLearnItem {
         this.meaning = "";
     }
 
-    /* copy constructor */
-    public ListLearnItem(ListLearnItem item) {
-        this.number = item.number;
-        this.kanji = item.kanji;
-        this.romaji = item.romaji;
-        this.meaning = item.meaning;
-    }
-
     public boolean isEquals(ListLearnItem item) {
         boolean ret = true;
         if (!this.kanji.contentEquals(item.kanji))
@@ -52,7 +44,6 @@ public class ListLearnItem {
      * @return sound file name of a word or a sentence
      */
     public String getSoundFileName() {
-        // Log.v(getClass().getSimpleName(), this.romaji + "|");
         String soundFileName = "";
         /**
          * remove trailing spaces, ending dot characters from Romaji component
@@ -60,6 +51,7 @@ public class ListLearnItem {
         soundFileName = this.romaji.trim();
         soundFileName = soundFileName.replace("-", "");
         soundFileName = soundFileName.replace(".", "");
+        soundFileName = soundFileName.replace(",", "");
         soundFileName = soundFileName.replaceAll("\\(.*\\)", "");
         soundFileName = soundFileName.trim();
 
@@ -68,7 +60,6 @@ public class ListLearnItem {
             soundFileName = TextUtils.join("_", words);
         }
 
-        // Log.v(getClass().getSimpleName(), soundFileName + "|");
         return soundFileName;
     }
 }

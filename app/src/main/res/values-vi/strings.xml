@@ -89,7 +89,7 @@
 
     <string-array name="pref_languages">
         <item>English</item>
-        <item>tiếng Việt</item>
+        <item>Tiếng Việt</item>
     </string-array>
 
     <string-array name="pref_lang">

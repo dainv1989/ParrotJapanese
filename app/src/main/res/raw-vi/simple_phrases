@@ -5,9 +5,8 @@
 こんばんは。 ~ konbanwa. ~ chào buổi tối.
 おやすみなさい。 ~ oyasuminasai. ~ chúc ngủ ngon.
 おげんきですか。　~ ogenki desuka. ~ bạn khỏe không.
-どういたしまして。　~ douitashimashite. ~ không có gì (nói khi có người khác cảm ơn)
 はじめまして。 ~ hajimemashite. ~ rất vui được làm quen với bạn. (lần đầu gặp)
-どうぞよろしくおねがいします。 ~ douzo yoroshiku onegaishimasu. ~ rất mong nhận được sự giúp đỡ. (nói sau khi giới thiệu bản thân)
+どうぞよろしく。 ~ douzo yoroshiku. ~ rất mong nhận được sự giúp đỡ. (nói sau khi giới thiệu bản thân)
 また、どうぞこしください。 ~ mata douzokoshi kudasai. ~ bạn luôn được chào đón ở đây.
 おひさしぶりです。 ~ ohisashiburi desu. ~ lâu rồi không gặp. (cách nói lịch sự)
 しばらくですね。 ~ shibaraku desune. ~ lâu rồi không gặp. (cách nói thông thường)
@@ -20,13 +19,16 @@
 けっこんおめでとう。 ~ kekkon omedetou. ~ chúc mừng đám cười.
 ぐあいはいかがですか。 ~ guai wa ikaga desuka. ~ bạn đang cảm thấy thế nào?
 かぜはどうですか。 ~ kaze wa dou desuka. ~ bạn bị cảm thế nào rồi?
-おかげさまでよくなりました。 ~ okagesamade yoku narimashita. ~ mình ổn hơn rồi.
+おかげさまでよくなりました。 ~ okagesama de yoku narimashita. ~ mình ổn hơn rồi.
+おだいじに。 ~ odaijini. ~ nhớ giữ gìn sức khỏe.
 はい。 ~ hai. ~ vâng, đúng.
 いいえ。 ~ iie. ~ không.
 すみません。 ~ sumimasen. ~ xin lỗi! (excuse me)
 ごめんなさい。 ~ gomennasai. ~ xin lỗi! (sorry)
 ありがとうございます。 ~ arigatou gozaimasu. ~ cảm ơn bạn rất nhiều.
+どういたしまして。　~ douitashimashite. ~ không có gì (nói khi có người khác cảm ơn)
 どうも。 ~ doumo. ~ cảm ơn. (cách nói ngắn gọn)
+どうぞ。 ~ douzo. ~ xin mời, của bạn đây.
 
 # as for language communication
 にほんごをはなしますか。 ~ nihongo wo hanashimasu ka. ~ bạn có nói được tiếng nhật không?
@@ -37,7 +39,7 @@
 しりません。 ~ shirimasen. ~ tôi không biết.
 よくわかりません。 ~ yoku wakarimasen. ~ tôi không chắc lắm.
 にほんごでなんといいますか。 ~ nihongo de nanto ii masuka. ~ từ/câu/cái này tiếng nhật nói như thế nào?
-どういういみですか。 ~ douiu imi desu ka. ~ nó có nghĩa là gì?
+どういういみですか。 ~ douiu imi desuka. ~ nó có nghĩa là gì?
 どういうことですか。 ~ douiu koto desuka. ~ ý của bạn là sao?
 これはなんですか。 ~ kore wa nan desuka. ~ cái gì đây?
 ゆっくりはなしてください。 ~ yukkuri hanashite kudasai. ~ xin vui lòng nói chậm lại.
@@ -45,6 +47,7 @@
 いいえ、けっこうです。 ~ iie, kekkou desu. ~ không, cảm ơn bạn.
 だいじょうぶです。 ~ daijoubu desu. ~ không vấn đề gì.
 ちょっとまってください。 ~ chotto matte kudasai. ~ xin vui lòng chờ một chút.
+しょうしょうおまちください。 ~ shoushou omachi kudasai ~ xin vui lòng chờ một chút. (lịch sự)
 ほんとうですか。 ~ hontou desuka. ~ thật à? thế á?
 
 # ask about time
@@ -56,11 +59,12 @@
 
 # on the phone
 もしもし。 ~ moshi moshi. ~ alo. (khi gọi điện thoại)
-どなたですか。 ~ donata desu ka. ~ ai đang gọi thế nhỉ?
-またあとででんわします。 ~ mata atode denwa shimasu. ~ tôi sẽ gọi lại sau.
-でんわばんごうはなんばんですか。 ~ denwabangou wa nan ban desu ka. ~ số điện thoại của bạn là gì?
-まちがえました。 ~ machigaemashita. ~ tôi gọi nhầm số.
-はなしちゅうです。 ~ hanashi-chuu desu. ~ số máy bận.
+きこえますか。 ~ kikoe masuka. ~ bạn có nghe được tôi nói không?
+どなたですか。 ~ donata desuka. ~ ai đang gọi thế nhỉ?
+またでんわします。 ~ mata denwa shimasu. ~ tôi sẽ gọi lại sau.
+でんわばんごうをおしえてください。 ~ denwabangou wo oshiete kudasai. ~ số điện thoại của bạn là gì?
+かけまちがえました。 ~ kake machigae mashita. ~ tôi gọi nhầm số.
+いまでんわちゅうです。 ~ ima denwa chuu desu. ~ số máy bận.
 
 # at a restaurant
 いらっしゃいませ。 ~ irasshaimase. ~ kính chào quí khách.
@@ -71,7 +75,6 @@
 のどがかわいています。 ~ nodo ga kawaite imasu. ~ tôi đang khát.
 おちゃをください。 ~ ocha wo kudasai. ~ vui lòng cho tôi cốc trà.
 いくらですか。 ~ ikura desuka. ~ giá bao nhiêu tiền?
-どうぞ。 ~ douzo. ~ xin mời, của bạn đây.
 
 # about weather
 てんきはどうですか。　~ tenki wa dou desuka. ~ thời tiết thế nào?
@@ -97,22 +100,27 @@
 テニスをしますか。 ~ tenisu wo shimasuka. ~ bạn có chơi quần vợt không?
 
 # taxi
-東京ホテルはどこですか。 ~ tokyo hoteru wa doko desuka. ~ khách sạn tokyo ở đâu nhỉ?
-ここからとおいですか。 ~ koko kara tooi desuka. ~ chỗ đó có xa đây không.
+バスていはどこですか。 ~ basu-tei wa doko desuka ~ bến xe bus ở đâu nhỉ?
+東京えきはどこですか。 ~ toukyou eki wa doko desuka. ~ nhà ga Tokyo ở đâu nhỉ?
+ここからちかいですか。 ~ koko kara chikai desuka. ~ chỗ đó có gần đây không.
 まっすぐいってください。 ~ massugu itte kudasai. ~ vui lòng đi thẳng.
 みぎにまがってください。 ~ migi ni magatte kudasai. ~ vui lòng rẽ phải.
 ひだりにまがってください。 ~ hidari ni magatte kudasai. ~ vui lòng rẽ trái.
 
 # others
+トイレはどこですか。 ~ toire wa doko desuka. ~ nhà vệ sinh ở đâu ạ?
 どうしたの。 ~ doushitano. ~ có chuyện gì vậy?
 なんでもない。 ~ nan demo nai. ~ không có gì cả.
 だれでもいない。 ~ dare demo inai. ~ không có ai.
 やくそくします。 ~ yakusoku shimasu. ~ tôi hứa.
 これでいいですか。 ~ kore de ii desuka. ~ như thế có được không?
 なるほど。 ~ naruhodo. ~ thì ra là vậy!
+どうして。 ~ doushite. ~ tại sao?
 しんじられない。 ~ shinjirarenai. ~ thật không thể tin nổi.
 がんばります。 ~ ganbarimasu. ~ cố lên!
-おつかれさまでした。 ~ otsukaresama deshita. ~ bạn đã vất vả rồi.
+がんばってください。 ~ ganbatte kudasai. ~ cố gắng lên!
+ごくろうさま。 ~ gokurousama. ~ bạn đã vất vả rồi. (cấp trên nói với cấp dưới)
+おつかれさま。 ~ otsukaresama. ~ bạn đã vất vả rồi. (cấp dưới nói với cấp trên hoặc đồng cấp)
 いってきます。 ~ itte kimasu. ~ tôi đi rồi về ngay.
 いってらっしゃい。 ~ itte rasshai. ~ bước chân cẩn thận.
 ただいま ~ tada ima. ~ tôi đang ở nhà.
@@ -123,3 +131,4 @@
 おまったせいたしました。 ~ omattase itashimashita. ~ xin lỗi đã bắt bạn phải chờ.
 そのとおりです。 ~ sono toori desu. ~ đúng thế, đúng vậy.
 どうしようかな。 ~ doushiyoukana. ~ tôi nên làm gì nhỉ?
+やめなさいよ。 ~ yamenasaiyo. ~ dừng lại!; thôi đi!
