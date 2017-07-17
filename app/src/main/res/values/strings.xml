@@ -115,4 +115,7 @@
 
     <string name="thanks_state">Thanks for using this app.\nPlease share and encourage me on Google Play.</string>
     <string name="app_suggest">Another app by me on Google Play:</string>
+
+    <string name="fullscreen_video_ads_id">ca-app-pub-5518862868429114/7129788981</string>
+    <string name="fullscreen_static_ads_id">ca-app-pub-5518862868429114/3438815788</string>
 </resources>

@@ -15,6 +15,9 @@ import com.dainv.parrotjapanese.data.Constant;
 import com.dainv.parrotjapanese.data.ListLearnItem;
 import com.dainv.parrotjapanese.data.VideoEntry;
 import com.dainv.parrotjapanese.util.TextLoader;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
@@ -35,6 +38,8 @@ public class GrammarActivity extends AppCompatActivity {
 
     private TextView tvTitle;
 
+    private InterstitialAd fullScrVideosAds;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +49,14 @@ public class GrammarActivity extends AppCompatActivity {
         Resources res = getResources();
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(res.getString(R.string.title_grammar));
+
+        /* ads implementation start */
+        fullScrVideosAds = new InterstitialAd(this);
+        fullScrVideosAds.setAdUnitId(res.getString(R.string.fullscreen_video_ads_id));
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        fullScrVideosAds.loadAd(adRequest);
+        /* ads implementation end */
 
         /** load YouTube video list from a resource file */
         if (lstVideo == null) {
@@ -66,13 +79,25 @@ public class GrammarActivity extends AppCompatActivity {
         lsVideoView.setAdapter(adapter);
         checkYoutubeApi();
 
-        final Activity parentActivity = this;
-        lsVideoView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+         lsVideoView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(YouTubeStandalonePlayer.createVideoIntent(
-                    parentActivity, Constant.DEVELOPER_KEY,
-                    lstVideo.get(position).videoId, 0, true, true));
+                final int video_index = position;
+
+                fullScrVideosAds.setAdListener(new AdListener() {
+                    @Override
+                    public void onAdClosed() {
+                        /* load the next ads content */
+                        fullScrVideosAds.loadAd(new AdRequest.Builder()
+                                .build());
+                        startYoutubePlayer(video_index);
+                    }
+                });
+
+                if(fullScrVideosAds.isLoaded())
+                    fullScrVideosAds.show();
+                else
+                    startYoutubePlayer(video_index);
             }
         });
     }
@@ -93,6 +118,13 @@ public class GrammarActivity extends AppCompatActivity {
             Toast.makeText(this, errorMsg, Toast.LENGTH_SHORT).show();
         }
     }
+
+    /**
+     * @param position      video index in video list
+     */
+    private void startYoutubePlayer(int position) {
+        startActivity(YouTubeStandalonePlayer.createVideoIntent(
+                this, Constant.DEVELOPER_KEY,
+                lstVideo.get(position).videoId, 0, true, true));
+    }
 }
-
-
