@@ -4,8 +4,11 @@
 
     <item android:drawable="@color/primary"/>
 
-    <item android:height="72dp"
-        android:width="72dp"
-        android:drawable="@drawable/logo"
-        android:gravity="center"/>
+    <item android:width="96dp"
+        android:height="96dp"
+        android:gravity="center">
+        <bitmap android:src="@mipmap/logo"
+            android:gravity="center"
+            android:tileMode="disabled"/>
+    </item>
 </layer-list>
