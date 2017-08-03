@@ -1,6 +1,7 @@
 package com.dainv.parrotjapanese;
 
-import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.dainv.parrotjapanese.data.VideoEntry;
 import com.dainv.parrotjapanese.util.TextLoader;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -39,6 +41,7 @@ public class GrammarActivity extends AppCompatActivity {
     private TextView tvTitle;
 
     private InterstitialAd fullScrVideosAds;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,9 @@ public class GrammarActivity extends AppCompatActivity {
         Resources res = getResources();
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(res.getString(R.string.title_grammar));
+
+        adView = (AdView)findViewById(R.id.adsVocabBanner);
+        adView.setVisibility(View.GONE);
 
         /* ads implementation start */
         fullScrVideosAds = new InterstitialAd(this);
@@ -123,8 +129,9 @@ public class GrammarActivity extends AppCompatActivity {
      * @param position      video index in video list
      */
     private void startYoutubePlayer(int position) {
-        startActivity(YouTubeStandalonePlayer.createVideoIntent(
+        Intent intent = YouTubeStandalonePlayer.createVideoIntent(
                 this, Constant.DEVELOPER_KEY,
-                lstVideo.get(position).videoId, 0, true, true));
+                lstVideo.get(position).videoId, 0, true, true);
+        startActivity(intent);
     }
 }

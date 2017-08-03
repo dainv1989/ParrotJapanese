@@ -30,7 +30,7 @@ public class ListVideoAdapter extends BaseAdapter {
     public ListVideoAdapter(Context context, List<VideoEntry> entries) {
         this.mContext = context;
         this.mListVideos = entries;
-        mLoaders = new HashMap<YouTubeThumbnailView, YouTubeThumbnailLoader>();
+        mLoaders = new HashMap<>();
         mListener = new ThumbnailListener();
     }
 

@@ -3,7 +3,6 @@ package com.dainv.parrotjapanese;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +14,7 @@ import android.widget.Toast;
 import com.dainv.parrotjapanese.adapter.CustomListAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
+import com.google.android.gms.ads.AdView;
 
 /**
  * Created by dainv on 10/28/2015.
@@ -25,6 +25,8 @@ public class CountingActivity extends AppCompatActivity {
 
     private TextView tvTitle;
 
+    private AdView adView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,9 @@ public class CountingActivity extends AppCompatActivity {
         Resources res = getResources();
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(res.getString(R.string.title_count));
+
+        adView = (AdView)findViewById(R.id.adsVocabBanner);
+        adView.setVisibility(View.GONE);
 
         /* load counter categories from menu resource file */
         if (AppData.lstCount.isEmpty()) {

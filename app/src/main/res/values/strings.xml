@@ -114,8 +114,10 @@
     <string name="qa_str_meaning">word meaning</string>
 
     <string name="thanks_state">Thanks for using this app.\nPlease share and encourage me on Google Play.</string>
-    <string name="app_suggest">Another app by me on Google Play:</string>
+    <string name="app_suggest">(touch to see on Google Play)</string>
+    <string name="hihi_kaka">mastering hiragana &amp; katanana by Hihi Kaka application</string>
 
     <string name="fullscreen_video_ads_id">ca-app-pub-5518862868429114/7129788981</string>
     <string name="fullscreen_static_ads_id">ca-app-pub-5518862868429114/3438815788</string>
+    <string name="banner_ads_id">ca-app-pub-5518862868429114/3823237085</string>
 </resources>

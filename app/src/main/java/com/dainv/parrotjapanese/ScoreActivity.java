@@ -3,15 +3,16 @@ package com.dainv.parrotjapanese;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.Constant;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 /**
  * Created by dainv on 12/24/2015.
@@ -25,6 +26,8 @@ public class ScoreActivity extends AppCompatActivity {
     private ImageView btnHome;
 
     private TextView tvTitle;
+
+    private InterstitialAd adsFullScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,6 +143,19 @@ public class ScoreActivity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                         Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+            }
+        });
+
+        adsFullScreen = new InterstitialAd(this);
+        adsFullScreen.setAdUnitId(getResources().getString(R.string.fullscreen_static_ads_id));
+        AdRequest adRequest = new AdRequest.Builder()
+                //.addTestDevice("1F17B575D2A0B81A953E526D33694A52")
+                .build();
+        adsFullScreen.loadAd(adRequest);
+        adsFullScreen.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                adsFullScreen.show();
             }
         });
     }

@@ -2,15 +2,11 @@ package com.dainv.parrotjapanese;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,6 +17,9 @@ import android.widget.TextView;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.Constant;
 import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +45,8 @@ public class QuestionActivity extends AppCompatActivity {
     private ListView lvAns;
 
     private TextView tvTitle;
+
+    private AdView adView;
 
     private String exercise = "";
     private static boolean isWaitingThread = false;
@@ -75,6 +76,24 @@ public class QuestionActivity extends AppCompatActivity {
         tvQuestion = (TextView)findViewById(R.id.qa_question);
         tvExplanation = (TextView)findViewById(R.id.qa_explain);
         lvAns = (ListView)findViewById(R.id.qa_answer);
+
+        adView = (AdView)findViewById(R.id.adsQuestionBanner);
+        adView.setVisibility(View.GONE);
+        AdRequest adRequest = new AdRequest.Builder()
+                //.addTestDevice("1F17B575D2A0B81A953E526D33694A52")
+                .build();
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                adView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                adView.setVisibility(View.GONE);
+            }
+        });
+        adView.loadAd(adRequest);
 
         exercise = this.getIntent().getStringExtra(Constant.EXTRA_EXER_KEY);
         switch (exercise) {
@@ -430,6 +449,27 @@ public class QuestionActivity extends AppCompatActivity {
             tvResult.setText(qaSummary.numCorrectAns + "/" +
                     qaSummary.numQuestion);
         }
+    }
+
+    @Override
+    public void onPause() {
+        if (adView != null)
+            adView.pause();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        if (adView != null)
+            adView.resume();
+        super.onResume();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (adView != null)
+            adView.destroy();
+        super.onDestroy();
     }
 
     /**

@@ -8,8 +8,8 @@ android {
         applicationId "com.dainv.parrotjapanese"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 36
-        versionName "2.0"
+        versionCode 38
+        versionName "2.1"
     }
     buildTypes {
         release {

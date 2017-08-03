@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         context.getPackageName();
 
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setType("text/html");
+                shareIntent.setType("text/plain");
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareText + appUrl);
 
                 startActivity(Intent.createChooser(shareIntent, "Share via"));

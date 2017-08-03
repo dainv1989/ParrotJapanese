@@ -113,8 +113,10 @@
     <string name="qa_str_meaning">nghĩa của từ</string>
 
     <string name="thanks_state">cảm ơn bà con đã ủng hộ.\nshare và vote ủng hộ mình trên Google Play nhé.</string>
-    <string name="app_suggest">xem app khác của mình trên Google Play:</string>
+    <string name="app_suggest">(click để xem trên Google Play)</string>
+    <string name="hihi_kaka">học chữ hiragana &amp; katanana với ứng dụng Hihi Kaka</string>
 
     <string name="fullscreen_video_ads_id">ca-app-pub-5518862868429114/7129788981</string>
     <string name="fullscreen_static_ads_id">ca-app-pub-5518862868429114/3438815788</string>
+    <string name="banner_ads_id">ca-app-pub-5518862868429114/3823237085</string>
 </resources>

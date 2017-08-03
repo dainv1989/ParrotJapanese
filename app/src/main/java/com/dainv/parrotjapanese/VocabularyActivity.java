@@ -3,9 +3,7 @@ package com.dainv.parrotjapanese;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -15,10 +13,15 @@ import android.widget.Toast;
 import com.dainv.parrotjapanese.adapter.CustomListAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class VocabularyActivity extends AppCompatActivity {
 
     private TextView tvTitle;
+
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,9 @@ public class VocabularyActivity extends AppCompatActivity {
         Resources res = getResources();
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(res.getString(R.string.title_vocabulary));
+
+        adView = (AdView)findViewById(R.id.adsVocabBanner);
+        adView.setVisibility(View.GONE);
 
         /** load vocabulary categories from file */
         if (AppData.lstVocab.isEmpty()) {
