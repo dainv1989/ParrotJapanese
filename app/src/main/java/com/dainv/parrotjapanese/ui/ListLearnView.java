@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.R;
-import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.dainv.parrotjapanese.data.LearnItem;
 
 /**
  * Created by dainv on 10/29/2015.
@@ -33,7 +33,7 @@ public class ListLearnView extends LinearLayout {
         this.speaker = (ImageView)findViewById(R.id.speaker);
     }
 
-    public void setItemList(ListLearnItem item) {
+    public void setItemList(LearnItem item) {
         this.number.setText(item.number + ".");
         this.kanji.setText(item.kanji);
         this.romaji.setText(item.romaji);

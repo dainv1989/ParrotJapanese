@@ -6,7 +6,6 @@ import android.content.res.Configuration;
 import android.preference.PreferenceManager;
 
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.Constant;
 
 import java.util.Locale;
 
@@ -22,7 +21,7 @@ public class ParrotJapaneseApp extends Application {
         super.onCreate();
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         config = new Configuration();
-        String lang = settings.getString(Constant.KEY_PREF_LANG, "en_US");
+        String lang = settings.getString(AppData.PREFKEY_LANGUAGE, "en_US");
         if (!lang.isEmpty()) {
             locale = new Locale(lang);
             Locale.setDefault(locale);

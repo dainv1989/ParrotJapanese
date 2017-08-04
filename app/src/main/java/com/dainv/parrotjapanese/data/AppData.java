@@ -3,6 +3,9 @@ package com.dainv.parrotjapanese.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 
 import java.util.ArrayList;
@@ -22,7 +25,31 @@ public class AppData {
     private final static String TAG = "AppData";
     private static AppData data;
 
-    public final static String[] hiragana = {
+    /* Youtube API developer key */
+    public static final String DEVELOPER_KEY = "AlzaSyc5lanwybSDZnEtlvM0sZdNDR8jk8hCqcM";
+
+    /* language */
+    public static final String LANG_VIETNAMESE = "vi";
+    public static final String LANG_ENGLISH = "en";
+
+    /* preference keys */
+    public static final String PREFKEY_LANGUAGE = "prefkey_language";
+    public static final String PREFKEY_QUESTION_COUNT = "prefkey_question_count";
+    public static final String PREFKEY_SUBJECT_CHOICE = "prefkey_subject_choice";
+
+    public static final String EXTRA_EXER_KEY = "exercise";
+    public static final String EXTRA_EXER_HIRAGANA = "hiragana";
+    public static final String EXTRA_EXER_KATAKANA = "katakana";
+    public static final String EXTRA_EXER_PRONUN = "pronunciation";
+    public static final String EXTRA_EXER_MEANING = "meaning";
+
+    public static final String CHART_TYPE = "CHART_TYPE";
+    public static final int CHART_HIRAGANA = 1;
+    public static final int CHART_KATAKANA = 2;
+
+    public final static int NUMBER_OF_ANSWERS = 4;
+
+    private final static String[] hiragana = {
             "あ", "い", "う", "え", "お",
             "か", "き", "く", "け", "こ",
             "さ", "し", "す", "せ", "そ",
@@ -36,7 +63,7 @@ public class AppData {
             "ん"
     };
 
-    public final static String[] katakana = {
+    private final static String[] katakana = {
             "ア", "イ", "ウ", "エ", "オ",
             "カ", "キ", "ク", "ケ", "コ",
             "サ", "シ", "ス", "セ", "ソ",
@@ -50,7 +77,7 @@ public class AppData {
             "ン"
     };
 
-    public final static String[] pronun = {
+    private final static String[] furigana = {
             "a", "i", "u", "e", "o",
             "ka", "ki", "ku", "ke", "ko",
             "sa", "shi", "su", "se", "so",
@@ -70,15 +97,15 @@ public class AppData {
      * lstCount: List counter items of Count number screen
      * lstVocab: List vocabulary items of Vocabulary screen
      */
-    public static ArrayList<ListItem> buttons;
+    public static ArrayList<ButtonItem> buttons;
     public static ArrayList<VideoEntry> videos;
-    public static ArrayList<ListItem> lstCount;
-    public static ArrayList<ListItem> lstVocab;
+    public static ArrayList<ButtonItem> lstCount;
+    public static ArrayList<ButtonItem> lstVocab;
 
     /* Questions - answers screen variable */
-    public static List<ListLearnItem> lstHira;
-    public static List<ListLearnItem> lstKata;
-    public static List<ListLearnItem> lstVocabFull;
+    public static List<LearnItem> lstHira;
+    public static List<LearnItem> lstKata;
+    public static List<LearnItem> lstVocabFull;
 
     public static QASummary hiraQASummary;
     public static QASummary kataQASummary;
@@ -87,21 +114,21 @@ public class AppData {
 
     /* application configuration varibale */
     public static Configuration config;
-    public static String language = Constant.LANG_ENGLISH;
+    public static String language = AppData.LANG_ENGLISH;
     public static int questions = 10;
 
     private AppData(){
         /**
          * initialize component here
          */
-        buttons = new ArrayList<ListItem>();
-        videos = new ArrayList<VideoEntry>();
-        lstCount = new ArrayList<ListItem>();
-        lstVocab = new ArrayList<ListItem>();
+        buttons = new ArrayList<>();
+        videos = new ArrayList<>();
+        lstCount = new ArrayList<>();
+        lstVocab = new ArrayList<>();
 
         lstHira = createHiraganaList();
         lstKata = createKatakanaList();
-        lstVocabFull = new ArrayList<ListLearnItem>();
+        lstVocabFull = new ArrayList<>();
 
         hiraQASummary = new QASummary();
         kataQASummary = new QASummary();
@@ -118,17 +145,29 @@ public class AppData {
         return data;
     }
 
-    private static List<ListLearnItem> createHiraganaList() {
-        List<ListLearnItem> lstHiragana = new ArrayList<>();
+    public static String[] getHiragana() {
+        return hiragana;
+    }
+
+    public static String[] getKatakana() {
+        return katakana;
+    }
+
+    public static String[] getFurigana() {
+        return furigana;
+    }
+
+    private static List<LearnItem> createHiraganaList() {
+        List<LearnItem> lstHiragana = new ArrayList<>();
 
         for (int i = 0; i < AppData.hiragana.length; i++) {
                 /* skip empty words */
             if (AppData.hiragana[i].isEmpty())
                 continue;
 
-            ListLearnItem item = new ListLearnItem();
+            LearnItem item = new LearnItem();
             item.kanji = AppData.hiragana[i];
-            item.romaji = AppData.pronun[i];
+            item.romaji = AppData.furigana[i];
             //Log.v(TAG, "add: " + item.kanji + " - " + item.romaji);
 
             lstHiragana.add(item);
@@ -136,17 +175,17 @@ public class AppData {
         return lstHiragana;
     }
 
-    private static List<ListLearnItem> createKatakanaList() {
-        List<ListLearnItem> lstKatakana = new ArrayList<>();
+    private static List<LearnItem> createKatakanaList() {
+        List<LearnItem> lstKatakana = new ArrayList<>();
 
         for (int i = 0; i < AppData.katakana.length; i++) {
                 /* skip empty words */
             if (AppData.hiragana[i].isEmpty())
                 continue;
 
-            ListLearnItem item = new ListLearnItem();
+            LearnItem item = new LearnItem();
             item.kanji = AppData.katakana[i];
-            item.romaji = AppData.pronun[i];
+            item.romaji = AppData.furigana[i];
 
             lstKatakana.add(item);
         }
@@ -155,7 +194,7 @@ public class AppData {
 
     public static void clearData() {
         int i = 0;
-        ListItem item = null;
+        ButtonItem item = null;
         for (i = 0; i < lstVocab.size(); i++) {
             item = lstVocab.get(i);
             item.learnItems.clear();
@@ -185,11 +224,11 @@ public class AppData {
      * Question - Answer structure
      */
     public static class QA {
-        public ListLearnItem[] answers;
-        public ListLearnItem correctAnswer;
+        public LearnItem[] answers;
+        public LearnItem correctAnswer;
         public QA() {
-            answers = new ListLearnItem[Constant.NUMBER_OF_ANSWERS];
-            correctAnswer = new ListLearnItem();
+            answers = new LearnItem[AppData.NUMBER_OF_ANSWERS];
+            correctAnswer = new LearnItem();
         }
     }
 
@@ -219,25 +258,25 @@ public class AppData {
      * @param number Number of questions to be built
      * @return List of QA struction
      */
-    public static List buildQuestions(List<ListLearnItem> source, int number) {
+    public static List buildQuestions(List<LearnItem> source, int number) {
         List<QA> lstQA = new ArrayList<QA>(number);
         Random random = new Random();
 
         /* step 1: select list of answers */
-        List<ListLearnItem> answers = pickRandom(source, number);
+        List<LearnItem> answers = pickRandom(source, number);
 
         for (int count = 0; count < number; count++) {
             QA newQA = new QA();
             newQA.correctAnswer = answers.get(count);
 
             /* step 2: create confusion for each answer by select 4 other selections */
-            List<ListLearnItem> qa = pickRandom(source, Constant.NUMBER_OF_ANSWERS);
+            List<LearnItem> qa = pickRandom(source, AppData.NUMBER_OF_ANSWERS);
 
             /* step 3: check whether 4 other selections list contains answer or not */
             boolean isContain = false;
-            ListLearnItem item1;
-            ListLearnItem item2;
-            for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
+            LearnItem item1;
+            LearnItem item2;
+            for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                 item1 = qa.get(i);
                 item2 = answers.get(count);
                 if ((item1).isEquals(item2)) {
@@ -261,12 +300,12 @@ public class AppData {
              * replace it with the correct answer
              */
             else {
-                int position = random.nextInt(Constant.NUMBER_OF_ANSWERS);
+                int position = random.nextInt(AppData.NUMBER_OF_ANSWERS);
                 qa.remove(position);
                 qa.add(position, answers.get(count));
             }
-            for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
-                newQA.answers[i] = (ListLearnItem)qa.get(i);
+            for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
+                newQA.answers[i] = (LearnItem)qa.get(i);
             }
             lstQA.add(newQA);
         }
@@ -291,7 +330,7 @@ public class AppData {
         public static int getNumberOfQuestions() {
             int ret = 0;
             String strNumQAs = "";
-            strNumQAs = prefs.getString(Constant.KEY_PREF_QA_NUMBERS, "10");
+            strNumQAs = prefs.getString(AppData.PREFKEY_QUESTION_COUNT, "10");
             if (!strNumQAs.isEmpty()) {
                 ret = Integer.parseInt(strNumQAs);
                 // Log.v(TAG, "update number of questions: " + ret);
@@ -301,7 +340,7 @@ public class AppData {
 
         public static boolean isLearnBySubject() {
             boolean ret = true;
-            ret = prefs.getBoolean(Constant.KEY_PREF_EXER_BY_SUBJECT, true);
+            ret = prefs.getBoolean(AppData.PREFKEY_SUBJECT_CHOICE, true);
             return ret;
         }
     }
@@ -327,6 +366,36 @@ public class AppData {
 
         public boolean isEmpty() {
             return lstQA.isEmpty();
+        }
+    }
+
+    public static void playSound(String fileName, Context context) {
+        Resources resources         = context.getResources();
+        MediaPlayer player;
+
+        /** get audio resource ID by name */
+        int audioResId = resources.getIdentifier(
+                "raw/" + fileName,
+                "raw" ,
+                context.getPackageName());
+
+        if (audioResId <= 0)
+            return;
+
+        try {
+            player = MediaPlayer.create(context, audioResId);
+            player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            player.start();
+
+            /* release media player after finishing */
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release();
+                }
+            });
+        } catch (IllegalStateException exp) {
+            exp.printStackTrace();
         }
     }
 }

@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.R;
-import com.dainv.parrotjapanese.data.ListItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
 
 /**
  * Created by dainv on 10/28/2015.
@@ -31,7 +31,7 @@ public class CustomListView extends LinearLayout {
         this.desc = (TextView)findViewById(R.id.itemDesc);
     }
 
-    public void setItemList(ListItem item) {
+    public void setItemList(ButtonItem item) {
         Resources res = mContext.getResources();
         int photoResId = res.getIdentifier(item.photoRes, "mipmap", mContext.getPackageName());
         if (photoResId > 0) {

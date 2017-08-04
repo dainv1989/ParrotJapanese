@@ -28,11 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HiraActivity"
-            android:configChanges="layoutDirection|locale"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".KataActivity"
+            android:name=".AlphabetActivity"
             android:configChanges="layoutDirection|locale"
             android:screenOrientation="portrait"/>
         <activity

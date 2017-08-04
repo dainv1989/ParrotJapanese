@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dainv.parrotjapanese.adapter.CustomListAdapter;
+import com.dainv.parrotjapanese.adapter.ButtonAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
 import com.google.android.gms.ads.AdView;
@@ -47,7 +47,7 @@ public class CountingActivity extends AppCompatActivity {
         }
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);
-        CustomListAdapter listCountAdapter = new CustomListAdapter(this,
+        ButtonAdapter listCountAdapter = new ButtonAdapter(this,
                 lvCount.getId(), AppData.lstCount);
         lvCount.setAdapter(listCountAdapter);
 

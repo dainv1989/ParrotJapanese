@@ -6,14 +6,14 @@ import java.util.List;
 /**
  * Created by dainv on 10/28/2015.
  */
-public class ListItem {
+public class ButtonItem {
     public String title;        // menu item title
     public String desc;         // menu item description
     public String photoRes;     // menu item photo resource file name
     public String dataRes;      // menu item data resource file name
-    public List<ListLearnItem> learnItems;
+    public List<LearnItem> learnItems;
 
-    public ListItem(String title, String desc, String dataFile, String photo) {
+    public ButtonItem(String title, String desc, String dataFile, String photo) {
         this.title = title;
         this.desc = desc;
         this.photoRes = photo;
@@ -21,7 +21,7 @@ public class ListItem {
         this.learnItems = new ArrayList<>();
     }
 
-    public ListItem() {
+    public ButtonItem() {
         this.title = "";
         this.desc = "";
         this.photoRes = "";

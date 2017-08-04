@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.Constant;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -43,24 +42,24 @@ public class ScoreActivity extends AppCompatActivity {
         btnHome = (ImageView)findViewById(R.id.sc_exit);
 
         final Intent qaIntent = new Intent(getApplicationContext(), QuestionActivity.class);
-        extra = (String)getIntent().getStringExtra(Constant.EXTRA_EXER_KEY);
+        extra = (String)getIntent().getStringExtra(AppData.EXTRA_EXER_KEY);
         switch (extra) {
-            case Constant.EXTRA_EXER_HIRAGANA:
+            case AppData.EXTRA_EXER_HIRAGANA:
                 numberOfQAs = AppData.hiraQASummary.numQuestion;
                 correctAns = AppData.hiraQASummary.numCorrectAns;
 
                 break;
-            case Constant.EXTRA_EXER_KATAKANA:
+            case AppData.EXTRA_EXER_KATAKANA:
                 numberOfQAs = AppData.kataQASummary.numQuestion;
                 correctAns = AppData.kataQASummary.numCorrectAns;
 
                 break;
-            case Constant.EXTRA_EXER_PRONUN:
+            case AppData.EXTRA_EXER_PRONUN:
                 numberOfQAs = AppData.pronunQASummary.numQuestion;
                 correctAns = AppData.pronunQASummary.numCorrectAns;
 
                 break;
-            case Constant.EXTRA_EXER_MEANING:
+            case AppData.EXTRA_EXER_MEANING:
                 numberOfQAs = AppData.meaningQASummary.numQuestion;
                 correctAns = AppData.meaningQASummary.numCorrectAns;
 
@@ -81,29 +80,29 @@ public class ScoreActivity extends AppCompatActivity {
                 int numQAs = 0;
                 numberOfQAs = AppData.Settings.getNumberOfQuestions();
                 switch (extra) {
-                    case Constant.EXTRA_EXER_HIRAGANA:
+                    case AppData.EXTRA_EXER_HIRAGANA:
                         AppData.hiraQASummary.clear();
                         AppData.hiraQASummary.numQuestion = numQAs;
 
-                        qaIntent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_HIRAGANA);
+                        qaIntent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_HIRAGANA);
                         break;
-                    case Constant.EXTRA_EXER_KATAKANA:
+                    case AppData.EXTRA_EXER_KATAKANA:
                         AppData.kataQASummary.clear();
                         AppData.kataQASummary.numQuestion = numQAs;
 
-                        qaIntent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_KATAKANA);
+                        qaIntent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_KATAKANA);
                         break;
-                    case Constant.EXTRA_EXER_PRONUN:
+                    case AppData.EXTRA_EXER_PRONUN:
                         AppData.pronunQASummary.clear();
                         AppData.pronunQASummary.numQuestion = numQAs;
 
-                        qaIntent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_PRONUN);
+                        qaIntent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_PRONUN);
                         break;
-                    case Constant.EXTRA_EXER_MEANING:
+                    case AppData.EXTRA_EXER_MEANING:
                         AppData.meaningQASummary.clear();
                         AppData.meaningQASummary.numQuestion = numQAs;
 
-                        qaIntent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_MEANING);
+                        qaIntent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_MEANING);
                         break;
                     default:
                         break;
@@ -123,16 +122,16 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (extra) {
-                    case Constant.EXTRA_EXER_HIRAGANA:
+                    case AppData.EXTRA_EXER_HIRAGANA:
                         AppData.hiraQASummary.clear();
                         break;
-                    case Constant.EXTRA_EXER_KATAKANA:
+                    case AppData.EXTRA_EXER_KATAKANA:
                         AppData.kataQASummary.clear();
                         break;
-                    case Constant.EXTRA_EXER_PRONUN:
+                    case AppData.EXTRA_EXER_PRONUN:
                         AppData.pronunQASummary.clear();
                         break;
-                    case Constant.EXTRA_EXER_MEANING:
+                    case AppData.EXTRA_EXER_MEANING:
                         AppData.meaningQASummary.clear();
                         break;
                     default:
@@ -168,16 +167,16 @@ public class ScoreActivity extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         switch (extra) {
-            case Constant.EXTRA_EXER_HIRAGANA:
+            case AppData.EXTRA_EXER_HIRAGANA:
                 AppData.hiraQASummary.clear();
                 break;
-            case Constant.EXTRA_EXER_KATAKANA:
+            case AppData.EXTRA_EXER_KATAKANA:
                 AppData.kataQASummary.clear();
                 break;
-            case Constant.EXTRA_EXER_PRONUN:
+            case AppData.EXTRA_EXER_PRONUN:
                 AppData.pronunQASummary.clear();
                 break;
-            case Constant.EXTRA_EXER_MEANING:
+            case AppData.EXTRA_EXER_MEANING:
                 AppData.meaningQASummary.clear();
                 break;
             default:

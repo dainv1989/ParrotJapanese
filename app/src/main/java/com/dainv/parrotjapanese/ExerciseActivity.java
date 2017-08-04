@@ -9,8 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.Constant;
-import com.dainv.parrotjapanese.data.ListItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
 import com.dainv.parrotjapanese.util.TextLoader;
 
 public class ExerciseActivity extends AppCompatActivity {
@@ -43,8 +42,8 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_HIRAGANA);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                                AppData.EXTRA_EXER_HIRAGANA);
                 startActivity(intent);
             }
         });
@@ -54,8 +53,8 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_KATAKANA);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                        AppData.EXTRA_EXER_KATAKANA);
                 startActivity(intent);
             }
         });
@@ -65,8 +64,8 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_PRONUN);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                        AppData.EXTRA_EXER_PRONUN);
                 startActivity(intent);
             }
         });
@@ -76,15 +75,15 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_MEANING);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                        AppData.EXTRA_EXER_MEANING);
                 startActivity(intent);
             }
         });
 
         TextLoader loader = new TextLoader(getApplicationContext());
         String pkgName = getPackageName();
-        int dataResId = 0;
+        int dataResId;
         /**
          * Load vocabulary subject list if it's not existed
          * This situation occurs in case user goes to Exercise before Vocabulary screen
@@ -95,7 +94,7 @@ public class ExerciseActivity extends AppCompatActivity {
         }
 
         /* Loading full vocabulary data from raw files */
-        ListItem item = new ListItem();
+        ButtonItem item = new ButtonItem();
         int totalVocab = 0;
         for (int i = 0; i < AppData.lstVocab.size(); i++) {
             item = AppData.lstVocab.get(i);

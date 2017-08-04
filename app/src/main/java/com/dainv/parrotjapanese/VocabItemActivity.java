@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.ListItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
 import com.dainv.parrotjapanese.util.TextLoader;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -35,7 +35,7 @@ public class VocabItemActivity extends AppCompatActivity {
 
         Resources res = getResources();
         current_index = (int)getIntent().getExtras().get("selected_index");
-        ListItem selectedItem = AppData.lstVocab.get(current_index);
+        ButtonItem selectedItem = AppData.lstVocab.get(current_index);
         int dataResId = res.getIdentifier(selectedItem.dataRes, "raw", getPackageName());
 
         /* set toolbar title */

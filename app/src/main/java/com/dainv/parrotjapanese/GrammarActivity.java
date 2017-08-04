@@ -1,7 +1,6 @@
 package com.dainv.parrotjapanese;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.ListVideoAdapter;
-import com.dainv.parrotjapanese.data.Constant;
-import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.dainv.parrotjapanese.data.AppData;
+import com.dainv.parrotjapanese.data.LearnItem;
 import com.dainv.parrotjapanese.data.VideoEntry;
 import com.dainv.parrotjapanese.util.TextLoader;
 import com.google.android.gms.ads.AdListener;
@@ -67,7 +66,7 @@ public class GrammarActivity extends AppCompatActivity {
         /** load YouTube video list from a resource file */
         if (lstVideo == null) {
             lstVideo = new ArrayList<>();
-            final List<ListLearnItem> lstItem = new ArrayList<ListLearnItem>();
+            final List<LearnItem> lstItem = new ArrayList<LearnItem>();
             TextLoader loader = new TextLoader(getApplicationContext());
             loader.loadFile(R.raw.grammar_videos, "~", lstItem);
             for (int i = 0; i < lstItem.size(); i++) {
@@ -130,7 +129,7 @@ public class GrammarActivity extends AppCompatActivity {
      */
     private void startYoutubePlayer(int position) {
         Intent intent = YouTubeStandalonePlayer.createVideoIntent(
-                this, Constant.DEVELOPER_KEY,
+                this, AppData.DEVELOPER_KEY,
                 lstVideo.get(position).videoId, 0, true, true);
         startActivity(intent);
     }

@@ -5,8 +5,8 @@ import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.dainv.parrotjapanese.data.ListItem;
-import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
+import com.dainv.parrotjapanese.data.LearnItem;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class TextLoader {
      * @param split     : split character
      * @param result    : Store result in a list of item
      */
-    public void loadFile(int resId, String split, List<ListLearnItem> result) {
+    public void loadFile(int resId, String split, List<LearnItem> result) {
         Resources resources = mContext.getResources();
         InputStream input = resources.openRawResource(resId);
         /**
@@ -57,13 +57,13 @@ public class TextLoader {
                 // Log.v(TAG, line);
                 String[] strings = TextUtils.split(line, split);
                 if (strings.length == LEARN_NUMBER_OF_FIELDS) {
-                    result.add(new ListLearnItem(count + "",
+                    result.add(new LearnItem(count + "",
                             strings[0].trim(),      // strings[0]: kanji
                             strings[1].trim(),      // strings[1]: romaji
                             strings[2].trim()));    // strings[2]: meaning
                     count++;
                 } else if (strings.length == COUNT_NUMBER_OF_FIELDS) {
-                    result.add(new ListLearnItem(
+                    result.add(new LearnItem(
                             count + "",             // strings[0] is ignored
                             strings[1].trim(),      // kanji
                             strings[2].trim(),      // romaji
@@ -89,7 +89,7 @@ public class TextLoader {
         }
     }
 
-    public void loadMenuFile(int resId, String split, List<ListItem> result) {
+    public void loadMenuFile(int resId, String split, List<ButtonItem> result) {
         Resources resources = mContext.getResources();
         InputStream input = resources.openRawResource(resId);
         /**
@@ -111,7 +111,7 @@ public class TextLoader {
                 // Log.v(TAG, line);
                 String[] strings = TextUtils.split(line, split);
                 if (strings.length == MENU_NUMBER_OF_FIELDS) {
-                    result.add(new ListItem(
+                    result.add(new ButtonItem(
                             strings[0].trim(),      // title
                             strings[1].trim(),      // description
                             strings[2].trim(),      // data resource file name

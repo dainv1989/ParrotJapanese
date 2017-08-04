@@ -9,7 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
-import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.dainv.parrotjapanese.data.LearnItem;
 import com.dainv.parrotjapanese.util.TextLoader;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -22,7 +22,7 @@ import java.util.ArrayList;
  */
 public class PhraseActivity extends AppCompatActivity {
 
-    private ArrayList<ListLearnItem> lstPhrase = null;
+    private ArrayList<LearnItem> lstPhrase = null;
 
     private TextView tvTitle;
 

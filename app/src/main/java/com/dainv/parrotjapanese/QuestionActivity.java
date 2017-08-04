@@ -15,8 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.Constant;
-import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.dainv.parrotjapanese.data.LearnItem;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -95,9 +94,9 @@ public class QuestionActivity extends AppCompatActivity {
         });
         adView.loadAd(adRequest);
 
-        exercise = this.getIntent().getStringExtra(Constant.EXTRA_EXER_KEY);
+        exercise = this.getIntent().getStringExtra(AppData.EXTRA_EXER_KEY);
         switch (exercise) {
-            case Constant.EXTRA_EXER_HIRAGANA:
+            case AppData.EXTRA_EXER_HIRAGANA:
                 if (AppData.hiraQASummary.isEmpty() || isChangedSetting) {
                     AppData.hiraQASummary.clear();
                     AppData.hiraQASummary.numQuestion = numQAs;
@@ -105,7 +104,7 @@ public class QuestionActivity extends AppCompatActivity {
                 }
                 setQAOnScreen(AppData.hiraQASummary, HIRAGANA_TO_ROMAJI);
                 break;
-            case Constant.EXTRA_EXER_KATAKANA:
+            case AppData.EXTRA_EXER_KATAKANA:
                 if (AppData.kataQASummary.isEmpty() || isChangedSetting) {
                     AppData.kataQASummary.clear();
                     AppData.kataQASummary.numQuestion = numQAs;
@@ -113,7 +112,7 @@ public class QuestionActivity extends AppCompatActivity {
                 }
                 setQAOnScreen(AppData.kataQASummary, HIRAGANA_TO_ROMAJI);
                 break;
-            case Constant.EXTRA_EXER_PRONUN:
+            case AppData.EXTRA_EXER_PRONUN:
                 boolean isLearnBySubject = AppData.Settings.isLearnBySubject();
                 if (AppData.pronunQASummary.isEmpty() || isChangedSetting) {
                     AppData.pronunQASummary.clear();
@@ -136,7 +135,7 @@ public class QuestionActivity extends AppCompatActivity {
                 }
                 setQAOnScreen(AppData.pronunQASummary, KANJI_TO_ROMAJI);
                 break;
-            case Constant.EXTRA_EXER_MEANING:
+            case AppData.EXTRA_EXER_MEANING:
                 isLearnBySubject = AppData.Settings.isLearnBySubject();
                 if (AppData.meaningQASummary.isEmpty() || isChangedSetting) {
                     AppData.meaningQASummary.clear();
@@ -176,7 +175,7 @@ public class QuestionActivity extends AppCompatActivity {
 
                 isAnswered = true;
                 switch (exercise) {
-                    case Constant.EXTRA_EXER_HIRAGANA:
+                    case AppData.EXTRA_EXER_HIRAGANA:
                         index = AppData.hiraQASummary.currentIndex;
                         if (index < AppData.hiraQASummary.lstQA.size()) {
                             AppData.QA qa = AppData.hiraQASummary.lstQA.get(index);
@@ -200,7 +199,7 @@ public class QuestionActivity extends AppCompatActivity {
                             }
                         }
                         break;
-                    case Constant.EXTRA_EXER_KATAKANA:
+                    case AppData.EXTRA_EXER_KATAKANA:
                         index = AppData.kataQASummary.currentIndex;
                         if (index < AppData.kataQASummary.lstQA.size()) {
                             AppData.QA qa = AppData.kataQASummary.lstQA.get(index);
@@ -223,7 +222,7 @@ public class QuestionActivity extends AppCompatActivity {
                             }
                         }
                         break;
-                    case Constant.EXTRA_EXER_PRONUN:
+                    case AppData.EXTRA_EXER_PRONUN:
                         index = AppData.pronunQASummary.currentIndex;
                         if (index < AppData.pronunQASummary.lstQA.size()) {
                             AppData.QA qa = AppData.pronunQASummary.lstQA.get(index);
@@ -248,7 +247,7 @@ public class QuestionActivity extends AppCompatActivity {
                             }
                         }
                         break;
-                    case Constant.EXTRA_EXER_MEANING:
+                    case AppData.EXTRA_EXER_MEANING:
                         index = AppData.meaningQASummary.currentIndex;
                         if (index < AppData.meaningQASummary.lstQA.size()) {
                             AppData.QA qa = AppData.meaningQASummary.lstQA.get(index);
@@ -297,7 +296,7 @@ public class QuestionActivity extends AppCompatActivity {
                     public void run() {
                         int index = 0;
                         switch (exercise) {
-                            case Constant.EXTRA_EXER_HIRAGANA:
+                            case AppData.EXTRA_EXER_HIRAGANA:
                                 /* show next question */
                                 AppData.hiraQASummary.currentIndex++;
                                 setQAOnScreen(AppData.hiraQASummary, HIRAGANA_TO_ROMAJI);
@@ -306,7 +305,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 if (index == AppData.hiraQASummary.lstQA.size()) {
                                     /* start score activity */
                                     Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
-                                    intent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_HIRAGANA);
+                                    intent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_HIRAGANA);
                                     /* clear history and start a new task */
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                                                     Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -314,7 +313,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 }
                                 break;
-                            case Constant.EXTRA_EXER_KATAKANA:
+                            case AppData.EXTRA_EXER_KATAKANA:
                                 AppData.kataQASummary.currentIndex++;
                                 setQAOnScreen(AppData.kataQASummary, HIRAGANA_TO_ROMAJI);
 
@@ -322,7 +321,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 if (index == AppData.kataQASummary.lstQA.size()) {
                                     /* start score activity */
                                     Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
-                                    intent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_KATAKANA);
+                                    intent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_KATAKANA);
                                     /* clear history and start a new task */
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                                                     Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -330,7 +329,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 }
                                 break;
-                            case Constant.EXTRA_EXER_MEANING:
+                            case AppData.EXTRA_EXER_MEANING:
                                 AppData.meaningQASummary.currentIndex++;
                                 setQAOnScreen(AppData.meaningQASummary, KANJI_TO_MEANING);
 
@@ -338,7 +337,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 if (index == AppData.meaningQASummary.lstQA.size()) {
                                     /* start score activity */
                                     Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
-                                    intent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_MEANING);
+                                    intent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_MEANING);
                                     /* clear history and start a new task */
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                                                     Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -346,7 +345,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 }
                                 break;
-                            case Constant.EXTRA_EXER_PRONUN:
+                            case AppData.EXTRA_EXER_PRONUN:
                                 AppData.pronunQASummary.currentIndex++;
                                 setQAOnScreen(AppData.pronunQASummary, KANJI_TO_ROMAJI);
 
@@ -354,7 +353,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 if (index == AppData.pronunQASummary.lstQA.size()) {
                                     /* start score activity */
                                     Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
-                                    intent.putExtra(Constant.EXTRA_EXER_KEY, Constant.EXTRA_EXER_PRONUN);
+                                    intent.putExtra(AppData.EXTRA_EXER_KEY, AppData.EXTRA_EXER_PRONUN);
                                     /* clear history and start a new task */
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                                                     Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -376,7 +375,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void setQAOnScreen(AppData.QASummary qaSummary, int exerciseType) {
         qaSummary.numQuestion = numQAs;
-        ListLearnItem item;
+        LearnItem item;
         int index = qaSummary.currentIndex;
         if (index < qaSummary.lstQA.size()) {
             final AppData.QA qa = qaSummary.lstQA.get(index);
@@ -401,7 +400,7 @@ public class QuestionActivity extends AppCompatActivity {
                     });
 
                     /* set answers for listview */
-                    for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
+                    for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                         item = qa.answers[i];
                         answers.add(item.meaning);
                     }
@@ -412,7 +411,7 @@ public class QuestionActivity extends AppCompatActivity {
                     tvExplanation.setVisibility(View.GONE);
 
                     /* set answers for listview */
-                    for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
+                    for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                         item = qa.answers[i];
                         answers.add(item.kanji);
                     }
@@ -424,7 +423,7 @@ public class QuestionActivity extends AppCompatActivity {
                     tvExplanation.setText(qa.correctAnswer.meaning);
 
                     /* set answers for listview */
-                    for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
+                    for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                         item = qa.answers[i];
                         answers.add(item.romaji);
                     }
@@ -435,7 +434,7 @@ public class QuestionActivity extends AppCompatActivity {
                     tvExplanation.setVisibility(View.GONE);
 
                     /* set answers for listview */
-                    for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
+                    for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                         item = qa.answers[i];
                         answers.add(item.romaji);
                     }
@@ -490,7 +489,7 @@ public class QuestionActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        for (int i = 0; i < Constant.NUMBER_OF_ANSWERS; i++) {
+                        for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                             if (qa.answers[i].kanji.contentEquals(qa.correctAnswer.kanji)) {
                                 lvAns.getChildAt(i).setBackgroundResource(R.drawable.round_solid_bkg);
                                 break;
@@ -504,7 +503,7 @@ public class QuestionActivity extends AppCompatActivity {
         thread.start();
     }
 
-    private void playSound(ListLearnItem item) {
+    private void playSound(LearnItem item) {
         String pkgName = getPackageName();
         Resources res = this.getResources();
         int soundId = res.getIdentifier(item.getSoundFileName(), "raw", pkgName);

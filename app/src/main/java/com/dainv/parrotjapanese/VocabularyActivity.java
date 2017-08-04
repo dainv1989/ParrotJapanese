@@ -10,11 +10,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dainv.parrotjapanese.adapter.CustomListAdapter;
+import com.dainv.parrotjapanese.adapter.ButtonAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 public class VocabularyActivity extends AppCompatActivity {
@@ -42,7 +40,7 @@ public class VocabularyActivity extends AppCompatActivity {
         }
 
         ListView lvVocab = (ListView)findViewById(R.id.listVocabulary);
-        CustomListAdapter listVocabAdapter = new CustomListAdapter(this, lvVocab.getId(), AppData.lstVocab);
+        ButtonAdapter listVocabAdapter = new ButtonAdapter(this, lvVocab.getId(), AppData.lstVocab);
         lvVocab.setAdapter(listVocabAdapter);
 
         lvVocab.setOnItemClickListener(new AdapterView.OnItemClickListener() {
