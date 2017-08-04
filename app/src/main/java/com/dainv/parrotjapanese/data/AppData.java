@@ -236,12 +236,12 @@ public class AppData {
      * Randomize a list and return randomized list with specific number of elements
      * In case required numbers of elements is greater than source list size
      * Return multiple randomized source list
-     * @param lst       : list to be randomized
+     * @param list      : list to be randomized
      * @param number    : number of elements in return list
      * @return
      */
-    public static List pickRandom(List lst, int number) {
-        List copy = new LinkedList(lst);
+    public static List pickRandom(List list, int number) {
+        List copy = new LinkedList(list);
         List ret = new LinkedList();
 
         while (ret.size() < number) {
@@ -252,6 +252,21 @@ public class AppData {
         return ret.subList(0, number);
     }
 
+    public static List generateQuestion(List<LearnItem> sources, int count) {
+        List<Question> lstQuestions = new ArrayList<>(count);
+
+        /* select list of answers */
+        List<LearnItem> lstAnswers = pickRandom(sources, count);
+
+        for(int i = 0; i < count; i++) {
+            Question question = new Question();
+
+
+        }
+
+        return lstQuestions;
+    }
+
     /**
      * Build a set consist of specific numbers of question from a data source
      * @param source Data source
@@ -259,7 +274,7 @@ public class AppData {
      * @return List of QA struction
      */
     public static List buildQuestions(List<LearnItem> source, int number) {
-        List<QA> lstQA = new ArrayList<QA>(number);
+        List<QA> lstQA = new ArrayList<>(number);
         Random random = new Random();
 
         /* step 1: select list of answers */
