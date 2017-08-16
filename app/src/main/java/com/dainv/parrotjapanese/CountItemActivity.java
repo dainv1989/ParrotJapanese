@@ -47,8 +47,7 @@ public class CountItemActivity extends AppCompatActivity {
 
         int dataResId = res.getIdentifier(selectedItem.dataRes, "raw", getPackageName());
         lstNumber = new ArrayList<>();
-        TextLoader loader = new TextLoader(this);
-        loader.loadFile(dataResId, "~", lstNumber);
+        TextLoader.loadFile(this, dataResId, "~", lstNumber);
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);
         final ListLearnAdapter adapter = new ListLearnAdapter(this, lvCount.getId(), lstNumber);

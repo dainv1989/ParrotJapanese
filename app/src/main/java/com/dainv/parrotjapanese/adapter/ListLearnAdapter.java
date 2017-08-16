@@ -46,7 +46,6 @@ public class ListLearnAdapter extends ArrayAdapter<LearnItem> {
         if (soundId > 0)
             isAvailble = true;
 
-        //Log.v("ListLearnAdapter", soundFileName + ":" + isAvailble);
         return isAvailble;
     }
 
@@ -54,7 +53,7 @@ public class ListLearnAdapter extends ArrayAdapter<LearnItem> {
         LearnItem item = mListItems.get(position);
         String soundFileName;
         Resources res = mContext.getResources();
-        int soundFileId = 0;
+        int soundFileId;
 
         soundFileName = item.getSoundFileName();
         if (isSoundAvailable(soundFileName)) {
@@ -69,7 +68,6 @@ public class ListLearnAdapter extends ArrayAdapter<LearnItem> {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
                     mp.release();
-                    mp = null;
                 }
             });
         }

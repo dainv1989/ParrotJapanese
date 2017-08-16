@@ -3,7 +3,6 @@ package com.dainv.parrotjapanese.util;
 import android.content.Context;
 import android.content.res.Resources;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.dainv.parrotjapanese.data.ButtonItem;
 import com.dainv.parrotjapanese.data.LearnItem;
@@ -18,16 +17,13 @@ import java.util.List;
 /**
  * Created by dainv on 11/24/2015.
  */
-public class TextLoader {
-    private final static String TAG = "TextLoader";
+public final class TextLoader {
+
     private final static int LEARN_NUMBER_OF_FIELDS = 3;
     private final static int COUNT_NUMBER_OF_FIELDS = 4;
     private final static int MENU_NUMBER_OF_FIELDS = 4;
-    private Context mContext;
 
-    public TextLoader(Context context) {
-        this.mContext = context;
-    }
+    private TextLoader() {}
 
     /**
      * Load raw text resource file, which have multiple fields split by a character such as dot, comma ...
@@ -35,8 +31,8 @@ public class TextLoader {
      * @param split     : split character
      * @param result    : Store result in a list of item
      */
-    public void loadFile(int resId, String split, List<LearnItem> result) {
-        Resources resources = mContext.getResources();
+    public static void loadFile(Context context, int resId, String split, List<LearnItem> result) {
+        Resources resources = context.getResources();
         InputStream input = resources.openRawResource(resId);
         /**
          * open input file with UTF-8 character encoding
@@ -47,14 +43,15 @@ public class TextLoader {
         try {
             String line;
             int count = 1;
-            while ((line = reader.readLine()) != null) {
-                /**
-                 * Character # is used to start comment line.
-                 */
+            do {
+                line = reader.readLine();
+                if (line == null)
+                    break;
+
+                /* character # is used to start a comment line. */
                 if (line.startsWith("#"))
                     continue;
 
-                // Log.v(TAG, line);
                 String[] strings = TextUtils.split(line, split);
                 if (strings.length == LEARN_NUMBER_OF_FIELDS) {
                     result.add(new LearnItem(count + "",
@@ -70,27 +67,25 @@ public class TextLoader {
                             strings[3].trim()));    // meaning + number expression
                     count++;
                 } else {
-                    Log.v(TAG, "INVALID LINE: " + line);
+                    /* invalid format */
                 }
-            }
+            } while (line != null);
         }
         catch (IOException exp) {
-            // TODO: display pop-up error for user
-            Log.v(TAG, exp.toString());
+            exp.printStackTrace();
         }
         finally {
             try {
                 reader.close();
             }
             catch (IOException exp) {
-                // TODO: display pop-up error for user
-                Log.v(TAG, exp.toString());
+                exp.printStackTrace();
             }
         }
     }
 
-    public void loadMenuFile(int resId, String split, List<ButtonItem> result) {
-        Resources resources = mContext.getResources();
+    public static void loadMenuFile(Context context, int resId, String split, List<ButtonItem> result) {
+        Resources resources = context.getResources();
         InputStream input = resources.openRawResource(resId);
         /**
          * open input file with UTF-8 character encoding
@@ -98,17 +93,20 @@ public class TextLoader {
          */
         BufferedReader reader = new BufferedReader(new InputStreamReader(input,
                 Charset.forName("UTF-8")));
+        if (reader == null)
+            return;
+
         try {
             String line;
-            int count = 1;
-            while ((line = reader.readLine()) != null) {
-                /**
-                 * Character # is used to start comment line.
-                 */
+            do {
+                line = reader.readLine();
+                if (line == null)
+                    break;
+
+                /* character # is used to start a comment line. */
                 if (line.startsWith("#"))
                     continue;
 
-                // Log.v(TAG, line);
                 String[] strings = TextUtils.split(line, split);
                 if (strings.length == MENU_NUMBER_OF_FIELDS) {
                     result.add(new ButtonItem(
@@ -117,23 +115,20 @@ public class TextLoader {
                             strings[2].trim(),      // data resource file name
                             strings[3].trim()       // photo resource file name
                     ));
-                    count++;
                 } else {
-                    Log.v(TAG, "INVALID LINE: " + line);
+                    /* invalid format */
                 }
-            }
+            } while (line != null);
         }
         catch (IOException exp) {
-            // TODO: display pop-up error for user
-            Log.v(TAG, exp.toString());
+            exp.printStackTrace();
         }
         finally {
             try {
                 reader.close();
             }
             catch (IOException exp) {
-                // TODO: display pop-up error for user
-                Log.v(TAG, exp.toString());
+                exp.printStackTrace();
             }
         }
     }

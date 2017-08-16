@@ -35,8 +35,7 @@ public class VocabularyActivity extends AppCompatActivity {
 
         /** load vocabulary categories from file */
         if (AppData.lstVocab.isEmpty()) {
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadMenuFile(R.raw.menu_vocabulary, "~", AppData.lstVocab);
+            TextLoader.loadMenuFile(this, R.raw.menu_vocabulary, "~", AppData.lstVocab);
         }
 
         ListView lvVocab = (ListView)findViewById(R.id.listVocabulary);

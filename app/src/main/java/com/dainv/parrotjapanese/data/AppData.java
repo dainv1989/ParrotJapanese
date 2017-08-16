@@ -22,15 +22,14 @@ import java.util.Random;
  *
  */
 public class AppData {
-    private final static String TAG = "AppData";
     private static AppData data;
 
     /* Youtube API developer key */
     public static final String DEVELOPER_KEY = "AlzaSyc5lanwybSDZnEtlvM0sZdNDR8jk8hCqcM";
 
     /* language */
-    public static final String LANG_VIETNAMESE = "vi";
-    public static final String LANG_ENGLISH = "en";
+    /* public static final String LANG_VIETNAMESE = "vi"; */
+    private static final String LANG_ENGLISH = "en";
 
     /* preference keys */
     public static final String PREFKEY_LANGUAGE = "prefkey_language";
@@ -114,7 +113,7 @@ public class AppData {
 
     /* application configuration varibale */
     public static Configuration config;
-    public static String language = AppData.LANG_ENGLISH;
+    public static String language = LANG_ENGLISH;
     public static int questions = 10;
 
     private AppData(){
@@ -193,8 +192,8 @@ public class AppData {
     }
 
     public static void clearData() {
-        int i = 0;
-        ButtonItem item = null;
+        int i;
+        ButtonItem item;
         for (i = 0; i < lstVocab.size(); i++) {
             item = lstVocab.get(i);
             item.learnItems.clear();
@@ -254,14 +253,30 @@ public class AppData {
 
     public static List generateQuestion(List<LearnItem> sources, int count) {
         List<Question> lstQuestions = new ArrayList<>(count);
+        List<LearnItem> lstConfusions;
+        LearnItem correctAnswer;
+        int correct_index;
 
-        /* select list of answers */
+        /* select list of answers first to prevent 2 questions has the same correct answer */
         List<LearnItem> lstAnswers = pickRandom(sources, count);
 
         for(int i = 0; i < count; i++) {
             Question question = new Question();
+            correctAnswer = lstAnswers.get(i);
 
+            lstConfusions = pickRandom(sources, NUMBER_OF_ANSWERS);
 
+            /* replace 1st item by answer if confusion list does not contains answer */
+            if (!lstConfusions.contains(correctAnswer))
+                lstConfusions.set(0, correctAnswer);
+
+            Collections.shuffle(lstConfusions);
+            question.setAnswers(lstConfusions);
+
+            correct_index = lstConfusions.indexOf(correctAnswer);
+            question.setCorrectAnswerIndex(correct_index);
+
+            lstQuestions.add(question);
         }
 
         return lstQuestions;
@@ -294,7 +309,7 @@ public class AppData {
             for (int i = 0; i < AppData.NUMBER_OF_ANSWERS; i++) {
                 item1 = qa.get(i);
                 item2 = answers.get(count);
-                if ((item1).isEquals(item2)) {
+                if ((item1).equals(item2)) {
                     isContain = true;
                     break;
                 }
@@ -385,7 +400,7 @@ public class AppData {
     }
 
     public static void playSound(String fileName, Context context) {
-        Resources resources         = context.getResources();
+        Resources resources = context.getResources();
         MediaPlayer player;
 
         /** get audio resource ID by name */

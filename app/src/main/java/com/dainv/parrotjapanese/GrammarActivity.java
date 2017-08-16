@@ -67,8 +67,9 @@ public class GrammarActivity extends AppCompatActivity {
         if (lstVideo == null) {
             lstVideo = new ArrayList<>();
             final List<LearnItem> lstItem = new ArrayList<LearnItem>();
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadFile(R.raw.grammar_videos, "~", lstItem);
+
+            TextLoader.loadFile(this, R.raw.grammar_videos, "~", lstItem);
+
             for (int i = 0; i < lstItem.size(); i++) {
                 VideoEntry entry = new VideoEntry();
                 entry.videoId = lstItem.get(i).kanji;

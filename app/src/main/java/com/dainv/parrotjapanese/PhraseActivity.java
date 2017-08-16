@@ -40,8 +40,7 @@ public class PhraseActivity extends AppCompatActivity {
 
         if (lstPhrase == null) {
             lstPhrase = new ArrayList<>();
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadFile(R.raw.simple_phrases, "~", lstPhrase);
+            TextLoader.loadFile(this, R.raw.simple_phrases, "~", lstPhrase);
         }
 
         final ListView lvPhrase = (ListView)findViewById(R.id.listVocabulary);

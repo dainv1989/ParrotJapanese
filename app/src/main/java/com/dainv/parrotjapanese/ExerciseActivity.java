@@ -81,7 +81,6 @@ public class ExerciseActivity extends AppCompatActivity {
             }
         });
 
-        TextLoader loader = new TextLoader(getApplicationContext());
         String pkgName = getPackageName();
         int dataResId;
         /**
@@ -90,7 +89,7 @@ public class ExerciseActivity extends AppCompatActivity {
          * after running app
          */
         if (AppData.lstVocab.isEmpty()) {
-            loader.loadMenuFile(R.raw.menu_vocabulary, "~", AppData.lstVocab);
+            TextLoader.loadMenuFile(this, R.raw.menu_vocabulary, "~", AppData.lstVocab);
         }
 
         /* Loading full vocabulary data from raw files */
@@ -100,7 +99,7 @@ public class ExerciseActivity extends AppCompatActivity {
             item = AppData.lstVocab.get(i);
             dataResId = res.getIdentifier(item.dataRes, "raw", pkgName);
             if (item.learnItems.isEmpty() && (dataResId > 0)) {
-                loader.loadFile(dataResId, "~", item.learnItems);
+                TextLoader.loadFile(this, dataResId, "~", item.learnItems);
                 totalVocab += item.learnItems.size();
             }
         }

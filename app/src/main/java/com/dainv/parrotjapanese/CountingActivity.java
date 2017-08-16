@@ -42,8 +42,7 @@ public class CountingActivity extends AppCompatActivity {
 
         /* load counter categories from menu resource file */
         if (AppData.lstCount.isEmpty()) {
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadMenuFile(R.raw.menu_counter, "~", AppData.lstCount);
+            TextLoader.loadMenuFile(this, R.raw.menu_counter, "~", AppData.lstCount);
         }
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);

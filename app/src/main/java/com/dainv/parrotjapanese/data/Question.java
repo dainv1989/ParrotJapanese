@@ -1,6 +1,5 @@
 package com.dainv.parrotjapanese.data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,11 +12,14 @@ public class Question {
     private int correct_index;          /* correct answer position */
 
     public Question() {
-        answers = new ArrayList<>(AppData.NUMBER_OF_ANSWERS);
     }
 
     public List<LearnItem> getAnswers() {
         return answers;
+    }
+
+    public void setAnswers(List<LearnItem> answers) {
+        this.answers = answers;
     }
 
     public LearnItem getQuestion() {
@@ -29,10 +31,18 @@ public class Question {
         return item;
     }
 
+    public void setCorrectAnswerIndex(int index) {
+        correct_index = index;
+    }
+
     public boolean isCorrect(int index) {
         boolean ret = false;
         if (index == correct_index)
             ret = true;
         return ret;
+    }
+
+    public boolean isCorrect(LearnItem item) {
+        return answers.contains(item);
     }
 }

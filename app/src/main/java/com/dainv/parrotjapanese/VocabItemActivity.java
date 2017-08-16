@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
 import com.dainv.parrotjapanese.data.AppData;
@@ -33,19 +34,32 @@ public class VocabItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        Resources res = getResources();
-        current_index = (int)getIntent().getExtras().get("selected_index");
+        current_index = getIntent().getIntExtra("selected_index", 0);
+        /* validate index */
+        if (current_index >= AppData.lstVocab.size())
+            current_index = AppData.lstVocab.size() - 1;
+        if (current_index < 0)
+            current_index = 0;
+
         ButtonItem selectedItem = AppData.lstVocab.get(current_index);
+
+        Resources res = getResources();
         int dataResId = res.getIdentifier(selectedItem.dataRes, "raw", getPackageName());
+
+        if (dataResId <= 0) {
+            Toast.makeText(getApplicationContext(), "Cannot find data file",
+                    Toast.LENGTH_SHORT).show();
+            onBackPressed();
+            return;
+        }
 
         /* set toolbar title */
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(selectedItem.title);
 
-        /** load vocabulary from raw data file */
+        /* load vocabulary from raw data file */
         if (selectedItem.learnItems.isEmpty()) {
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadFile(dataResId, "~", selectedItem.learnItems);
+            TextLoader.loadFile(this, dataResId, "~", selectedItem.learnItems);
         }
 
         ListView lvVocab = (ListView)findViewById(R.id.listVocabulary);

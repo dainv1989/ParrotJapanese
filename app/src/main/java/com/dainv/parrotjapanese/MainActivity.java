@@ -40,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         /** load button list from menu config file */
         if (AppData.buttons.size() == 0) {
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadMenuFile(R.raw.menu_main, "~", AppData.buttons);
+            TextLoader.loadMenuFile(this, R.raw.menu_main, "~", AppData.buttons);
         }
 
         gridView    = (GridView)findViewById(R.id.gridView);
@@ -188,8 +187,7 @@ public class MainActivity extends AppCompatActivity {
                  * reload data resource file with new language setting
                  */
                 AppData.buttons.clear();
-                TextLoader loader = new TextLoader(getApplicationContext());
-                loader.loadMenuFile(R.raw.menu_main, "~", AppData.buttons);
+                TextLoader.loadMenuFile(this, R.raw.menu_main, "~", AppData.buttons);
                 /**
                  * force to update screen
                  */

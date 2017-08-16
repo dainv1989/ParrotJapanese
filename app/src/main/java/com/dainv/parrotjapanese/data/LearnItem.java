@@ -28,17 +28,6 @@ public class LearnItem {
         this.meaning = "";
     }
 
-    public boolean isEquals(LearnItem item) {
-        boolean ret = true;
-        if (!this.kanji.contentEquals(item.kanji))
-            ret = false;
-        if (!this.romaji.contentEquals(item.romaji))
-            ret = false;
-        if (!this.meaning.contentEquals(item.meaning))
-            ret = false;
-        return ret;
-    }
-
     /**
      * sound file name of sentence "ikura desuka" is: ikura_desuka
      * @return sound file name of a word or a sentence
