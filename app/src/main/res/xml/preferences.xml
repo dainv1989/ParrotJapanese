@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <ListPreference
-        android:key="pref_lang"
+        android:key="prefkey_language"
         android:title="@string/pref_language_title"
         android:dialogTitle="@string/pref_language_title"
         android:entries="@array/pref_languages"
@@ -9,7 +9,7 @@
         android:defaultValue="@string/pref_lang_default"/>
 
     <ListPreference
-        android:key="pref_number_qa"
+        android:key="prefkey_question_count"
         android:title="@string/pref_qa_title"
         android:summary="@string/pref_qa_summary"
         android:dialogTitle="@string/pref_qa_title"
@@ -18,7 +18,7 @@
         android:defaultValue="10" />
 
     <CheckBoxPreference
-        android:key="pref_exercise_by_subject"
+        android:key="prefkey_subject_choice"
         android:title="@string/pref_sub_title"
         android:summary="@string/pref_sub_summary"
         android:defaultValue="true" />

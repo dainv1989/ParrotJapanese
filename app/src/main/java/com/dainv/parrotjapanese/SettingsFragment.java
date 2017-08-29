@@ -42,7 +42,8 @@ public class SettingsFragment extends PreferenceFragment implements
         String numberOfQa = settings.getString(AppData.PREFKEY_QUESTION_COUNT, "10");
 
         Preference qaNumbers = findPreference(AppData.PREFKEY_QUESTION_COUNT);
-        qaNumbers.setSummary(numberOfQa + " " +
+        if (qaNumbers != null)
+            qaNumbers.setSummary(numberOfQa + " " +
                 getResources().getString(R.string.pref_qa_summary));
     }
 
