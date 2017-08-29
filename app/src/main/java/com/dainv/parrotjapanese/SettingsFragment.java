@@ -10,7 +10,6 @@ import android.preference.PreferenceScreen;
 import android.util.Log;
 
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.Constant;
 
 import java.util.Locale;
 
@@ -40,16 +39,17 @@ public class SettingsFragment extends PreferenceFragment implements
          */
         PreferenceScreen prefs = getPreferenceScreen();
         SharedPreferences settings = prefs.getSharedPreferences();
-        String numberOfQa = settings.getString(Constant.KEY_PREF_QA_NUMBERS, "10");
+        String numberOfQa = settings.getString(AppData.PREFKEY_QUESTION_COUNT, "10");
 
-        Preference qaNumbers = findPreference(Constant.KEY_PREF_QA_NUMBERS);
-        qaNumbers.setSummary(numberOfQa + " " +
+        Preference qaNumbers = findPreference(AppData.PREFKEY_QUESTION_COUNT);
+        if (qaNumbers != null)
+            qaNumbers.setSummary(numberOfQa + " " +
                 getResources().getString(R.string.pref_qa_summary));
     }
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if(key.equals(Constant.KEY_PREF_LANG)) {
+        if(key.equals(AppData.PREFKEY_LANGUAGE)) {
             String language = sharedPreferences.getString(key, "en");
             Log.v(TAG, language);
 
@@ -68,14 +68,13 @@ public class SettingsFragment extends PreferenceFragment implements
                 this.onCreate(null);
             }
         }
-        else if (key.equals(Constant.KEY_PREF_QA_NUMBERS)) {
+        else if (key.equals(AppData.PREFKEY_QUESTION_COUNT)) {
             String qa = sharedPreferences.getString(key, "10");
             if (qa != null) {
                 AppData.questions = Integer.parseInt(qa.trim());
-                Preference qaNumbers = findPreference(Constant.KEY_PREF_QA_NUMBERS);
+                Preference qaNumbers = findPreference(AppData.PREFKEY_QUESTION_COUNT);
                 qaNumbers.setSummary(AppData.questions + " " +
                         getResources().getString(R.string.pref_qa_summary));
-                Log.v(TAG, "new number of questions: " + AppData.questions);
             }
         }
     }

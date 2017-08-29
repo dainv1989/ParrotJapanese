@@ -9,17 +9,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.R;
-import com.dainv.parrotjapanese.data.ListItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
 
 /**
  * Created by dainv on 10/22/2015.
  */
-public class MainViewButton extends LinearLayout {
+public class ButtonView extends LinearLayout {
     private ImageView thumb;
     private TextView label;
     private Context context;
 
-    public MainViewButton(Context context) {
+    public ButtonView(Context context) {
         super(context);
         this.context = context;
 
@@ -32,7 +32,7 @@ public class MainViewButton extends LinearLayout {
         }
     }
     
-    public void setItem(ListItem item) {
+    public void setItem(ButtonItem item) {
         Resources res = context.getResources();
         int photoId = res.getIdentifier(item.photoRes, "mipmap", context.getPackageName());
         Log.v("mainviewbutton", "photo " + item.photoRes.toString() + " id = " + photoId);

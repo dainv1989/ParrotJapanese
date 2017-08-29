@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.dainv.parrotjapanese.data.ListItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
 import com.dainv.parrotjapanese.ui.CustomListView;
 
 import java.util.List;
@@ -13,24 +13,24 @@ import java.util.List;
 /**
  * Created by dainv on 10/28/2015.
  */
-public class CustomListAdapter extends ArrayAdapter<ListItem> {
-    private List<ListItem> mListItems;
+public class ButtonAdapter extends ArrayAdapter<ButtonItem> {
+    private List<ButtonItem> mButtonItems;
     private Context mContext;
 
-    public CustomListAdapter(Context context, int resource, List<ListItem> objects) {
+    public ButtonAdapter(Context context, int resource, List<ButtonItem> objects) {
         super(context, resource, objects);
         this.mContext = context;
-        this.mListItems = objects;
+        this.mButtonItems = objects;
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         CustomListView view = new CustomListView(mContext);
-        view.setItemList(mListItems.get(position));
+        view.setItemList(mButtonItems.get(position));
         return view;
     }
 
     @Override
     public int getCount() {
-        return mListItems.size();
+        return mButtonItems.size();
     }
 }

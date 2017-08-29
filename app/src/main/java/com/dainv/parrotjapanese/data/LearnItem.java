@@ -5,38 +5,27 @@ import android.text.TextUtils;
 /**
  * Created by dainv on 10/29/2015.
  */
-public class ListLearnItem {
+public class LearnItem {
     public String number;
     public String kanji;
     public String romaji;
     public String meaning;
 
-    public ListLearnItem (String number,
-                          String kanji,
-                          String romaji,
-                          String meaning) {
+    public LearnItem(String number,
+                     String kanji,
+                     String romaji,
+                     String meaning) {
         this.number = number;
         this.kanji = kanji;
         this.romaji = romaji;
         this.meaning = meaning;
     }
 
-    public ListLearnItem() {
+    public LearnItem() {
         this.number = "";
         this.kanji = "";
         this.romaji = "";
         this.meaning = "";
-    }
-
-    public boolean isEquals(ListLearnItem item) {
-        boolean ret = true;
-        if (!this.kanji.contentEquals(item.kanji))
-            ret = false;
-        if (!this.romaji.contentEquals(item.romaji))
-            ret = false;
-        if (!this.meaning.contentEquals(item.meaning))
-            ret = false;
-        return ret;
     }
 
     /**

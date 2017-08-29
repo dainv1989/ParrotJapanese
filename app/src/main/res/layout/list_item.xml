@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minHeight="72dp"
+    android:layout_height="wrap_content"
+    android:minHeight="80dp"
     android:layout_gravity="center"
     android:gravity="center"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
     android:background="@drawable/noise_bkg">
 
     <ImageView
@@ -27,15 +29,15 @@
             android:id="@+id/itemTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
-            android:textSize="16sp"
+            android:text="title"
+            android:textSize="18sp"
             android:textColor="@color/title_color"/>
 
         <TextView
             android:id="@+id/itemDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Brief Description"
+            android:text="brief description"
             android:textSize="15sp"
             android:textColor="@color/primary_text"/>
     </LinearLayout>

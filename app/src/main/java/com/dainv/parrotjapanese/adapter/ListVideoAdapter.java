@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.R;
-import com.dainv.parrotjapanese.data.Constant;
+import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.data.VideoEntry;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
@@ -30,7 +30,7 @@ public class ListVideoAdapter extends BaseAdapter {
     public ListVideoAdapter(Context context, List<VideoEntry> entries) {
         this.mContext = context;
         this.mListVideos = entries;
-        mLoaders = new HashMap<YouTubeThumbnailView, YouTubeThumbnailLoader>();
+        mLoaders = new HashMap<>();
         mListener = new ThumbnailListener();
     }
 
@@ -67,7 +67,7 @@ public class ListVideoAdapter extends BaseAdapter {
 
             YouTubeThumbnailView thumbnail = (YouTubeThumbnailView) view.findViewById(R.id.thumbail);
             thumbnail.setTag(entry.videoId);
-            thumbnail.initialize(Constant.DEVELOPER_KEY, mListener);
+            thumbnail.initialize(AppData.DEVELOPER_KEY, mListener);
         } else {
             YouTubeThumbnailView thumbnail = (YouTubeThumbnailView) view.findViewById(R.id.thumbail);
             YouTubeThumbnailLoader loader = mLoaders.get(thumbnail);

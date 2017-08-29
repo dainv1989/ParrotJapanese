@@ -4,15 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.Constant;
-import com.dainv.parrotjapanese.data.ListItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
 import com.dainv.parrotjapanese.util.TextLoader;
 
 public class ExerciseActivity extends AppCompatActivity {
@@ -45,8 +42,8 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_HIRAGANA);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                                AppData.EXTRA_EXER_HIRAGANA);
                 startActivity(intent);
             }
         });
@@ -56,8 +53,8 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_KATAKANA);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                        AppData.EXTRA_EXER_KATAKANA);
                 startActivity(intent);
             }
         });
@@ -67,8 +64,8 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_PRONUN);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                        AppData.EXTRA_EXER_PRONUN);
                 startActivity(intent);
             }
         });
@@ -78,32 +75,31 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                intent.putExtra(Constant.EXTRA_EXER_KEY,
-                                Constant.EXTRA_EXER_MEANING);
+                intent.putExtra(AppData.EXTRA_EXER_KEY,
+                        AppData.EXTRA_EXER_MEANING);
                 startActivity(intent);
             }
         });
 
-        TextLoader loader = new TextLoader(getApplicationContext());
         String pkgName = getPackageName();
-        int dataResId = 0;
+        int dataResId;
         /**
          * Load vocabulary subject list if it's not existed
          * This situation occurs in case user goes to Exercise before Vocabulary screen
          * after running app
          */
         if (AppData.lstVocab.isEmpty()) {
-            loader.loadMenuFile(R.raw.menu_vocabulary, "~", AppData.lstVocab);
+            TextLoader.loadMenuFile(this, R.raw.menu_vocabulary, "~", AppData.lstVocab);
         }
 
         /* Loading full vocabulary data from raw files */
-        ListItem item = new ListItem();
+        ButtonItem item = new ButtonItem();
         int totalVocab = 0;
         for (int i = 0; i < AppData.lstVocab.size(); i++) {
             item = AppData.lstVocab.get(i);
             dataResId = res.getIdentifier(item.dataRes, "raw", pkgName);
             if (item.learnItems.isEmpty() && (dataResId > 0)) {
-                loader.loadFile(dataResId, "~", item.learnItems);
+                TextLoader.loadFile(this, dataResId, "~", item.learnItems);
                 totalVocab += item.learnItems.size();
             }
         }

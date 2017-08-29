@@ -12,11 +12,6 @@ public class AlphabetItem {
         this.txtJp = jp;
     }
 
-    public AlphabetItem() {
-        this.txtJp = "";
-        this.txtEn = "";
-    }
-
     public String toString() {
         return this.txtEn;
     }

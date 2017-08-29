@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import com.dainv.parrotjapanese.data.AlphabetItem;
-import com.dainv.parrotjapanese.ui.AlphabetItemView;
+import com.dainv.parrotjapanese.ui.AlphabetView;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class AlphabetAdapter extends ArrayAdapter<AlphabetItem> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        AlphabetItemView view = new AlphabetItemView(this.mContext);
+        AlphabetView view = new AlphabetView(this.mContext);
         view.setItemList(mListItems.get(position));
         return view;
     }

@@ -3,7 +3,6 @@ package com.dainv.parrotjapanese;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -12,9 +11,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dainv.parrotjapanese.adapter.CustomListAdapter;
+import com.dainv.parrotjapanese.adapter.ButtonAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
+import com.google.android.gms.ads.AdView;
 
 /**
  * Created by dainv on 10/28/2015.
@@ -24,6 +24,8 @@ public class CountingActivity extends AppCompatActivity {
     private final String TAG = "CountingActivity";
 
     private TextView tvTitle;
+
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +37,16 @@ public class CountingActivity extends AppCompatActivity {
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(res.getString(R.string.title_count));
 
+        adView = (AdView)findViewById(R.id.adsVocabBanner);
+        adView.setVisibility(View.GONE);
+
         /* load counter categories from menu resource file */
         if (AppData.lstCount.isEmpty()) {
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadMenuFile(R.raw.menu_counter, "~", AppData.lstCount);
+            TextLoader.loadMenuFile(this, R.raw.menu_counter, "~", AppData.lstCount);
         }
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);
-        CustomListAdapter listCountAdapter = new CustomListAdapter(this,
+        ButtonAdapter listCountAdapter = new ButtonAdapter(this,
                 lvCount.getId(), AppData.lstCount);
         lvCount.setAdapter(listCountAdapter);
 

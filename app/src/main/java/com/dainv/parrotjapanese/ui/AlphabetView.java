@@ -11,11 +11,11 @@ import com.dainv.parrotjapanese.data.AlphabetItem;
 /**
  * Created by dainv on 11/23/2015.
  */
-public class AlphabetItemView extends LinearLayout {
+public class AlphabetView extends LinearLayout {
     public TextView txtJp;
     public TextView txtEn;
 
-    public AlphabetItemView(Context context) {
+    public AlphabetView(Context context) {
         super(context);
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);

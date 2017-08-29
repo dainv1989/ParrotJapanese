@@ -3,22 +3,23 @@ package com.dainv.parrotjapanese;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dainv.parrotjapanese.adapter.CustomListAdapter;
+import com.dainv.parrotjapanese.adapter.ButtonAdapter;
 import com.dainv.parrotjapanese.data.AppData;
 import com.dainv.parrotjapanese.util.TextLoader;
+import com.google.android.gms.ads.AdView;
 
 public class VocabularyActivity extends AppCompatActivity {
 
     private TextView tvTitle;
+
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +30,16 @@ public class VocabularyActivity extends AppCompatActivity {
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
         tvTitle.setText(res.getString(R.string.title_vocabulary));
 
+        adView = (AdView)findViewById(R.id.adsVocabBanner);
+        adView.setVisibility(View.GONE);
+
         /** load vocabulary categories from file */
         if (AppData.lstVocab.isEmpty()) {
-            TextLoader loader = new TextLoader(getApplicationContext());
-            loader.loadMenuFile(R.raw.menu_vocabulary, "~", AppData.lstVocab);
+            TextLoader.loadMenuFile(this, R.raw.menu_vocabulary, "~", AppData.lstVocab);
         }
 
         ListView lvVocab = (ListView)findViewById(R.id.listVocabulary);
-        CustomListAdapter listVocabAdapter = new CustomListAdapter(this, lvVocab.getId(), AppData.lstVocab);
+        ButtonAdapter listVocabAdapter = new ButtonAdapter(this, lvVocab.getId(), AppData.lstVocab);
         lvVocab.setAdapter(listVocabAdapter);
 
         lvVocab.setOnItemClickListener(new AdapterView.OnItemClickListener() {

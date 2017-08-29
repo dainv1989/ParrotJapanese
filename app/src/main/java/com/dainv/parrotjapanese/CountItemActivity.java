@@ -10,9 +10,12 @@ import android.widget.TextView;
 
 import com.dainv.parrotjapanese.adapter.ListLearnAdapter;
 import com.dainv.parrotjapanese.data.AppData;
-import com.dainv.parrotjapanese.data.ListItem;
-import com.dainv.parrotjapanese.data.ListLearnItem;
+import com.dainv.parrotjapanese.data.ButtonItem;
+import com.dainv.parrotjapanese.data.LearnItem;
 import com.dainv.parrotjapanese.util.TextLoader;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -24,9 +27,11 @@ public class CountItemActivity extends AppCompatActivity {
     private final static String TAG = "CountItemActivity";
     private static int current_index = 0;
     private Resources res;
-    private ArrayList<ListLearnItem> lstNumber = null;
+    private ArrayList<LearnItem> lstNumber = null;
 
     private TextView tvTitle;
+
+    private AdView adView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +39,7 @@ public class CountItemActivity extends AppCompatActivity {
 
         res = getResources();
         current_index = (int)getIntent().getExtras().get("selected_index");
-        ListItem selectedItem = AppData.lstCount.get(current_index);
+        ButtonItem selectedItem = AppData.lstCount.get(current_index);
 
         /* set screen title */
         tvTitle = (TextView)findViewById(R.id.txtVocabTitle);
@@ -42,8 +47,7 @@ public class CountItemActivity extends AppCompatActivity {
 
         int dataResId = res.getIdentifier(selectedItem.dataRes, "raw", getPackageName());
         lstNumber = new ArrayList<>();
-        TextLoader loader = new TextLoader(this);
-        loader.loadFile(dataResId, "~", lstNumber);
+        TextLoader.loadFile(this, dataResId, "~", lstNumber);
 
         ListView lvCount = (ListView)findViewById(R.id.listVocabulary);
         final ListLearnAdapter adapter = new ListLearnAdapter(this, lvCount.getId(), lstNumber);
@@ -56,5 +60,44 @@ public class CountItemActivity extends AppCompatActivity {
                 adapter.playSound(position);
             }
         });
+
+        adView = (AdView)findViewById(R.id.adsVocabBanner);
+        adView.setVisibility(View.GONE);
+        AdRequest adRequest = new AdRequest.Builder()
+                //.addTestDevice("1F17B575D2A0B81A953E526D33694A52")
+                .build();
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                adView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                adView.setVisibility(View.GONE);
+            }
+        });
+        adView.loadAd(adRequest);
+    }
+
+    @Override
+    public void onPause() {
+        if (adView != null)
+            adView.pause();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        if (adView != null)
+            adView.resume();
+        super.onResume();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (adView != null)
+            adView.destroy();
+        super.onDestroy();
     }
 }

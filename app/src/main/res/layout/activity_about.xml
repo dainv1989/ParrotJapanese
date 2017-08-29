@@ -58,9 +58,8 @@
     <LinearLayout
         android:id="@+id/aboutContent"
         android:layout_below="@id/txtAboutTitle"
-        android:layout_above="@id/txtThanks"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -103,24 +102,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:visibility="gone"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="4dp"
-            android:text="@string/app_suggest"
-            android:textSize="14dp"
-            android:textColor="@color/primary_text"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="4dp"
-            android:text="Hiragana &amp; Katanana"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/hihi_kaka"
             android:textSize="16dp"
             android:textColor="@color/primary_text"/>
 
@@ -130,5 +122,14 @@
             android:layout_height="72dp"
             android:padding="4dp"
             android:src="@drawable/hiragana_icon"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/app_suggest"
+            android:textSize="14dp"
+            android:textColor="@color/primary_text"/>
     </LinearLayout>
 </RelativeLayout>
