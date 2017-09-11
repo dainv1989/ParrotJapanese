@@ -5,26 +5,25 @@
 # author        : dainv
 #--------------------------------------------------
 # transportation
-じどうしゃ ~ jidousha ~ xe hơi
-くるま ~ kuruma ~ xe ô tô
+車 ~ kuruma ~ xe ô tô
+自動車 ~ jidousha ~ xe hơi
+自転車 ~ jitensha ~ xe đạp
+汽車 ~ kisha ~ tàu hỏa
+電車 ~ densha ~ tàu điện
 トラック ~ torakku ~ xe tải
 スポーツカー ~ supootsu kaa ~ xe ô tô thể thao
 タクシー ~ takushii ~ taxi
-きゅうきゅうしゃ ~ kyuukyuusha ~ xe cứu thương
-しょうぼうしゃ ~ shoubousha ~ xe cứu hỏa
+救急車 ~ kyuukyuusha ~ xe cứu thương
+消防車 ~ shoubousha ~ xe cứu hỏa
 パトカー ~ patokaa ~ xe tuần tra của cảnh sát
 オートバイ ~ ootobai ~ xe gắn máy; xe máy
-じてんしゃ ~ jitensha ~ xe đạp
-きしゃ ~ kisha ~ tàu hỏa
-でんしゃ ~ densha ~ tàu điện
-ちかてつ ~ chikatetsu ~ tàu điện ngầm
-しんかんせん ~ shinkansen ~ tàu siêu tốc của nhật bản
-ひこうき ~ hikouki ~ máy bay
+地下鉄 ~ chikatetsu ~ tàu điện ngầm
+新幹線 ~ shinkansen ~ tàu siêu tốc của nhật bản
+飛行機 ~ hikouki ~ máy bay
 ヘリコプター ~ herikoputaa ~ trực thăng
-ふね ~ fune ~ tàu thuyền
-はんせん ~ hansen ~ thuyền buồm
+船 ~ fune ~ tàu thuyền
+帆船 ~ hansen ~ thuyền buồm
 フェリー ~ ferii ~ phà
 
-
 # traffic
-こうさてん ~ kousaten ~ ngã tư đường
+交差点 ~ kousaten ~ ngã tư đường
